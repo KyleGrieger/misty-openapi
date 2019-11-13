@@ -17,8 +17,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/response'
-              examples:
-                example-1: {}
+              examples: {}
             application/xml:
               schema:
                 type: object
@@ -28,8 +27,7 @@ paths:
           application/json:
             schema:
               type: object
-            examples:
-              example-1: {}
+            examples: {}
       parameters:
         - schema:
             type: number
@@ -159,20 +157,18 @@ components:
     response:
       title: response
       type: array
-      items:
-        type: object
-        properties:
-          result:
-            type:
-              - string
-              - boolean
-          status:
-            type: string
       x-examples:
         example-1:
           - result: true
             status: Success
       description: response
+      items:
+        type: object
+        properties:
+          result:
+            type: boolean
+          status:
+            type: string
     device:
       title: device
       type: object
