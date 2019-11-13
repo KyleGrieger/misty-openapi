@@ -106,7 +106,12 @@ paths:
             type: number
           in: query
           name: RightTrackSpeed
-      requestBody: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
       description: api.drive_track_get
     post:
       summary: ''
