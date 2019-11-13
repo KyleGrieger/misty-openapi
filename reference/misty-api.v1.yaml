@@ -81,7 +81,7 @@ paths:
                     '':
                       type: string
         '':
-          description: Info about your device
+          description: Information about your device
           content:
             application/json:
               schema:
@@ -174,4 +174,6 @@ components:
       type: object
       properties:
         id:
+          type: string
+        '':
           type: string
