@@ -26,9 +26,7 @@ paths:
         content:
           application/json:
             schema:
-              type:
-                - object
-                - 'null'
+              type: object
             examples: {}
         description: ''
       parameters:
