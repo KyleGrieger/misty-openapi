@@ -39,7 +39,7 @@ paths:
           in: query
           name: LinearVelocity
       description: Drive
-      operationId: api.drive_get
+      operationId: api.drive
     post:
       summary: ''
       responses:
@@ -65,7 +65,7 @@ paths:
                   LinearVelocity: 5
                   AngularVelocity: 5
       description: Drive
-      operationId: api.drive_post
+      operationId: api.drive
     parameters: []
   /api/drive/stop:
     get:
@@ -79,7 +79,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/response'
       description: Stop
-      operationId: api.drive_stop_get
+      operationId: api.drive_stop
     post:
       summary: ''
       responses:
@@ -90,7 +90,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/response'
       description: Stop
-      operationId: api.drive_stop_post
+      operationId: api.drive_stop
   /api/drive/track:
     get:
       summary: Your GET endpoint
@@ -118,7 +118,7 @@ paths:
               type: object
               properties: {}
       description: Drive Track
-      operationId: api.drive_track_get
+      operationId: api.drive_track
     post:
       summary: ''
       responses:
@@ -139,7 +139,7 @@ paths:
                   type: number
                 RightTrackSppeed:
                   type: number
-      operationId: api.drive_track_post
+      operationId: api.drive_track
 components:
   schemas:
     response:
