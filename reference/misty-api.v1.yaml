@@ -16,16 +16,13 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type:
-                        - boolean
-                        - string
-                    status:
-                      type: string
+                $ref: '#/components/schemas/response'
+              examples:
+                example-1: {}
+            application/xml:
+              schema:
+                type: object
+                properties: {}
       requestBody:
         content:
           application/json:
@@ -38,12 +35,10 @@ paths:
             type: number
           in: query
           name: AngularVelocity
-          required: true
         - schema:
             type: number
           in: query
           name: LinearVelocity
-          required: true
       description: api.drive_get
     post:
       summary: ''
@@ -53,16 +48,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type:
-                        - boolean
-                        - string
-                    status:
-                      type: string
+                $ref: '#/components/schemas/response'
       requestBody:
         content:
           application/json:
@@ -80,71 +66,6 @@ paths:
                   AngularVelocity: 5
       description: api.drive_post
     parameters: []
-  /api/drive/arc:
-    get:
-      summary: Your GET endpoint
-      tags: []
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type:
-                        - string
-                        - boolean
-                    status:
-                      type: string
-      parameters:
-        - schema:
-            type: number
-          in: query
-          name: Heading
-        - schema:
-            type: number
-          in: query
-          name: Radius
-        - schema:
-            type: number
-          in: query
-          name: TimeMS
-      description: api.drive_arc_get
-    post:
-      summary: ''
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type:
-                        - string
-                        - boolean
-                    status:
-                      type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                Heading:
-                  type: number
-                Radius:
-                  type: number
-                TimeMS:
-                  type: number
-      description: api.drive_arc_post
   /api/device:
     get:
       summary: Your GET endpoint
@@ -162,162 +83,13 @@ paths:
                     '':
                       type: string
         '':
+          description: Info about your device
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    batteryLevel:
-                      type: number
-                    currentProfileName:
-                      type: string
-                    hardwareInfo:
-                      type:
-                        - string
-                        - object
-                    ipAddress:
-                      type: string
-                    networkConnectivity:
-                      type: string
-              examples:
-                example-1: {}
-          description: Info about your device
+                $ref: '#/components/schemas/device'
       description: api.device_get
     parameters: []
-  /api/drive/hdt:
-    get:
-      summary: Your GET endpoint
-      tags: []
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type:
-                        - string
-                        - boolean
-                    status:
-                      type: string
-      parameters:
-        - schema:
-            type: number
-          in: query
-          name: Heading
-        - schema:
-            type: number
-          in: query
-          name: Distance
-        - schema:
-            type: number
-          in: query
-          name: TimeMS
-      description: api.drive_heading_get
-    post:
-      summary: ''
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type:
-                        - string
-                        - boolean
-                    status:
-                      type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                Heading:
-                  type: number
-                Distance:
-                  type: number
-                TimeMS:
-                  type: number
-            examples:
-              example-1: {}
-      description: api.drive_heading_post
-  /api/drive/time:
-    get:
-      summary: Your GET endpoint
-      tags: []
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type:
-                        - string
-                        - boolean
-                    status:
-                      type: string
-      description: api.drive_time_get
-      parameters:
-        - schema:
-            type: string
-          in: query
-          name: LinearVelocity
-        - schema:
-            type: string
-          in: query
-          name: AngularVelocity
-        - schema:
-            type: string
-          in: query
-          name: TimeMS
-    post:
-      summary: ''
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type:
-                        - string
-                        - boolean
-                    status:
-                      type: string
-      description: api.drive_time_post
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                LinearVelocity:
-                  type: number
-                AngularVelocity:
-                  type: number
-                TimeMS:
-                  type: number
   /api/drive/track:
     get:
       summary: Your GET endpoint
@@ -328,16 +100,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type:
-                        - string
-                        - boolean
-                    status:
-                      type: string
+                $ref: '#/components/schemas/response'
       description: api.drive_track_get
       parameters:
         - schema:
@@ -357,16 +120,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type:
-                        - string
-                        - boolean
-                    status:
-                      type: string
+                $ref: '#/components/schemas/response'
       description: api.drive_track_post
       requestBody:
         content:
@@ -388,16 +142,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type:
-                        - string
-                        - boolean
-                    status:
-                      type: string
+                $ref: '#/components/schemas/response'
       description: api.drive_stop_get
     post:
       summary: ''
@@ -407,16 +152,30 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type:
-                        - string
-                        - boolean
-                    status:
-                      type: string
+                $ref: '#/components/schemas/response'
       description: api.drive_stop_post
 components:
-  schemas: {}
+  schemas:
+    response:
+      title: response
+      type: array
+      items:
+        type: object
+        properties:
+          result:
+            type:
+              - string
+              - boolean
+          status:
+            type: string
+      x-examples:
+        example-1:
+          - result: true
+            status: Success
+      description: response
+    device:
+      title: device
+      type: object
+      properties:
+        id:
+          type: string
