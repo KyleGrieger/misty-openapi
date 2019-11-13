@@ -1,0 +1,419 @@
+openapi: 3.0.0
+info:
+  title: Misty API
+  version: '1.0'
+  description: ''
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /api/drive:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type:
+                        - boolean
+                        - string
+                    status:
+                      type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+            examples:
+              example-1: {}
+      parameters:
+        - schema:
+            type: number
+          in: query
+          name: AngularVelocity
+          required: true
+        - schema:
+            type: number
+          in: query
+          name: LinearVelocity
+          required: true
+      description: Drive Linear and Angular Velocity
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type:
+                        - boolean
+                        - string
+                    status:
+                      type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                LinearVelocity:
+                  type: number
+                AngularVelocity:
+                  type: number
+            examples:
+              example-1:
+                value:
+                  LinearVelocity: 5
+                  AngularVelocity: 5
+      description: Drive Linear and Angular Velocity
+    parameters: []
+  /api/drive/arc:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type:
+                        - string
+                        - boolean
+                    status:
+                      type: string
+      parameters:
+        - schema:
+            type: number
+          in: query
+          name: Heading
+        - schema:
+            type: number
+          in: query
+          name: Radius
+        - schema:
+            type: number
+          in: query
+          name: TimeMS
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type:
+                        - string
+                        - boolean
+                    status:
+                      type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Heading:
+                  type: number
+                Radius:
+                  type: number
+                TimeMS:
+                  type: number
+  /api/device:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    '':
+                      type: string
+        '':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    batteryLevel:
+                      type: number
+                    currentProfileName:
+                      type: string
+                    hardwareInfo:
+                      type:
+                        - string
+                        - object
+                    ipAddress:
+                      type: string
+                    networkConnectivity:
+                      type: string
+              examples:
+                example-1: {}
+          description: Info about your device
+    parameters: []
+  /api/drive/hdt:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type:
+                        - string
+                        - boolean
+                    status:
+                      type: string
+      parameters:
+        - schema:
+            type: number
+          in: query
+          name: Heading
+        - schema:
+            type: number
+          in: query
+          name: Distance
+        - schema:
+            type: number
+          in: query
+          name: TimeMS
+      description: Drive Heading
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type:
+                        - string
+                        - boolean
+                    status:
+                      type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Heading:
+                  type: number
+                Distance:
+                  type: number
+                TimeMS:
+                  type: number
+            examples:
+              example-1: {}
+      description: Drive Heading
+  /api/drive/time:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type:
+                        - string
+                        - boolean
+                    status:
+                      type: string
+      description: Drive Time
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: LinearVelocity
+        - schema:
+            type: string
+          in: query
+          name: AngularVelocity
+        - schema:
+            type: string
+          in: query
+          name: TimeMS
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type:
+                        - string
+                        - boolean
+                    status:
+                      type: string
+      description: Drive Time
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                LinearVelocity:
+                  type: number
+                AngularVelocity:
+                  type: number
+                TimeMS:
+                  type: number
+  /api/drive/track:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type:
+                        - string
+                        - boolean
+                    status:
+                      type: string
+      description: Track Driving
+      parameters:
+        - schema:
+            type: number
+          in: query
+          name: LeftTrackSpeed
+        - schema:
+            type: number
+          in: query
+          name: RightTrackSpeed
+      requestBody: {}
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type:
+                        - string
+                        - boolean
+                    status:
+                      type: string
+      description: Track Driving
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                LeftTrackSpeed:
+                  type: string
+                RightTrackSpeed:
+                  type: string
+  /api/drive/stop:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type:
+                        - string
+                        - boolean
+                    status:
+                      type: string
+      description: Stop Driving
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type:
+                        - string
+                        - boolean
+                    status:
+                      type: string
+      description: Stop Driving
+components:
+  schemas: {}
