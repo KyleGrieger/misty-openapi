@@ -171,9 +171,10 @@ components:
             type: string
     device:
       title: device
-      type: object
-      properties:
-        id:
-          type: string
-        '':
-          type: string
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+      x-examples: {}
