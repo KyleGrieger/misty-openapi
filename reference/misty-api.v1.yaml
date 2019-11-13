@@ -39,7 +39,7 @@ paths:
           in: query
           name: LinearVelocity
       description: Drive
-      operationId: api.drive
+      operationId: api.drive_get
     post:
       summary: ''
       responses:
@@ -65,7 +65,7 @@ paths:
                   LinearVelocity: 5
                   AngularVelocity: 5
       description: Drive
-      operationId: api.drive
+      operationId: api.drive_post
     parameters: []
   /api/drive/stop:
     get:
@@ -79,7 +79,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/response'
       description: Stop
-      operationId: api.drive_stop
+      operationId: api.drive_stop_get
     post:
       summary: ''
       responses:
@@ -90,56 +90,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/response'
       description: Stop
-      operationId: api.drive_stop
-  /api/drive/track:
-    get:
-      summary: Your GET endpoint
-      tags: []
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/response'
-      parameters:
-        - schema:
-            type: number
-          in: query
-          name: LeftTrackSpeed
-        - schema:
-            type: number
-          in: query
-          name: RightTrackSpeed
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties: {}
-      description: Drive Track
-      operationId: api.drive_track
-    post:
-      summary: ''
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/response'
-      description: Drive Track
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                LeftTrackSpeed:
-                  type: number
-                RightTrackSppeed:
-                  type: number
-      operationId: api.drive_track
+      operationId: api.drive_stop_post
 components:
   schemas:
     response:
