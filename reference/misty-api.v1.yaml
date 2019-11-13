@@ -64,48 +64,6 @@ paths:
                   AngularVelocity: 5
       description: api.drive_post
     parameters: []
-  /api/drive/track:
-    get:
-      summary: Your GET endpoint
-      tags: []
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/response'
-      description: api.drive_track_get
-      parameters:
-        - schema:
-            type: number
-          in: query
-          name: LeftTrackSpeed
-        - schema:
-            type: number
-          in: query
-          name: RightTrackSpeed
-      requestBody: {}
-    post:
-      summary: ''
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/response'
-      description: api.drive_track_post
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                LeftTrackSpeed:
-                  type: string
-                RightTrackSpeed:
-                  type: string
   /api/drive/stop:
     get:
       summary: Your GET endpoint
