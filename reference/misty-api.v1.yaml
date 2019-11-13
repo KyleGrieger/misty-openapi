@@ -44,7 +44,7 @@ paths:
           in: query
           name: LinearVelocity
           required: true
-      description: drive
+      description: api.drive_get
     post:
       summary: ''
       responses:
@@ -78,7 +78,7 @@ paths:
                 value:
                   LinearVelocity: 5
                   AngularVelocity: 5
-      description: drive
+      description: api.drive_post
     parameters: []
   /api/drive/arc:
     get:
@@ -113,7 +113,7 @@ paths:
             type: number
           in: query
           name: TimeMS
-      description: drive_arc
+      description: api.drive_arc_get
     post:
       summary: ''
       responses:
@@ -144,7 +144,7 @@ paths:
                   type: number
                 TimeMS:
                   type: number
-      description: drive_arc
+      description: api.drive_arc_post
   /api/device:
     get:
       summary: Your GET endpoint
@@ -184,7 +184,7 @@ paths:
               examples:
                 example-1: {}
           description: Info about your device
-      description: device
+      description: api.device_get
     parameters: []
   /api/drive/hdt:
     get:
@@ -219,7 +219,7 @@ paths:
             type: number
           in: query
           name: TimeMS
-      description: drive_heading
+      description: api.drive_heading_get
     post:
       summary: ''
       responses:
@@ -252,7 +252,7 @@ paths:
                   type: number
             examples:
               example-1: {}
-      description: drive_heading
+      description: api.drive_heading_post
   /api/drive/time:
     get:
       summary: Your GET endpoint
@@ -273,7 +273,7 @@ paths:
                         - boolean
                     status:
                       type: string
-      description: drive_time
+      description: api.drive_time_get
       parameters:
         - schema:
             type: string
@@ -305,7 +305,7 @@ paths:
                         - boolean
                     status:
                       type: string
-      description: drive_time
+      description: api.drive_time_post
       requestBody:
         content:
           application/json:
@@ -338,7 +338,7 @@ paths:
                         - boolean
                     status:
                       type: string
-      description: drive_track
+      description: api.drive_track_get
       parameters:
         - schema:
             type: number
@@ -367,7 +367,7 @@ paths:
                         - boolean
                     status:
                       type: string
-      description: drive_track
+      description: api.drive_track_post
       requestBody:
         content:
           application/json:
@@ -398,7 +398,7 @@ paths:
                         - boolean
                     status:
                       type: string
-      description: drive_stop
+      description: api.drive_stop_get
     post:
       summary: ''
       responses:
@@ -417,6 +417,6 @@ paths:
                         - boolean
                     status:
                       type: string
-      description: drive_stop
+      description: api.drive_stop_post
 components:
   schemas: {}
