@@ -24,6 +24,10 @@ paths:
                 properties: {}
       requestBody:
         description: ''
+        content:
+          application/json:
+            schema:
+              type: 'null'
       parameters:
         - schema:
             type: number
