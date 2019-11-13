@@ -86,6 +86,48 @@ paths:
               schema:
                 $ref: '#/components/schemas/response'
       description: api.drive_stop_post
+  /api/drive/track:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response'
+      parameters:
+        - schema:
+            type: number
+          in: query
+          name: LeftTrackSpeed
+        - schema:
+            type: number
+          in: query
+          name: RightTrackSpeed
+      requestBody: {}
+      description: api.drive_track_get
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/response'
+      description: api.drive_track_get
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                LeftTrackSpeed:
+                  type: number
+                RightTrackSppeed:
+                  type: number
 components:
   schemas:
     response:
