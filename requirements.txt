@@ -1,2 +1,3 @@
 connexion
 tornado
+shpero_sdk
