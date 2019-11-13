@@ -23,11 +23,6 @@ paths:
                 type: object
                 properties: {}
       requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-            examples: {}
         description: ''
       parameters:
         - schema:
