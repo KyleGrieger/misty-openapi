@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: Misty API
   version: '1.0'
-  description: ''
+  description: Misty Open API
 servers:
   - url: 'http://localhost:3000'
 paths:
