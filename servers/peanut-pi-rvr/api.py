@@ -46,11 +46,19 @@ def drive_stop_post(**kwargs):
 def drive_track_get(**kwargs):
     print(kwargs)
     try:
+        left_speed = int((kwargs.LeftTrackSpeed/100) * 255)
+        right_speed = int((kwargs.RightTrackSpeed/100) * 255)
+        
+        print("LeftTrackSpeed")
+        print(left_speed)
+        print("RightTrackSpeed")
+        print(right_speed)
+
         rvr.raw_motors(
             left_mode=RawMotorModesEnum.forward.value,
-            left_speed=int((kwargs.LeftTrackSpeed/100) * 255),  # Valid speed values are 0-255
+            left_speed=left_speed,  # Valid speed values are 0-255
             right_mode=RawMotorModesEnum.forward.value,
-            right_speed=int((kwargs.LeftTrackSpeed/100) * 255)  # Valid speed values are 0-255
+            right_speed=right_speed  # Valid speed values are 0-255
         )
 
     except KeyboardInterrupt:
@@ -64,11 +72,19 @@ def drive_track_get(**kwargs):
 def drive_track_post(**kwargs):
     print(kwargs)
     try:
+        left_speed = int((kwargs.LeftTrackSpeed/100) * 255)
+        right_speed = int((kwargs.RightTrackSpeed/100) * 255)
+        
+        print("LeftTrackSpeed")
+        print(left_speed)
+        print("RightTrackSpeed")
+        print(right_speed)
+
         rvr.raw_motors(
             left_mode=RawMotorModesEnum.forward.value,
-            left_speed=int((kwargs.LeftTrackSpeed/100) * 255),  # Valid speed values are 0-255
+            left_speed=left_speed,  # Valid speed values are 0-255
             right_mode=RawMotorModesEnum.forward.value,
-            right_speed=int((kwargs.LeftTrackSpeed/100) * 255)  # Valid speed values are 0-255
+            right_speed=right_speed  # Valid speed values are 0-255
         )
 
     except KeyboardInterrupt:
