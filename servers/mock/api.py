@@ -1,6 +1,6 @@
 import connexion
 
-default_response = [{'result': True, 'status':'Success'}]
+default_response = [{'result': True, 'status':'Not implemented'}]
 default_device_response = [{'robotId': 12345, 'serialNumber': 12345}]
 
 def device_get(**kwargs):

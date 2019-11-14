@@ -16,7 +16,20 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/response'
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                    - result: true
+                      status: Success
+                description: response
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type: boolean
+                    status:
+                      type: string
               examples: {}
             application/xml:
               schema:
@@ -47,7 +60,20 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/response'
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                    - result: true
+                      status: Success
+                description: response
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type: boolean
+                    status:
+                      type: string
       requestBody:
         content:
           application/json:
@@ -76,7 +102,20 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/response'
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                    - result: true
+                      status: Success
+                description: response
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type: boolean
+                    status:
+                      type: string
       description: Stop
       operationId: api.drive_stop_get
     post:
@@ -87,9 +126,44 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/response'
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                    - result: true
+                      status: Success
+                description: response
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type: boolean
+                    status:
+                      type: string
       description: Stop
       operationId: api.drive_stop_post
+  /api/device:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                title: device
+                type: array
+                x-examples: {}
+                items:
+                  type: object
+                  properties:
+                    robotId:
+                      type: string
+                    serialNumber:
+                      type: string
+      operationId: api.device_get
+      description: Get Device Information
 components:
   schemas:
     response:
@@ -110,9 +184,11 @@ components:
     device:
       title: device
       type: array
+      x-examples: {}
       items:
         type: object
         properties:
-          name:
+          robotId:
             type: string
-      x-examples: {}
+          serialNumber:
+            type: string
