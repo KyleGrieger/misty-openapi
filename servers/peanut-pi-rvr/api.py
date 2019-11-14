@@ -28,3 +28,12 @@ def drive_stop_post(**kwargs):
     print(kwargs)
     return default_response, 200 
 
+def drive_track_get(**kwargs):
+    #TODO: implement
+    print(kwargs)
+    return default_response, 200
+
+def drive_track_post(**kwargs):
+    #TODO: implement
+    print(kwargs)
+    return default_response, 200

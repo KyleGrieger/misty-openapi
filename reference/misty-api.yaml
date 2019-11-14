@@ -5,6 +5,7 @@ info:
   description: Misty Open API
 servers:
   - url: 'http://localhost:3000'
+    description: misty
 paths:
   /api/drive:
     get:
@@ -30,17 +31,11 @@ paths:
                       type: boolean
                     status:
                       type: string
-              examples: {}
-            application/xml:
-              schema:
-                type: object
-                properties: {}
       requestBody:
         description: ''
         content:
           application/json:
-            schema:
-              type: 'null'
+            schema: {}
       parameters:
         - schema:
             type: number
@@ -164,6 +159,85 @@ paths:
                       type: string
       operationId: api.device_get
       description: Get Device Information
+  /api/drive/track:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                    - result: true
+                      status: Success
+                description: response
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type: boolean
+                    status:
+                      type: string
+      description: Drive Track
+      operationId: api.drive_track_get
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: LeftTrackSpeed
+        - schema:
+            type: string
+          in: query
+          name: RightTrackSpeed
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+    post:
+      summary: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                    - result: true
+                      status: Success
+                description: response
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type: boolean
+                    status:
+                      type: string
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                RightTrackSpeed:
+                  type: number
+                LeftTrackSpeed:
+                  type: number
+            examples:
+              example-1:
+                value:
+                  LeftTrackSpeed: 30
+                  RightTrackSpeed: 70
+      operationId: api.drive_track_post
+      description: Drive Track
 components:
   schemas:
     response:
