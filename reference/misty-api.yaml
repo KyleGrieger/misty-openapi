@@ -9,6 +9,7 @@ servers:
 paths:
   /api/drive:
     get:
+      x-openapi-router-controller: api
       summary: Your GET endpoint
       tags: []
       responses:
@@ -46,8 +47,9 @@ paths:
           in: query
           name: LinearVelocity
       description: Drive
-      operationId: api.drive_get
+      operationId: drive_get
     post:
+      x-openapi-router-controller: api
       summary: ''
       responses:
         '200':
@@ -85,10 +87,11 @@ paths:
                   LinearVelocity: 5
                   AngularVelocity: 5
       description: Drive
-      operationId: api.drive_post
+      operationId: drive
     parameters: []
   /api/drive/stop:
     get:
+      x-openapi-router-controller: api
       summary: Your GET endpoint
       tags: []
       responses:
@@ -112,8 +115,9 @@ paths:
                     status:
                       type: string
       description: Stop
-      operationId: api.drive_stop_get
+      operationId: stop_get
     post:
+      x-openapi-router-controller: api
       summary: ''
       responses:
         '200':
@@ -136,9 +140,10 @@ paths:
                     status:
                       type: string
       description: Stop
-      operationId: api.drive_stop_post
+      operationId: stop
   /api/device:
     get:
+      x-openapi-router-controller: api
       summary: Your GET endpoint
       tags: []
       responses:
@@ -157,10 +162,11 @@ paths:
                       type: string
                     serialNumber:
                       type: string
-      operationId: api.device_get
+      operationId: get_device_information
       description: Get Device Information
   /api/drive/track:
     get:
+      x-openapi-router-controller: api
       summary: Your GET endpoint
       tags: []
       responses:
@@ -184,7 +190,7 @@ paths:
                     status:
                       type: string
       description: Drive Track
-      operationId: api.drive_track_get
+      operationId: drive_track_get
       parameters:
         - schema:
             type: string
@@ -199,6 +205,7 @@ paths:
           application/json:
             schema: {}
     post:
+      x-openapi-router-controller: api
       summary: ''
       responses:
         '200':
@@ -236,7 +243,7 @@ paths:
                 value:
                   LeftTrackSpeed: 30
                   RightTrackSpeed: 70
-      operationId: api.drive_track_post
+      operationId: drive_track
       description: Drive Track
 components:
   schemas:

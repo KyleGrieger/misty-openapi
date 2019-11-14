@@ -1,3 +1,4 @@
 connexion[swagger-ui]
 tornado
 sphero_sdk
+flask_cors

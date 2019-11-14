@@ -1,40 +1,46 @@
 import connexion
 
 default_response = [{'result': True, 'status':'Not implemented'}]
-default_device_response = [{'robotId': 12345, 'serialNumber': 12345}]
+device_information = [{'result':{'robotId': 12345, 'serialNumber': 12345}}]
 
-def device_get(**kwargs):
+# Get Device Information
+def get_device_information(**kwargs):
     #TODO: implement
     print(kwargs)
-    return default_device_response, 200
+    return device_information, 200
+
+# Drive 
+def drive(**kwargs):
+    #TODO: implement
+    print(kwargs)
+    return default_response, 200
 
 def drive_get(**kwargs):
     #TODO: implement
     print(kwargs)
     return default_response, 200
 
-def drive_post(**kwargs):
+# Stop
+def stop(**kwargs):
     #TODO: implement
     print(kwargs)
     return default_response, 200
 
-def drive_stop_get(**kwargs):
+def stop_get(**kwargs):
     #TODO: implement
     print(kwargs)
     return default_response, 200
 
-def drive_stop_post(**kwargs):
+#Drive Track
+def drive_track(**kwargs):
     #TODO: implement
     print(kwargs)
-    return default_response, 200 
+    return default_response, 200
 
 def drive_track_get(**kwargs):
     #TODO: implement
     print(kwargs)
     return default_response, 200
 
-def drive_track_post(**kwargs):
-    #TODO: implement
-    print(kwargs)
-    return default_response, 200
+
 
