@@ -11,5 +11,5 @@ The Misty Robot OpenAPI spec
 
 ex.
 
-	python servers/peanut-pi-rvr/server.py
+	python servers/mock/server.py
 
