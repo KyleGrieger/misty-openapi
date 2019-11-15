@@ -26,16 +26,22 @@ def drive(**kwargs):
         k=1
         left_mode = RawMotorModesEnum.forward.value
         right_mode = RawMotorModesEnum.forward.value
-        x = kwargs['AngularVelocity']
-        y = kwargs['LinearVelocity']
-
+        x = float(kwargs['body']['AngularVelocity'])
+        y = float(kwargs['body']['LinearVelocity'])
+        print(x)
+        print(y)
         left_speed = int(((y-(k*x))/100) * 255)
         right_speed = int(((y+(k*x))/100) * 255)
-
+        print('left_speed')
+        print(left_speed)
+        print('right_speed')
+        print(right_speed)
         if left_speed < 0:
-            left_mode = RawMotorModesEnum.backward.value
+            left_mode = RawMotorModesEnum.reverse.value
+            left_speed = left_speed * -1
         if right_speed < 0:
-            right_mode = RawMotorModesEnum.backward.value
+            right_mode = RawMotorModesEnum.reverse.value
+            right_speed = right_speed * -1
 
         rvr.raw_motors(
             left_mode=left_mode,
@@ -147,13 +153,15 @@ def drive_track_get(**kwargs):
         left_mode = RawMotorModesEnum.forward.value
         right_mode = RawMotorModesEnum.forward.value
 
-        left_speed = int((kwargs['LeftTrackSpeed']/100) * 255)
-        right_speed = int((kwargs['RightTrackSpeed']/100) * 255)
+        left_speed = int((float(kwargs['LeftTrackSpeed'])/100) * 255)
+        right_speed = int((float(kwargs['RightTrackSpeed'])/100) * 255)
 
         if left_speed < 0:
-            left_mode = RawMotorModesEnum.backward.value
+            left_speed = left_speed * -1
+            left_mode = RawMotorModesEnum.reverse.value
         if right_speed < 0:
-            right_mode = RawMotorModesEnum.backward.value
+            right_speed = right_speed * -1
+            right_mode = RawMotorModesEnum.reverse.value
 
         rvr.raw_motors(
             left_mode=left_mode,
