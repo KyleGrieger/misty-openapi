@@ -1,0 +1,295 @@
+openapi: 3.0.0
+info:
+  description: Misty Open API
+  title: Misty API
+  version: "1.0"
+servers:
+- description: misty
+  url: http://localhost:3000
+paths:
+  /api/drive:
+    get:
+      description: Drive
+      operationId: drive_get
+      parameters:
+      - explode: true
+        in: query
+        name: AngularVelocity
+        required: false
+        schema:
+          type: number
+        style: form
+      - explode: true
+        in: query
+        name: LinearVelocity
+        required: false
+        schema:
+          type: number
+        style: form
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                description: response
+                items:
+                  $ref: '#/components/schemas/inline_response_200'
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                  - result: true
+                    status: Success
+          description: OK
+      summary: Drive GET
+      tags: []
+      x-openapi-router-controller: api
+    post:
+      description: Drive
+      operationId: drive
+      requestBody:
+        $ref: '#/components/requestBodies/inline_object'
+        content:
+          application/json:
+            examples:
+              example-1:
+                value:
+                  LinearVelocity: 5
+                  AngularVelocity: 5
+            schema:
+              properties:
+                LinearVelocity:
+                  type: number
+                AngularVelocity:
+                  type: number
+              type: object
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                description: response
+                items:
+                  $ref: '#/components/schemas/inline_response_200'
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                  - result: true
+                    status: Success
+          description: OK
+      summary: Drive POST
+      x-openapi-router-controller: api
+  /api/drive/stop:
+    get:
+      description: Stop
+      operationId: stop_get
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                description: response
+                items:
+                  $ref: '#/components/schemas/inline_response_200'
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                  - result: true
+                    status: Success
+          description: OK
+      summary: Drive Stop GET
+      tags: []
+      x-openapi-router-controller: api
+    post:
+      description: Stop
+      operationId: stop
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                description: response
+                items:
+                  $ref: '#/components/schemas/inline_response_200'
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                  - result: true
+                    status: Success
+          description: OK
+      summary: Drive Stop POST
+      x-openapi-router-controller: api
+  /api/device:
+    get:
+      description: Get Device Information
+      operationId: get_device_information
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/inline_response_200_1'
+                title: device
+                type: array
+                x-examples: {}
+          description: OK
+      summary: Device GET
+      tags: []
+      x-openapi-router-controller: api
+  /api/drive/track:
+    get:
+      description: Drive Track
+      operationId: drive_track_get
+      parameters:
+      - explode: true
+        in: query
+        name: LeftTrackSpeed
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: RightTrackSpeed
+        required: false
+        schema:
+          type: string
+        style: form
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                description: response
+                items:
+                  $ref: '#/components/schemas/inline_response_200'
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                  - result: true
+                    status: Success
+          description: OK
+      summary: Drive Track GET
+      tags: []
+      x-openapi-router-controller: api
+    post:
+      description: Drive Track
+      operationId: drive_track
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/inline_object_1'
+        content:
+          application/json:
+            examples:
+              example-1:
+                value:
+                  LeftTrackSpeed: 30
+                  RightTrackSpeed: 70
+            schema:
+              properties:
+                RightTrackSpeed:
+                  type: number
+                LeftTrackSpeed:
+                  type: number
+              type: object
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                description: response
+                items:
+                  $ref: '#/components/schemas/inline_response_200'
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                  - result: true
+                    status: Success
+          description: OK
+      summary: Drive Track Post
+      x-openapi-router-controller: api
+components:
+  requestBodies:
+    inline_object_1:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/inline_object_1'
+    inline_object:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/inline_object'
+  schemas:
+    response:
+      description: response
+      items:
+        properties:
+          result:
+            type: boolean
+          status:
+            type: string
+        type: object
+      title: response
+      type: array
+      x-examples:
+        example-1:
+        - result: true
+          status: Success
+    device:
+      items:
+        properties:
+          robotId:
+            type: string
+          serialNumber:
+            type: string
+        type: object
+      title: device
+      type: array
+      x-examples: {}
+    inline_response_200:
+      example:
+        result: true
+        status: status
+      properties:
+        result:
+          type: boolean
+        status:
+          type: string
+    inline_object:
+      properties:
+        LinearVelocity:
+          type: number
+        AngularVelocity:
+          type: number
+      type: object
+    inline_response_200_1:
+      example:
+        serialNumber: serialNumber
+        robotId: robotId
+      properties:
+        robotId:
+          type: string
+        serialNumber:
+          type: string
+    inline_object_1:
+      properties:
+        RightTrackSpeed:
+          type: number
+        LeftTrackSpeed:
+          type: number
+      type: object

@@ -56,16 +56,14 @@ from pprint import pprint
 configuration.host = "http://localhost:3000"
 # Create an instance of the API class
 api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
-angular_velocity = 3.4 # float |  (optional)
-linear_velocity = 3.4 # float |  (optional)
-body = openapi_client.Null() # Null |  (optional)
+inline_object = openapi_client.InlineObject() # InlineObject |  (optional)
 
 try:
-    # Your GET endpoint
-    api_response = api_instance.api_drive_get(angular_velocity=angular_velocity, linear_velocity=linear_velocity, body=body)
+    # Drive POST
+    api_response = api_instance.drive(inline_object=inline_object)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->api_drive_get: %s\n" % e)
+    print("Exception when calling DefaultApi->drive: %s\n" % e)
 
 ```
 
@@ -75,15 +73,21 @@ All URIs are relative to *http://localhost:3000*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**api_drive_get**](docs/DefaultApi.md#api_drive_get) | **GET** /api/drive | Your GET endpoint
-*DefaultApi* | [**api_drive_post**](docs/DefaultApi.md#api_drive_post) | **POST** /api/drive | 
-*DefaultApi* | [**api_drive_stop_get**](docs/DefaultApi.md#api_drive_stop_get) | **GET** /api/drive/stop | Your GET endpoint
-*DefaultApi* | [**api_drive_stop_post**](docs/DefaultApi.md#api_drive_stop_post) | **POST** /api/drive/stop | 
+*DefaultApi* | [**drive**](docs/DefaultApi.md#drive) | **POST** /api/drive | Drive POST
+*DefaultApi* | [**drive_get**](docs/DefaultApi.md#drive_get) | **GET** /api/drive | Drive GET
+*DefaultApi* | [**drive_track**](docs/DefaultApi.md#drive_track) | **POST** /api/drive/track | Drive Track Post
+*DefaultApi* | [**drive_track_get**](docs/DefaultApi.md#drive_track_get) | **GET** /api/drive/track | Drive Track GET
+*DefaultApi* | [**get_device_information**](docs/DefaultApi.md#get_device_information) | **GET** /api/device | Device GET
+*DefaultApi* | [**stop**](docs/DefaultApi.md#stop) | **POST** /api/drive/stop | Drive Stop POST
+*DefaultApi* | [**stop_get**](docs/DefaultApi.md#stop_get) | **GET** /api/drive/stop | Drive Stop GET
 
 
 ## Documentation For Models
 
  - [InlineObject](docs/InlineObject.md)
+ - [InlineObject1](docs/InlineObject1.md)
+ - [InlineResponse200](docs/InlineResponse200.md)
+ - [InlineResponse2001](docs/InlineResponse2001.md)
 
 
 ## Documentation For Authorization

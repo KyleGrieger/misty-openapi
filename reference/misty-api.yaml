@@ -10,7 +10,7 @@ paths:
   /api/drive:
     get:
       x-openapi-router-controller: api
-      summary: Your GET endpoint
+      summary: Drive GET
       tags: []
       responses:
         '200':
@@ -50,7 +50,7 @@ paths:
       operationId: drive_get
     post:
       x-openapi-router-controller: api
-      summary: ''
+      summary: Drive POST
       responses:
         '200':
           description: OK
@@ -92,7 +92,7 @@ paths:
   /api/drive/stop:
     get:
       x-openapi-router-controller: api
-      summary: Your GET endpoint
+      summary: Drive Stop GET
       tags: []
       responses:
         '200':
@@ -118,7 +118,7 @@ paths:
       operationId: stop_get
     post:
       x-openapi-router-controller: api
-      summary: ''
+      summary: Drive Stop POST
       responses:
         '200':
           description: OK
@@ -144,7 +144,7 @@ paths:
   /api/device:
     get:
       x-openapi-router-controller: api
-      summary: Your GET endpoint
+      summary: Device GET
       tags: []
       responses:
         '200':
@@ -167,7 +167,7 @@ paths:
   /api/drive/track:
     get:
       x-openapi-router-controller: api
-      summary: Your GET endpoint
+      summary: Drive Track GET
       tags: []
       responses:
         '200':
@@ -206,7 +206,7 @@ paths:
             schema: {}
     post:
       x-openapi-router-controller: api
-      summary: ''
+      summary: Drive Track Post
       responses:
         '200':
           description: OK

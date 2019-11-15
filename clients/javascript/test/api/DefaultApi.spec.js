@@ -48,40 +48,70 @@
   }
 
   describe('DefaultApi', function() {
-    describe('apiDriveGet', function() {
-      it('should call apiDriveGet successfully', function(done) {
-        //uncomment below and update the code to test apiDriveGet
-        //instance.apiDriveGet(function(error) {
+    describe('drive', function() {
+      it('should call drive successfully', function(done) {
+        //uncomment below and update the code to test drive
+        //instance.drive(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('apiDrivePost', function() {
-      it('should call apiDrivePost successfully', function(done) {
-        //uncomment below and update the code to test apiDrivePost
-        //instance.apiDrivePost(function(error) {
+    describe('driveGet', function() {
+      it('should call driveGet successfully', function(done) {
+        //uncomment below and update the code to test driveGet
+        //instance.driveGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('apiDriveStopGet', function() {
-      it('should call apiDriveStopGet successfully', function(done) {
-        //uncomment below and update the code to test apiDriveStopGet
-        //instance.apiDriveStopGet(function(error) {
+    describe('driveTrack', function() {
+      it('should call driveTrack successfully', function(done) {
+        //uncomment below and update the code to test driveTrack
+        //instance.driveTrack(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('apiDriveStopPost', function() {
-      it('should call apiDriveStopPost successfully', function(done) {
-        //uncomment below and update the code to test apiDriveStopPost
-        //instance.apiDriveStopPost(function(error) {
+    describe('driveTrackGet', function() {
+      it('should call driveTrackGet successfully', function(done) {
+        //uncomment below and update the code to test driveTrackGet
+        //instance.driveTrackGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getDeviceInformation', function() {
+      it('should call getDeviceInformation successfully', function(done) {
+        //uncomment below and update the code to test getDeviceInformation
+        //instance.getDeviceInformation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('stop', function() {
+      it('should call stop successfully', function(done) {
+        //uncomment below and update the code to test stop
+        //instance.stop(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('stopGet', function() {
+      it('should call stopGet successfully', function(done) {
+        //uncomment below and update the code to test stopGet
+        //instance.stopGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

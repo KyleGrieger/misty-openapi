@@ -103,9 +103,7 @@ var MistyApi = require('misty_api');
 
 var api = new MistyApi.DefaultApi()
 var opts = {
-  'angularVelocity': 3.4, // {Number} 
-  'linearVelocity': 3.4, // {Number} 
-  'body': new MistyApi.ModelNull() // {ModelNull} 
+  'inlineObject': new MistyApi.InlineObject() // {InlineObject} 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -114,7 +112,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.apiDriveGet(opts, callback);
+api.drive(opts, callback);
 
 ```
 
@@ -124,15 +122,21 @@ All URIs are relative to *http://localhost:3000*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*MistyApi.DefaultApi* | [**apiDriveGet**](docs/DefaultApi.md#apiDriveGet) | **GET** /api/drive | Your GET endpoint
-*MistyApi.DefaultApi* | [**apiDrivePost**](docs/DefaultApi.md#apiDrivePost) | **POST** /api/drive | 
-*MistyApi.DefaultApi* | [**apiDriveStopGet**](docs/DefaultApi.md#apiDriveStopGet) | **GET** /api/drive/stop | Your GET endpoint
-*MistyApi.DefaultApi* | [**apiDriveStopPost**](docs/DefaultApi.md#apiDriveStopPost) | **POST** /api/drive/stop | 
+*MistyApi.DefaultApi* | [**drive**](docs/DefaultApi.md#drive) | **POST** /api/drive | Drive POST
+*MistyApi.DefaultApi* | [**driveGet**](docs/DefaultApi.md#driveGet) | **GET** /api/drive | Drive GET
+*MistyApi.DefaultApi* | [**driveTrack**](docs/DefaultApi.md#driveTrack) | **POST** /api/drive/track | Drive Track Post
+*MistyApi.DefaultApi* | [**driveTrackGet**](docs/DefaultApi.md#driveTrackGet) | **GET** /api/drive/track | Drive Track GET
+*MistyApi.DefaultApi* | [**getDeviceInformation**](docs/DefaultApi.md#getDeviceInformation) | **GET** /api/device | Device GET
+*MistyApi.DefaultApi* | [**stop**](docs/DefaultApi.md#stop) | **POST** /api/drive/stop | Drive Stop POST
+*MistyApi.DefaultApi* | [**stopGet**](docs/DefaultApi.md#stopGet) | **GET** /api/drive/stop | Drive Stop GET
 
 
 ## Documentation for Models
 
  - [MistyApi.InlineObject](docs/InlineObject.md)
+ - [MistyApi.InlineObject1](docs/InlineObject1.md)
+ - [MistyApi.InlineResponse200](docs/InlineResponse200.md)
+ - [MistyApi.InlineResponse2001](docs/InlineResponse2001.md)
 
 
 ## Documentation for Authorization

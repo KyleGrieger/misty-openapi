@@ -4,69 +4,21 @@ All URIs are relative to *http://localhost:3000*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiDriveGet**](DefaultApi.md#apiDriveGet) | **GET** /api/drive | Your GET endpoint
-[**apiDrivePost**](DefaultApi.md#apiDrivePost) | **POST** /api/drive | 
-[**apiDriveStopGet**](DefaultApi.md#apiDriveStopGet) | **GET** /api/drive/stop | Your GET endpoint
-[**apiDriveStopPost**](DefaultApi.md#apiDriveStopPost) | **POST** /api/drive/stop | 
+[**drive**](DefaultApi.md#drive) | **POST** /api/drive | Drive POST
+[**driveGet**](DefaultApi.md#driveGet) | **GET** /api/drive | Drive GET
+[**driveTrack**](DefaultApi.md#driveTrack) | **POST** /api/drive/track | Drive Track Post
+[**driveTrackGet**](DefaultApi.md#driveTrackGet) | **GET** /api/drive/track | Drive Track GET
+[**getDeviceInformation**](DefaultApi.md#getDeviceInformation) | **GET** /api/device | Device GET
+[**stop**](DefaultApi.md#stop) | **POST** /api/drive/stop | Drive Stop POST
+[**stopGet**](DefaultApi.md#stopGet) | **GET** /api/drive/stop | Drive Stop GET
 
 
 
-## apiDriveGet
+## drive
 
-> [Object] apiDriveGet(opts)
+> [InlineResponse200] drive(opts)
 
-Your GET endpoint
-
-Drive
-
-### Example
-
-```javascript
-import MistyApi from 'misty_api';
-
-let apiInstance = new MistyApi.DefaultApi();
-let opts = {
-  'angularVelocity': 3.4, // Number | 
-  'linearVelocity': 3.4, // Number | 
-  'body': new MistyApi.ModelNull() // ModelNull | 
-};
-apiInstance.apiDriveGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **angularVelocity** | **Number**|  | [optional] 
- **linearVelocity** | **Number**|  | [optional] 
- **body** | **ModelNull**|  | [optional] 
-
-### Return type
-
-**[Object]**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json, application/xml
-
-
-## apiDrivePost
-
-> [Object] apiDrivePost(opts)
-
-
+Drive POST
 
 Drive
 
@@ -79,7 +31,7 @@ let apiInstance = new MistyApi.DefaultApi();
 let opts = {
   'inlineObject': new MistyApi.InlineObject() // InlineObject | 
 };
-apiInstance.apiDrivePost(opts, (error, data, response) => {
+apiInstance.drive(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -97,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[Object]**
+[**[InlineResponse200]**](InlineResponse200.md)
 
 ### Authorization
 
@@ -109,13 +61,13 @@ No authorization required
 - **Accept**: application/json
 
 
-## apiDriveStopGet
+## driveGet
 
-> [Object] apiDriveStopGet()
+> [InlineResponse200] driveGet(opts)
 
-Your GET endpoint
+Drive GET
 
-Stop
+Drive
 
 ### Example
 
@@ -123,7 +75,156 @@ Stop
 import MistyApi from 'misty_api';
 
 let apiInstance = new MistyApi.DefaultApi();
-apiInstance.apiDriveStopGet((error, data, response) => {
+let opts = {
+  'angularVelocity': 3.4, // Number | 
+  'linearVelocity': 3.4, // Number | 
+  'body': null // Object | 
+};
+apiInstance.driveGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **angularVelocity** | **Number**|  | [optional] 
+ **linearVelocity** | **Number**|  | [optional] 
+ **body** | **Object**|  | [optional] 
+
+### Return type
+
+[**[InlineResponse200]**](InlineResponse200.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## driveTrack
+
+> [InlineResponse200] driveTrack(opts)
+
+Drive Track Post
+
+Drive Track
+
+### Example
+
+```javascript
+import MistyApi from 'misty_api';
+
+let apiInstance = new MistyApi.DefaultApi();
+let opts = {
+  'inlineObject1': new MistyApi.InlineObject1() // InlineObject1 | 
+};
+apiInstance.driveTrack(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inlineObject1** | [**InlineObject1**](InlineObject1.md)|  | [optional] 
+
+### Return type
+
+[**[InlineResponse200]**](InlineResponse200.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## driveTrackGet
+
+> [InlineResponse200] driveTrackGet(opts)
+
+Drive Track GET
+
+Drive Track
+
+### Example
+
+```javascript
+import MistyApi from 'misty_api';
+
+let apiInstance = new MistyApi.DefaultApi();
+let opts = {
+  'leftTrackSpeed': "leftTrackSpeed_example", // String | 
+  'rightTrackSpeed': "rightTrackSpeed_example", // String | 
+  'body': null // Object | 
+};
+apiInstance.driveTrackGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **leftTrackSpeed** | **String**|  | [optional] 
+ **rightTrackSpeed** | **String**|  | [optional] 
+ **body** | **Object**|  | [optional] 
+
+### Return type
+
+[**[InlineResponse200]**](InlineResponse200.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getDeviceInformation
+
+> [InlineResponse2001] getDeviceInformation()
+
+Device GET
+
+Get Device Information
+
+### Example
+
+```javascript
+import MistyApi from 'misty_api';
+
+let apiInstance = new MistyApi.DefaultApi();
+apiInstance.getDeviceInformation((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -138,7 +239,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**[Object]**
+[**[InlineResponse2001]**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -150,11 +251,11 @@ No authorization required
 - **Accept**: application/json
 
 
-## apiDriveStopPost
+## stop
 
-> [Object] apiDriveStopPost()
+> [InlineResponse200] stop()
 
-
+Drive Stop POST
 
 Stop
 
@@ -164,7 +265,7 @@ Stop
 import MistyApi from 'misty_api';
 
 let apiInstance = new MistyApi.DefaultApi();
-apiInstance.apiDriveStopPost((error, data, response) => {
+apiInstance.stop((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -179,7 +280,48 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**[Object]**
+[**[InlineResponse200]**](InlineResponse200.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## stopGet
+
+> [InlineResponse200] stopGet()
+
+Drive Stop GET
+
+Stop
+
+### Example
+
+```javascript
+import MistyApi from 'misty_api';
+
+let apiInstance = new MistyApi.DefaultApi();
+apiInstance.stopGet((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[InlineResponse200]**](InlineResponse200.md)
 
 ### Authorization
 

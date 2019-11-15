@@ -29,4 +29,7 @@ from openapi_client.exceptions import ApiKeyError
 from openapi_client.exceptions import ApiException
 # import models into sdk package
 from openapi_client.models.inline_object import InlineObject
+from openapi_client.models.inline_object1 import InlineObject1
+from openapi_client.models.inline_response200 import InlineResponse200
+from openapi_client.models.inline_response2001 import InlineResponse2001
 

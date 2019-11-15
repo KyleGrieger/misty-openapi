@@ -276,7 +276,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         return [
             {
                 'url': "http://localhost:3000",
-                'description': "No description provided",
+                'description': "misty",
             }
         ]
 

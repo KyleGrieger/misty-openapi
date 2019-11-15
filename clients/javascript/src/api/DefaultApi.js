@@ -14,7 +14,9 @@
 
 import ApiClient from "../ApiClient";
 import InlineObject from '../model/InlineObject';
-import ModelNull from '../model/ModelNull';
+import InlineObject1 from '../model/InlineObject1';
+import InlineResponse200 from '../model/InlineResponse200';
+import InlineResponse2001 from '../model/InlineResponse2001';
 
 /**
 * Default service.
@@ -36,24 +38,64 @@ export default class DefaultApi {
 
 
     /**
-     * Callback function to receive the result of the apiDriveGet operation.
-     * @callback module:api/DefaultApi~apiDriveGetCallback
+     * Callback function to receive the result of the drive operation.
+     * @callback module:api/DefaultApi~driveCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {Array.<module:model/InlineResponse200>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Your GET endpoint
+     * Drive POST
+     * Drive
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject} opts.inlineObject 
+     * @param {module:api/DefaultApi~driveCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/InlineResponse200>}
+     */
+    drive(opts, callback) {
+      opts = opts || {};
+      let postBody = opts['inlineObject'];
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = [InlineResponse200];
+      return this.apiClient.callApi(
+        '/api/drive', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the driveGet operation.
+     * @callback module:api/DefaultApi~driveGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/InlineResponse200>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Drive GET
      * Drive
      * @param {Object} opts Optional parameters
      * @param {Number} opts.angularVelocity 
      * @param {Number} opts.linearVelocity 
-     * @param {module:model/ModelNull} opts.body 
-     * @param {module:api/DefaultApi~apiDriveGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * @param {Object} opts.body 
+     * @param {module:api/DefaultApi~driveGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/InlineResponse200>}
      */
-    apiDriveGet(opts, callback) {
+    driveGet(opts, callback) {
       opts = opts || {};
       let postBody = opts['body'];
 
@@ -70,8 +112,8 @@ export default class DefaultApi {
 
       let authNames = [];
       let contentTypes = ['application/json'];
-      let accepts = ['application/json', 'application/xml'];
-      let returnType = [Object];
+      let accepts = ['application/json'];
+      let returnType = [InlineResponse200];
       return this.apiClient.callApi(
         '/api/drive', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -80,23 +122,24 @@ export default class DefaultApi {
     }
 
     /**
-     * Callback function to receive the result of the apiDrivePost operation.
-     * @callback module:api/DefaultApi~apiDrivePostCallback
+     * Callback function to receive the result of the driveTrack operation.
+     * @callback module:api/DefaultApi~driveTrackCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {Array.<module:model/InlineResponse200>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Drive
+     * Drive Track Post
+     * Drive Track
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject} opts.inlineObject 
-     * @param {module:api/DefaultApi~apiDrivePostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * @param {module:model/InlineObject1} opts.inlineObject1 
+     * @param {module:api/DefaultApi~driveTrackCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/InlineResponse200>}
      */
-    apiDrivePost(opts, callback) {
+    driveTrack(opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject'];
+      let postBody = opts['inlineObject1'];
 
       let pathParams = {
       };
@@ -110,29 +153,73 @@ export default class DefaultApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = [Object];
+      let returnType = [InlineResponse200];
       return this.apiClient.callApi(
-        '/api/drive', 'POST',
+        '/api/drive/track', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the apiDriveStopGet operation.
-     * @callback module:api/DefaultApi~apiDriveStopGetCallback
+     * Callback function to receive the result of the driveTrackGet operation.
+     * @callback module:api/DefaultApi~driveTrackGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {Array.<module:model/InlineResponse200>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Your GET endpoint
-     * Stop
-     * @param {module:api/DefaultApi~apiDriveStopGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * Drive Track GET
+     * Drive Track
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.leftTrackSpeed 
+     * @param {String} opts.rightTrackSpeed 
+     * @param {Object} opts.body 
+     * @param {module:api/DefaultApi~driveTrackGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/InlineResponse200>}
      */
-    apiDriveStopGet(callback) {
+    driveTrackGet(opts, callback) {
+      opts = opts || {};
+      let postBody = opts['body'];
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'LeftTrackSpeed': opts['leftTrackSpeed'],
+        'RightTrackSpeed': opts['rightTrackSpeed']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = [InlineResponse200];
+      return this.apiClient.callApi(
+        '/api/drive/track', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getDeviceInformation operation.
+     * @callback module:api/DefaultApi~getDeviceInformationCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/InlineResponse2001>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Device GET
+     * Get Device Information
+     * @param {module:api/DefaultApi~getDeviceInformationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/InlineResponse2001>}
+     */
+    getDeviceInformation(callback) {
       let postBody = null;
 
       let pathParams = {
@@ -147,28 +234,29 @@ export default class DefaultApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [Object];
+      let returnType = [InlineResponse2001];
       return this.apiClient.callApi(
-        '/api/drive/stop', 'GET',
+        '/api/device', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the apiDriveStopPost operation.
-     * @callback module:api/DefaultApi~apiDriveStopPostCallback
+     * Callback function to receive the result of the stop operation.
+     * @callback module:api/DefaultApi~stopCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {Array.<module:model/InlineResponse200>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
+     * Drive Stop POST
      * Stop
-     * @param {module:api/DefaultApi~apiDriveStopPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * @param {module:api/DefaultApi~stopCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/InlineResponse200>}
      */
-    apiDriveStopPost(callback) {
+    stop(callback) {
       let postBody = null;
 
       let pathParams = {
@@ -183,9 +271,46 @@ export default class DefaultApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [Object];
+      let returnType = [InlineResponse200];
       return this.apiClient.callApi(
         '/api/drive/stop', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the stopGet operation.
+     * @callback module:api/DefaultApi~stopGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/InlineResponse200>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Drive Stop GET
+     * Stop
+     * @param {module:api/DefaultApi~stopGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/InlineResponse200>}
+     */
+    stopGet(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = [InlineResponse200];
+      return this.apiClient.callApi(
+        '/api/drive/stop', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

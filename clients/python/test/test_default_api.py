@@ -28,29 +28,52 @@ class TestDefaultApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_api_drive_get(self):
-        """Test case for api_drive_get
+    def test_drive(self):
+        """Test case for drive
 
-        Your GET endpoint  # noqa: E501
+        Drive POST  # noqa: E501
         """
         pass
 
-    def test_api_drive_post(self):
-        """Test case for api_drive_post
+    def test_drive_get(self):
+        """Test case for drive_get
 
+        Drive GET  # noqa: E501
         """
         pass
 
-    def test_api_drive_stop_get(self):
-        """Test case for api_drive_stop_get
+    def test_drive_track(self):
+        """Test case for drive_track
 
-        Your GET endpoint  # noqa: E501
+        Drive Track Post  # noqa: E501
         """
         pass
 
-    def test_api_drive_stop_post(self):
-        """Test case for api_drive_stop_post
+    def test_drive_track_get(self):
+        """Test case for drive_track_get
 
+        Drive Track GET  # noqa: E501
+        """
+        pass
+
+    def test_get_device_information(self):
+        """Test case for get_device_information
+
+        Device GET  # noqa: E501
+        """
+        pass
+
+    def test_stop(self):
+        """Test case for stop
+
+        Drive Stop POST  # noqa: E501
+        """
+        pass
+
+    def test_stop_get(self):
+        """Test case for stop_get
+
+        Drive Stop GET  # noqa: E501
         """
         pass
 
