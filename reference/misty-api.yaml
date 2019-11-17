@@ -17,13 +17,6 @@ paths:
           content:
             application/json:
               schema:
-                title: response
-                type: array
-                x-examples:
-                  example-1:
-                    - result: true
-                      status: Success
-                description: response
                 items:
                   type: object
                   properties:
@@ -31,6 +24,13 @@ paths:
                       type: boolean
                     status:
                       type: string
+                description: response
+                x-examples:
+                  example-1:
+                    - result: true
+                      status: Success
+                type: array
+                title: response
       requestBody:
         content:
           application/json:
@@ -44,6 +44,7 @@ paths:
                 value:
                   LinearVelocity: 5
                   AngularVelocity: 5
+        description: Drive
       description: Drive
       operationId: drive
     parameters: []
@@ -57,13 +58,6 @@ paths:
           content:
             application/json:
               schema:
-                title: response
-                type: array
-                x-examples:
-                  example-1:
-                    - result: true
-                      status: Success
-                description: response
                 items:
                   type: object
                   properties:
@@ -71,6 +65,13 @@ paths:
                       type: boolean
                     status:
                       type: string
+                description: response
+                x-examples:
+                  example-1:
+                    - result: true
+                      status: Success
+                type: array
+                title: response
       description: Stop
       operationId: stop
   /api/device:
@@ -84,26 +85,6 @@ paths:
           content:
             application/json:
               schema:
-                title: device
-                type: array
-                x-examples:
-                  get-device-information-example:
-                    - result:
-                        robotId: '12345'
-                        serialNumber: '12345'
-                        batteryLevel: 0.5
-                        hardwareInfo: {}
-                        ipAddress: 0.0.0.0
-                        occipitalDeviceInfo: {}
-                        outputCapabilities:
-                          - sure
-                        robotVersion: 1.0.0.0
-                        sensorCapabilities:
-                          - uh hunh
-                        sensoryServiceAppVersion: 1.0.0.0
-                        windowsOSVersion: 1.0.0.0
-                      status: Success
-                description: ''
                 items:
                   type: object
                   properties:
@@ -129,6 +110,26 @@ paths:
                           type: array
                           items: {}
                     status: {}
+                description: ''
+                x-examples:
+                  get-device-information-example:
+                    - result:
+                        robotId: '12345'
+                        serialNumber: '12345'
+                        batteryLevel: 0.5
+                        hardwareInfo: {}
+                        ipAddress: 0.0.0.0
+                        occipitalDeviceInfo: {}
+                        outputCapabilities:
+                          - sure
+                        robotVersion: 1.0.0.0
+                        sensorCapabilities:
+                          - uh hunh
+                        sensoryServiceAppVersion: 1.0.0.0
+                        windowsOSVersion: 1.0.0.0
+                      status: Success
+                type: array
+                title: device
       operationId: get_device_information
       description: Get Device Information
   /api/drive/track:
@@ -141,13 +142,6 @@ paths:
           content:
             application/json:
               schema:
-                title: response
-                type: array
-                x-examples:
-                  example-1:
-                    - result: true
-                      status: Success
-                description: response
                 items:
                   type: object
                   properties:
@@ -155,6 +149,13 @@ paths:
                       type: boolean
                     status:
                       type: string
+                description: response
+                x-examples:
+                  example-1:
+                    - result: true
+                      status: Success
+                type: array
+                title: response
       parameters: []
       requestBody:
         content:
@@ -169,11 +170,11 @@ paths:
                 value:
                   LeftTrackSpeed: 30
                   RightTrackSpeed: 70
+        description: Drive Track
       operationId: drive_track
       description: Drive Track
   /api/drive/hdt:
     post:
-      x-openapi-router-controller: api
       summary: Drive Heading
       responses:
         '200':
@@ -181,26 +182,6 @@ paths:
           content:
             application/json:
               schema:
-                title: device
-                type: array
-                x-examples:
-                  get-device-information-example:
-                    - result:
-                        robotId: '12345'
-                        serialNumber: '12345'
-                        batteryLevel: 0.5
-                        hardwareInfo: {}
-                        ipAddress: 0.0.0.0
-                        occipitalDeviceInfo: {}
-                        outputCapabilities:
-                          - sure
-                        robotVersion: 1.0.0.0
-                        sensorCapabilities:
-                          - uh hunh
-                        sensoryServiceAppVersion: 1.0.0.0
-                        windowsOSVersion: 1.0.0.0
-                      status: Success
-                description: ''
                 items:
                   type: object
                   properties:
@@ -226,6 +207,26 @@ paths:
                           type: array
                           items: {}
                     status: {}
+                description: ''
+                x-examples:
+                  get-device-information-example:
+                    - result:
+                        robotId: '12345'
+                        serialNumber: '12345'
+                        batteryLevel: 0.5
+                        hardwareInfo: {}
+                        ipAddress: 0.0.0.0
+                        occipitalDeviceInfo: {}
+                        outputCapabilities:
+                          - sure
+                        robotVersion: 1.0.0.0
+                        sensorCapabilities:
+                          - uh hunh
+                        sensoryServiceAppVersion: 1.0.0.0
+                        windowsOSVersion: 1.0.0.0
+                      status: Success
+                type: array
+                title: device
       description: Drive Heading
       operationId: drive_heading
       requestBody:
@@ -243,9 +244,10 @@ paths:
                   Heading: 90
                   Distance: 1
                   TimeMs: 4000
+        description: Drive Heading
+      x-openapi-router-controller: api
   /api/drive/time:
     post:
-      x-openapi-router-controller: api
       summary: Drive Time
       responses:
         '200':
@@ -253,13 +255,6 @@ paths:
           content:
             application/json:
               schema:
-                title: response
-                type: array
-                x-examples:
-                  example-1:
-                    - result: true
-                      status: Success
-                description: response
                 items:
                   type: object
                   properties:
@@ -267,6 +262,13 @@ paths:
                       type: boolean
                     status:
                       type: string
+                description: response
+                x-examples:
+                  example-1:
+                    - result: true
+                      status: Success
+                type: array
+                title: response
       description: Drive Time
       operationId: drive_time
       requestBody:
@@ -284,6 +286,8 @@ paths:
                   LinearVelocity: 1
                   AngularVelocity: 4
                   TimeMS: 500
+        description: Drive Time
+      x-openapi-router-controller: api
 components:
   schemas:
     response:
@@ -321,7 +325,7 @@ components:
               sensoryServiceAppVersion: 1.0.0.0
               windowsOSVersion: 1.0.0.0
             status: Success
-      description: ''
+      description: device
       items:
         type: object
         properties:

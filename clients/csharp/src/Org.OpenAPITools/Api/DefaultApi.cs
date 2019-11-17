@@ -25,7 +25,7 @@ namespace Org.OpenAPITools.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Drive POST
+        /// Drive
         /// </summary>
         /// <remarks>
         /// Drive
@@ -36,7 +36,7 @@ namespace Org.OpenAPITools.Api
         List<InlineResponse200> Drive (InlineObject inlineObject = default(InlineObject));
 
         /// <summary>
-        /// Drive POST
+        /// Drive
         /// </summary>
         /// <remarks>
         /// Drive
@@ -46,32 +46,49 @@ namespace Org.OpenAPITools.Api
         /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
         ApiResponse<List<InlineResponse200>> DriveWithHttpInfo (InlineObject inlineObject = default(InlineObject));
         /// <summary>
-        /// Drive GET
+        /// Drive Heading
         /// </summary>
         /// <remarks>
-        /// Drive
+        /// Drive Heading
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="angularVelocity"> (optional)</param>
-        /// <param name="linearVelocity"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>List&lt;InlineResponse200&gt;</returns>
-        List<InlineResponse200> DriveGet (decimal angularVelocity = default(decimal), decimal linearVelocity = default(decimal), Object body = default(Object));
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>List&lt;InlineResponse2001&gt;</returns>
+        List<InlineResponse2001> DriveHeading (InlineObject2 inlineObject2 = default(InlineObject2));
 
         /// <summary>
-        /// Drive GET
+        /// Drive Heading
         /// </summary>
         /// <remarks>
-        /// Drive
+        /// Drive Heading
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="angularVelocity"> (optional)</param>
-        /// <param name="linearVelocity"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
-        ApiResponse<List<InlineResponse200>> DriveGetWithHttpInfo (decimal angularVelocity = default(decimal), decimal linearVelocity = default(decimal), Object body = default(Object));
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>ApiResponse of List&lt;InlineResponse2001&gt;</returns>
+        ApiResponse<List<InlineResponse2001>> DriveHeadingWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2));
         /// <summary>
-        /// Drive Track Post
+        /// Drive Time
+        /// </summary>
+        /// <remarks>
+        /// Drive Time
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject3"> (optional)</param>
+        /// <returns>List&lt;InlineResponse200&gt;</returns>
+        List<InlineResponse200> DriveTime (InlineObject3 inlineObject3 = default(InlineObject3));
+
+        /// <summary>
+        /// Drive Time
+        /// </summary>
+        /// <remarks>
+        /// Drive Time
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject3"> (optional)</param>
+        /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
+        ApiResponse<List<InlineResponse200>> DriveTimeWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3));
+        /// <summary>
+        /// Drive Track
         /// </summary>
         /// <remarks>
         /// Drive Track
@@ -82,7 +99,7 @@ namespace Org.OpenAPITools.Api
         List<InlineResponse200> DriveTrack (InlineObject1 inlineObject1 = default(InlineObject1));
 
         /// <summary>
-        /// Drive Track Post
+        /// Drive Track
         /// </summary>
         /// <remarks>
         /// Drive Track
@@ -92,32 +109,7 @@ namespace Org.OpenAPITools.Api
         /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
         ApiResponse<List<InlineResponse200>> DriveTrackWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1));
         /// <summary>
-        /// Drive Track GET
-        /// </summary>
-        /// <remarks>
-        /// Drive Track
-        /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leftTrackSpeed"> (optional)</param>
-        /// <param name="rightTrackSpeed"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>List&lt;InlineResponse200&gt;</returns>
-        List<InlineResponse200> DriveTrackGet (string leftTrackSpeed = default(string), string rightTrackSpeed = default(string), Object body = default(Object));
-
-        /// <summary>
-        /// Drive Track GET
-        /// </summary>
-        /// <remarks>
-        /// Drive Track
-        /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leftTrackSpeed"> (optional)</param>
-        /// <param name="rightTrackSpeed"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
-        ApiResponse<List<InlineResponse200>> DriveTrackGetWithHttpInfo (string leftTrackSpeed = default(string), string rightTrackSpeed = default(string), Object body = default(Object));
-        /// <summary>
-        /// Device GET
+        /// Get Device Information
         /// </summary>
         /// <remarks>
         /// Get Device Information
@@ -127,7 +119,7 @@ namespace Org.OpenAPITools.Api
         List<InlineResponse2001> GetDeviceInformation ();
 
         /// <summary>
-        /// Device GET
+        /// Get Device Information
         /// </summary>
         /// <remarks>
         /// Get Device Information
@@ -136,7 +128,7 @@ namespace Org.OpenAPITools.Api
         /// <returns>ApiResponse of List&lt;InlineResponse2001&gt;</returns>
         ApiResponse<List<InlineResponse2001>> GetDeviceInformationWithHttpInfo ();
         /// <summary>
-        /// Drive Stop POST
+        /// Stop
         /// </summary>
         /// <remarks>
         /// Stop
@@ -146,7 +138,7 @@ namespace Org.OpenAPITools.Api
         List<InlineResponse200> Stop ();
 
         /// <summary>
-        /// Drive Stop POST
+        /// Stop
         /// </summary>
         /// <remarks>
         /// Stop
@@ -154,29 +146,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
         ApiResponse<List<InlineResponse200>> StopWithHttpInfo ();
-        /// <summary>
-        /// Drive Stop GET
-        /// </summary>
-        /// <remarks>
-        /// Stop
-        /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;InlineResponse200&gt;</returns>
-        List<InlineResponse200> StopGet ();
-
-        /// <summary>
-        /// Drive Stop GET
-        /// </summary>
-        /// <remarks>
-        /// Stop
-        /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
-        ApiResponse<List<InlineResponse200>> StopGetWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Drive POST
+        /// Drive
         /// </summary>
         /// <remarks>
         /// Drive
@@ -187,7 +160,7 @@ namespace Org.OpenAPITools.Api
         System.Threading.Tasks.Task<List<InlineResponse200>> DriveAsync (InlineObject inlineObject = default(InlineObject));
 
         /// <summary>
-        /// Drive POST
+        /// Drive
         /// </summary>
         /// <remarks>
         /// Drive
@@ -197,32 +170,49 @@ namespace Org.OpenAPITools.Api
         /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveAsyncWithHttpInfo (InlineObject inlineObject = default(InlineObject));
         /// <summary>
-        /// Drive GET
+        /// Drive Heading
         /// </summary>
         /// <remarks>
-        /// Drive
+        /// Drive Heading
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="angularVelocity"> (optional)</param>
-        /// <param name="linearVelocity"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
-        System.Threading.Tasks.Task<List<InlineResponse200>> DriveGetAsync (decimal angularVelocity = default(decimal), decimal linearVelocity = default(decimal), Object body = default(Object));
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>Task of List&lt;InlineResponse2001&gt;</returns>
+        System.Threading.Tasks.Task<List<InlineResponse2001>> DriveHeadingAsync (InlineObject2 inlineObject2 = default(InlineObject2));
 
         /// <summary>
-        /// Drive GET
+        /// Drive Heading
         /// </summary>
         /// <remarks>
-        /// Drive
+        /// Drive Heading
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="angularVelocity"> (optional)</param>
-        /// <param name="linearVelocity"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveGetAsyncWithHttpInfo (decimal angularVelocity = default(decimal), decimal linearVelocity = default(decimal), Object body = default(Object));
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;InlineResponse2001&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse2001>>> DriveHeadingAsyncWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2));
         /// <summary>
-        /// Drive Track Post
+        /// Drive Time
+        /// </summary>
+        /// <remarks>
+        /// Drive Time
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject3"> (optional)</param>
+        /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
+        System.Threading.Tasks.Task<List<InlineResponse200>> DriveTimeAsync (InlineObject3 inlineObject3 = default(InlineObject3));
+
+        /// <summary>
+        /// Drive Time
+        /// </summary>
+        /// <remarks>
+        /// Drive Time
+        /// </remarks>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject3"> (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveTimeAsyncWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3));
+        /// <summary>
+        /// Drive Track
         /// </summary>
         /// <remarks>
         /// Drive Track
@@ -233,7 +223,7 @@ namespace Org.OpenAPITools.Api
         System.Threading.Tasks.Task<List<InlineResponse200>> DriveTrackAsync (InlineObject1 inlineObject1 = default(InlineObject1));
 
         /// <summary>
-        /// Drive Track Post
+        /// Drive Track
         /// </summary>
         /// <remarks>
         /// Drive Track
@@ -243,32 +233,7 @@ namespace Org.OpenAPITools.Api
         /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveTrackAsyncWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1));
         /// <summary>
-        /// Drive Track GET
-        /// </summary>
-        /// <remarks>
-        /// Drive Track
-        /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leftTrackSpeed"> (optional)</param>
-        /// <param name="rightTrackSpeed"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
-        System.Threading.Tasks.Task<List<InlineResponse200>> DriveTrackGetAsync (string leftTrackSpeed = default(string), string rightTrackSpeed = default(string), Object body = default(Object));
-
-        /// <summary>
-        /// Drive Track GET
-        /// </summary>
-        /// <remarks>
-        /// Drive Track
-        /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leftTrackSpeed"> (optional)</param>
-        /// <param name="rightTrackSpeed"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveTrackGetAsyncWithHttpInfo (string leftTrackSpeed = default(string), string rightTrackSpeed = default(string), Object body = default(Object));
-        /// <summary>
-        /// Device GET
+        /// Get Device Information
         /// </summary>
         /// <remarks>
         /// Get Device Information
@@ -278,7 +243,7 @@ namespace Org.OpenAPITools.Api
         System.Threading.Tasks.Task<List<InlineResponse2001>> GetDeviceInformationAsync ();
 
         /// <summary>
-        /// Device GET
+        /// Get Device Information
         /// </summary>
         /// <remarks>
         /// Get Device Information
@@ -287,7 +252,7 @@ namespace Org.OpenAPITools.Api
         /// <returns>Task of ApiResponse (List&lt;InlineResponse2001&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<InlineResponse2001>>> GetDeviceInformationAsyncWithHttpInfo ();
         /// <summary>
-        /// Drive Stop POST
+        /// Stop
         /// </summary>
         /// <remarks>
         /// Stop
@@ -297,7 +262,7 @@ namespace Org.OpenAPITools.Api
         System.Threading.Tasks.Task<List<InlineResponse200>> StopAsync ();
 
         /// <summary>
-        /// Drive Stop POST
+        /// Stop
         /// </summary>
         /// <remarks>
         /// Stop
@@ -305,25 +270,6 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> StopAsyncWithHttpInfo ();
-        /// <summary>
-        /// Drive Stop GET
-        /// </summary>
-        /// <remarks>
-        /// Stop
-        /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
-        System.Threading.Tasks.Task<List<InlineResponse200>> StopGetAsync ();
-
-        /// <summary>
-        /// Drive Stop GET
-        /// </summary>
-        /// <remarks>
-        /// Stop
-        /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> StopGetAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -436,7 +382,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive POST Drive
+        /// Drive Drive
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject"> (optional)</param>
@@ -448,7 +394,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive POST Drive
+        /// Drive Drive
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject"> (optional)</param>
@@ -507,7 +453,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive POST Drive
+        /// Drive Drive
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject"> (optional)</param>
@@ -520,7 +466,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive POST Drive
+        /// Drive Drive
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject"> (optional)</param>
@@ -579,31 +525,27 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive GET Drive
+        /// Drive Heading Drive Heading
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="angularVelocity"> (optional)</param>
-        /// <param name="linearVelocity"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>List&lt;InlineResponse200&gt;</returns>
-        public List<InlineResponse200> DriveGet (decimal angularVelocity = default(decimal), decimal linearVelocity = default(decimal), Object body = default(Object))
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>List&lt;InlineResponse2001&gt;</returns>
+        public List<InlineResponse2001> DriveHeading (InlineObject2 inlineObject2 = default(InlineObject2))
         {
-             ApiResponse<List<InlineResponse200>> localVarResponse = DriveGetWithHttpInfo(angularVelocity, linearVelocity, body);
+             ApiResponse<List<InlineResponse2001>> localVarResponse = DriveHeadingWithHttpInfo(inlineObject2);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Drive GET Drive
+        /// Drive Heading Drive Heading
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="angularVelocity"> (optional)</param>
-        /// <param name="linearVelocity"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
-        public ApiResponse<List<InlineResponse200>> DriveGetWithHttpInfo (decimal angularVelocity = default(decimal), decimal linearVelocity = default(decimal), Object body = default(Object))
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>ApiResponse of List&lt;InlineResponse2001&gt;</returns>
+        public ApiResponse<List<InlineResponse2001>> DriveHeadingWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2))
         {
 
-            var localVarPath = "/api/drive";
+            var localVarPath = "/api/drive/hdt";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -625,63 +567,57 @@ namespace Org.OpenAPITools.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (angularVelocity != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AngularVelocity", angularVelocity)); // query parameter
-            if (linearVelocity != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LinearVelocity", linearVelocity)); // query parameter
-            if (body != null && body.GetType() != typeof(byte[]))
+            if (inlineObject2 != null && inlineObject2.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject2); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = body; // byte array
+                localVarPostBody = inlineObject2; // byte array
             }
 
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DriveGet", localVarResponse);
+                Exception exception = ExceptionFactory("DriveHeading", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<InlineResponse200>>(localVarStatusCode,
+            return new ApiResponse<List<InlineResponse2001>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<InlineResponse200>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse200>)));
+                (List<InlineResponse2001>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse2001>)));
         }
 
         /// <summary>
-        /// Drive GET Drive
+        /// Drive Heading Drive Heading
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="angularVelocity"> (optional)</param>
-        /// <param name="linearVelocity"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
-        public async System.Threading.Tasks.Task<List<InlineResponse200>> DriveGetAsync (decimal angularVelocity = default(decimal), decimal linearVelocity = default(decimal), Object body = default(Object))
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>Task of List&lt;InlineResponse2001&gt;</returns>
+        public async System.Threading.Tasks.Task<List<InlineResponse2001>> DriveHeadingAsync (InlineObject2 inlineObject2 = default(InlineObject2))
         {
-             ApiResponse<List<InlineResponse200>> localVarResponse = await DriveGetAsyncWithHttpInfo(angularVelocity, linearVelocity, body);
+             ApiResponse<List<InlineResponse2001>> localVarResponse = await DriveHeadingAsyncWithHttpInfo(inlineObject2);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Drive GET Drive
+        /// Drive Heading Drive Heading
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="angularVelocity"> (optional)</param>
-        /// <param name="linearVelocity"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveGetAsyncWithHttpInfo (decimal angularVelocity = default(decimal), decimal linearVelocity = default(decimal), Object body = default(Object))
+        /// <param name="inlineObject2"> (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;InlineResponse2001&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse2001>>> DriveHeadingAsyncWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2))
         {
 
-            var localVarPath = "/api/drive";
+            var localVarPath = "/api/drive/hdt";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -703,28 +639,97 @@ namespace Org.OpenAPITools.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (angularVelocity != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AngularVelocity", angularVelocity)); // query parameter
-            if (linearVelocity != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LinearVelocity", linearVelocity)); // query parameter
-            if (body != null && body.GetType() != typeof(byte[]))
+            if (inlineObject2 != null && inlineObject2.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject2); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = body; // byte array
+                localVarPostBody = inlineObject2; // byte array
             }
 
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DriveGet", localVarResponse);
+                Exception exception = ExceptionFactory("DriveHeading", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<InlineResponse2001>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<InlineResponse2001>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse2001>)));
+        }
+
+        /// <summary>
+        /// Drive Time Drive Time
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject3"> (optional)</param>
+        /// <returns>List&lt;InlineResponse200&gt;</returns>
+        public List<InlineResponse200> DriveTime (InlineObject3 inlineObject3 = default(InlineObject3))
+        {
+             ApiResponse<List<InlineResponse200>> localVarResponse = DriveTimeWithHttpInfo(inlineObject3);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Drive Time Drive Time
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject3"> (optional)</param>
+        /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
+        public ApiResponse<List<InlineResponse200>> DriveTimeWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3))
+        {
+
+            var localVarPath = "/api/drive/time";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inlineObject3 != null && inlineObject3.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject3); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = inlineObject3; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DriveTime", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -734,7 +739,79 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive Track Post Drive Track
+        /// Drive Time Drive Time
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject3"> (optional)</param>
+        /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
+        public async System.Threading.Tasks.Task<List<InlineResponse200>> DriveTimeAsync (InlineObject3 inlineObject3 = default(InlineObject3))
+        {
+             ApiResponse<List<InlineResponse200>> localVarResponse = await DriveTimeAsyncWithHttpInfo(inlineObject3);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Drive Time Drive Time
+        /// </summary>
+        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inlineObject3"> (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveTimeAsyncWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3))
+        {
+
+            var localVarPath = "/api/drive/time";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inlineObject3 != null && inlineObject3.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject3); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = inlineObject3; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DriveTime", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<InlineResponse200>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<InlineResponse200>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse200>)));
+        }
+
+        /// <summary>
+        /// Drive Track Drive Track
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject1"> (optional)</param>
@@ -746,7 +823,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive Track Post Drive Track
+        /// Drive Track Drive Track
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject1"> (optional)</param>
@@ -805,7 +882,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive Track Post Drive Track
+        /// Drive Track Drive Track
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject1"> (optional)</param>
@@ -818,7 +895,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive Track Post Drive Track
+        /// Drive Track Drive Track
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inlineObject1"> (optional)</param>
@@ -877,162 +954,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive Track GET Drive Track
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leftTrackSpeed"> (optional)</param>
-        /// <param name="rightTrackSpeed"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>List&lt;InlineResponse200&gt;</returns>
-        public List<InlineResponse200> DriveTrackGet (string leftTrackSpeed = default(string), string rightTrackSpeed = default(string), Object body = default(Object))
-        {
-             ApiResponse<List<InlineResponse200>> localVarResponse = DriveTrackGetWithHttpInfo(leftTrackSpeed, rightTrackSpeed, body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Drive Track GET Drive Track
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leftTrackSpeed"> (optional)</param>
-        /// <param name="rightTrackSpeed"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
-        public ApiResponse<List<InlineResponse200>> DriveTrackGetWithHttpInfo (string leftTrackSpeed = default(string), string rightTrackSpeed = default(string), Object body = default(Object))
-        {
-
-            var localVarPath = "/api/drive/track";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (leftTrackSpeed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LeftTrackSpeed", leftTrackSpeed)); // query parameter
-            if (rightTrackSpeed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "RightTrackSpeed", rightTrackSpeed)); // query parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("DriveTrackGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<InlineResponse200>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<InlineResponse200>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse200>)));
-        }
-
-        /// <summary>
-        /// Drive Track GET Drive Track
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leftTrackSpeed"> (optional)</param>
-        /// <param name="rightTrackSpeed"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
-        public async System.Threading.Tasks.Task<List<InlineResponse200>> DriveTrackGetAsync (string leftTrackSpeed = default(string), string rightTrackSpeed = default(string), Object body = default(Object))
-        {
-             ApiResponse<List<InlineResponse200>> localVarResponse = await DriveTrackGetAsyncWithHttpInfo(leftTrackSpeed, rightTrackSpeed, body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Drive Track GET Drive Track
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="leftTrackSpeed"> (optional)</param>
-        /// <param name="rightTrackSpeed"> (optional)</param>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveTrackGetAsyncWithHttpInfo (string leftTrackSpeed = default(string), string rightTrackSpeed = default(string), Object body = default(Object))
-        {
-
-            var localVarPath = "/api/drive/track";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (leftTrackSpeed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LeftTrackSpeed", leftTrackSpeed)); // query parameter
-            if (rightTrackSpeed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "RightTrackSpeed", rightTrackSpeed)); // query parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("DriveTrackGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<InlineResponse200>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<InlineResponse200>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse200>)));
-        }
-
-        /// <summary>
-        /// Device GET Get Device Information
+        /// Get Device Information Get Device Information
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;InlineResponse2001&gt;</returns>
@@ -1043,7 +965,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Device GET Get Device Information
+        /// Get Device Information Get Device Information
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;InlineResponse2001&gt;</returns>
@@ -1092,7 +1014,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Device GET Get Device Information
+        /// Get Device Information Get Device Information
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;InlineResponse2001&gt;</returns>
@@ -1104,7 +1026,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Device GET Get Device Information
+        /// Get Device Information Get Device Information
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;InlineResponse2001&gt;)</returns>
@@ -1153,7 +1075,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive Stop POST Stop
+        /// Stop Stop
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;InlineResponse200&gt;</returns>
@@ -1164,7 +1086,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive Stop POST Stop
+        /// Stop Stop
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
@@ -1213,7 +1135,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive Stop POST Stop
+        /// Stop Stop
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
@@ -1225,7 +1147,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Drive Stop POST Stop
+        /// Stop Stop
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
@@ -1265,127 +1187,6 @@ namespace Org.OpenAPITools.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("Stop", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<InlineResponse200>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<InlineResponse200>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse200>)));
-        }
-
-        /// <summary>
-        /// Drive Stop GET Stop
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;InlineResponse200&gt;</returns>
-        public List<InlineResponse200> StopGet ()
-        {
-             ApiResponse<List<InlineResponse200>> localVarResponse = StopGetWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Drive Stop GET Stop
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
-        public ApiResponse<List<InlineResponse200>> StopGetWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/drive/stop";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StopGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<InlineResponse200>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<InlineResponse200>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse200>)));
-        }
-
-        /// <summary>
-        /// Drive Stop GET Stop
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
-        public async System.Threading.Tasks.Task<List<InlineResponse200>> StopGetAsync ()
-        {
-             ApiResponse<List<InlineResponse200>> localVarResponse = await StopGetAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Drive Stop GET Stop
-        /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> StopGetAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/drive/stop";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StopGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

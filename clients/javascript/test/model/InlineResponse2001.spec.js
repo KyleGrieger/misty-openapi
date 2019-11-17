@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(MistyApi.InlineResponse2001);
     });
 
-    it('should have the property robotId (base name: "robotId")', function() {
-      // uncomment below and update the code to test the property robotId
+    it('should have the property result (base name: "result")', function() {
+      // uncomment below and update the code to test the property result
       //var instane = new MistyApi.InlineResponse2001();
       //expect(instance).to.be();
     });
 
-    it('should have the property serialNumber (base name: "serialNumber")', function() {
-      // uncomment below and update the code to test the property serialNumber
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
       //var instane = new MistyApi.InlineResponse2001();
       //expect(instance).to.be();
     });

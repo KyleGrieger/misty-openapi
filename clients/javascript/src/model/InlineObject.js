@@ -48,10 +48,10 @@ class InlineObject {
             obj = obj || new InlineObject();
 
             if (data.hasOwnProperty('LinearVelocity')) {
-                obj['LinearVelocity'] = ApiClient.convertToType(data['LinearVelocity'], 'Number');
+                obj['LinearVelocity'] = ApiClient.convertToType(data['LinearVelocity'], Object);
             }
             if (data.hasOwnProperty('AngularVelocity')) {
-                obj['AngularVelocity'] = ApiClient.convertToType(data['AngularVelocity'], 'Number');
+                obj['AngularVelocity'] = ApiClient.convertToType(data['AngularVelocity'], Object);
             }
         }
         return obj;
@@ -61,12 +61,12 @@ class InlineObject {
 }
 
 /**
- * @member {Number} LinearVelocity
+ * @member {Object} LinearVelocity
  */
 InlineObject.prototype['LinearVelocity'] = undefined;
 
 /**
- * @member {Number} AngularVelocity
+ * @member {Object} AngularVelocity
  */
 InlineObject.prototype['AngularVelocity'] = undefined;
 

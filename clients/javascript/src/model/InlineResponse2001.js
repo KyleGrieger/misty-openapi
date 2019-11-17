@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ApiDeviceResult from './ApiDeviceResult';
 
 /**
  * The InlineResponse2001 model module.
@@ -47,11 +48,11 @@ class InlineResponse2001 {
         if (data) {
             obj = obj || new InlineResponse2001();
 
-            if (data.hasOwnProperty('robotId')) {
-                obj['robotId'] = ApiClient.convertToType(data['robotId'], 'String');
+            if (data.hasOwnProperty('result')) {
+                obj['result'] = ApiDeviceResult.constructFromObject(data['result']);
             }
-            if (data.hasOwnProperty('serialNumber')) {
-                obj['serialNumber'] = ApiClient.convertToType(data['serialNumber'], 'String');
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], Object);
             }
         }
         return obj;
@@ -61,14 +62,14 @@ class InlineResponse2001 {
 }
 
 /**
- * @member {String} robotId
+ * @member {module:model/ApiDeviceResult} result
  */
-InlineResponse2001.prototype['robotId'] = undefined;
+InlineResponse2001.prototype['result'] = undefined;
 
 /**
- * @member {String} serialNumber
+ * @member {Object} status
  */
-InlineResponse2001.prototype['serialNumber'] = undefined;
+InlineResponse2001.prototype['status'] = undefined;
 
 
 

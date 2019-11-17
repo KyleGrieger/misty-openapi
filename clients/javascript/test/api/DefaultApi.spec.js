@@ -58,10 +58,20 @@
         done();
       });
     });
-    describe('driveGet', function() {
-      it('should call driveGet successfully', function(done) {
-        //uncomment below and update the code to test driveGet
-        //instance.driveGet(function(error) {
+    describe('driveHeading', function() {
+      it('should call driveHeading successfully', function(done) {
+        //uncomment below and update the code to test driveHeading
+        //instance.driveHeading(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('driveTime', function() {
+      it('should call driveTime successfully', function(done) {
+        //uncomment below and update the code to test driveTime
+        //instance.driveTime(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -72,16 +82,6 @@
       it('should call driveTrack successfully', function(done) {
         //uncomment below and update the code to test driveTrack
         //instance.driveTrack(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('driveTrackGet', function() {
-      it('should call driveTrackGet successfully', function(done) {
-        //uncomment below and update the code to test driveTrackGet
-        //instance.driveTrackGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -102,16 +102,6 @@
       it('should call stop successfully', function(done) {
         //uncomment below and update the code to test stop
         //instance.stop(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('stopGet', function() {
-      it('should call stopGet successfully', function(done) {
-        //uncomment below and update the code to test stopGet
-        //instance.stopGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

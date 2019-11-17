@@ -11,5 +11,6 @@ Use Python 3.7
 
 	python server.py
 
+The api should be served at http://localhost:3000
 
-
+You can now test tools and scripts written for the Misty API.  

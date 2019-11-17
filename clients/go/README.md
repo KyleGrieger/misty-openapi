@@ -32,19 +32,21 @@ All URIs are relative to *http://localhost:3000*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**Drive**](docs/DefaultApi.md#drive) | **Post** /api/drive | Drive POST
-*DefaultApi* | [**DriveGet**](docs/DefaultApi.md#driveget) | **Get** /api/drive | Drive GET
-*DefaultApi* | [**DriveTrack**](docs/DefaultApi.md#drivetrack) | **Post** /api/drive/track | Drive Track Post
-*DefaultApi* | [**DriveTrackGet**](docs/DefaultApi.md#drivetrackget) | **Get** /api/drive/track | Drive Track GET
-*DefaultApi* | [**GetDeviceInformation**](docs/DefaultApi.md#getdeviceinformation) | **Get** /api/device | Device GET
-*DefaultApi* | [**Stop**](docs/DefaultApi.md#stop) | **Post** /api/drive/stop | Drive Stop POST
-*DefaultApi* | [**StopGet**](docs/DefaultApi.md#stopget) | **Get** /api/drive/stop | Drive Stop GET
+*DefaultApi* | [**Drive**](docs/DefaultApi.md#drive) | **Post** /api/drive | Drive
+*DefaultApi* | [**DriveHeading**](docs/DefaultApi.md#driveheading) | **Post** /api/drive/hdt | Drive Heading
+*DefaultApi* | [**DriveTime**](docs/DefaultApi.md#drivetime) | **Post** /api/drive/time | Drive Time
+*DefaultApi* | [**DriveTrack**](docs/DefaultApi.md#drivetrack) | **Post** /api/drive/track | Drive Track
+*DefaultApi* | [**GetDeviceInformation**](docs/DefaultApi.md#getdeviceinformation) | **Get** /api/device | Get Device Information
+*DefaultApi* | [**Stop**](docs/DefaultApi.md#stop) | **Post** /api/drive/stop | Stop
 
 
 ## Documentation For Models
 
+ - [ApiDeviceResult](docs/ApiDeviceResult.md)
  - [InlineObject](docs/InlineObject.md)
  - [InlineObject1](docs/InlineObject1.md)
+ - [InlineObject2](docs/InlineObject2.md)
+ - [InlineObject3](docs/InlineObject3.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
 

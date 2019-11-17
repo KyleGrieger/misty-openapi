@@ -10,6 +10,6 @@
 package openapi
 // InlineResponse2001 struct for InlineResponse2001
 type InlineResponse2001 struct {
-	RobotId string `json:"robotId,omitempty"`
-	SerialNumber string `json:"serialNumber,omitempty"`
+	Result ApiDeviceResult `json:"result,omitempty"`
+	Status map[string]interface{} `json:"status,omitempty"`
 }

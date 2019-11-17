@@ -8,46 +8,6 @@ servers:
   url: http://localhost:3000
 paths:
   /api/drive:
-    get:
-      description: Drive
-      operationId: drive_get
-      parameters:
-      - explode: true
-        in: query
-        name: AngularVelocity
-        required: false
-        schema:
-          type: number
-        style: form
-      - explode: true
-        in: query
-        name: LinearVelocity
-        required: false
-        schema:
-          type: number
-        style: form
-      requestBody:
-        content:
-          application/json:
-            schema: {}
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                description: response
-                items:
-                  $ref: '#/components/schemas/inline_response_200'
-                title: response
-                type: array
-                x-examples:
-                  example-1:
-                  - result: true
-                    status: Success
-          description: OK
-      summary: Drive GET
-      tags: []
-      x-openapi-router-controller: api
     post:
       description: Drive
       operationId: drive
@@ -62,11 +22,10 @@ paths:
                   AngularVelocity: 5
             schema:
               properties:
-                LinearVelocity:
-                  type: number
-                AngularVelocity:
-                  type: number
+                LinearVelocity: {}
+                AngularVelocity: {}
               type: object
+        description: Drive
       responses:
         200:
           content:
@@ -82,30 +41,9 @@ paths:
                   - result: true
                     status: Success
           description: OK
-      summary: Drive POST
+      summary: Drive
       x-openapi-router-controller: api
   /api/drive/stop:
-    get:
-      description: Stop
-      operationId: stop_get
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                description: response
-                items:
-                  $ref: '#/components/schemas/inline_response_200'
-                title: response
-                type: array
-                x-examples:
-                  example-1:
-                  - result: true
-                    status: Success
-          description: OK
-      summary: Drive Stop GET
-      tags: []
-      x-openapi-router-controller: api
     post:
       description: Stop
       operationId: stop
@@ -124,7 +62,7 @@ paths:
                   - result: true
                     status: Success
           description: OK
-      summary: Drive Stop POST
+      summary: Stop
       x-openapi-router-controller: api
   /api/device:
     get:
@@ -139,52 +77,28 @@ paths:
                   $ref: '#/components/schemas/inline_response_200_1'
                 title: device
                 type: array
-                x-examples: {}
+                x-examples:
+                  get-device-information-example:
+                  - result:
+                      robotId: "12345"
+                      serialNumber: "12345"
+                      batteryLevel: 0.5
+                      hardwareInfo: {}
+                      ipAddress: 0.0.0.0
+                      occipitalDeviceInfo: {}
+                      outputCapabilities:
+                      - sure
+                      robotVersion: 1.0.0.0
+                      sensorCapabilities:
+                      - uh hunh
+                      sensoryServiceAppVersion: 1.0.0.0
+                      windowsOSVersion: 1.0.0.0
+                    status: Success
           description: OK
-      summary: Device GET
+      summary: Get Device Information
       tags: []
       x-openapi-router-controller: api
   /api/drive/track:
-    get:
-      description: Drive Track
-      operationId: drive_track_get
-      parameters:
-      - explode: true
-        in: query
-        name: LeftTrackSpeed
-        required: false
-        schema:
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: RightTrackSpeed
-        required: false
-        schema:
-          type: string
-        style: form
-      requestBody:
-        content:
-          application/json:
-            schema: {}
-      responses:
-        200:
-          content:
-            application/json:
-              schema:
-                description: response
-                items:
-                  $ref: '#/components/schemas/inline_response_200'
-                title: response
-                type: array
-                x-examples:
-                  example-1:
-                  - result: true
-                    status: Success
-          description: OK
-      summary: Drive Track GET
-      tags: []
-      x-openapi-router-controller: api
     post:
       description: Drive Track
       operationId: drive_track
@@ -200,11 +114,10 @@ paths:
                   RightTrackSpeed: 70
             schema:
               properties:
-                RightTrackSpeed:
-                  type: number
-                LeftTrackSpeed:
-                  type: number
+                RightTrackSpeed: {}
+                LeftTrackSpeed: {}
               type: object
+        description: Drive Track
       responses:
         200:
           content:
@@ -220,7 +133,95 @@ paths:
                   - result: true
                     status: Success
           description: OK
-      summary: Drive Track Post
+      summary: Drive Track
+      x-openapi-router-controller: api
+  /api/drive/hdt:
+    post:
+      description: Drive Heading
+      operationId: drive_heading
+      requestBody:
+        $ref: '#/components/requestBodies/inline_object_2'
+        content:
+          application/json:
+            examples:
+              example-1:
+                value:
+                  Heading: 90
+                  Distance: 1
+                  TimeMs: 4000
+            schema:
+              properties:
+                Heading: {}
+                Distance: {}
+                TimeMS: {}
+              type: object
+        description: Drive Heading
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/inline_response_200_1'
+                title: device
+                type: array
+                x-examples:
+                  get-device-information-example:
+                  - result:
+                      robotId: "12345"
+                      serialNumber: "12345"
+                      batteryLevel: 0.5
+                      hardwareInfo: {}
+                      ipAddress: 0.0.0.0
+                      occipitalDeviceInfo: {}
+                      outputCapabilities:
+                      - sure
+                      robotVersion: 1.0.0.0
+                      sensorCapabilities:
+                      - uh hunh
+                      sensoryServiceAppVersion: 1.0.0.0
+                      windowsOSVersion: 1.0.0.0
+                    status: Success
+          description: OK
+      summary: Drive Heading
+      x-openapi-router-controller: api
+  /api/drive/time:
+    post:
+      description: Drive Time
+      operationId: drive_time
+      requestBody:
+        $ref: '#/components/requestBodies/inline_object_3'
+        content:
+          application/json:
+            examples:
+              example-1:
+                value:
+                  LinearVelocity: 1
+                  AngularVelocity: 4
+                  TimeMS: 500
+            schema:
+              properties:
+                LinearVelocity: {}
+                AngularVelocity: {}
+                TimeMS: {}
+              type: object
+        description: Drive Time
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                description: response
+                items:
+                  $ref: '#/components/schemas/inline_response_200'
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                  - result: true
+                    status: Success
+          description: OK
+      summary: Drive Time
       x-openapi-router-controller: api
 components:
   requestBodies:
@@ -234,6 +235,16 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object'
+    inline_object_3:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/inline_object_3'
+    inline_object_2:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/inline_object_2'
   schemas:
     response:
       description: response
@@ -251,16 +262,56 @@ components:
         - result: true
           status: Success
     device:
+      description: device
       items:
         properties:
-          robotId:
-            type: string
-          serialNumber:
-            type: string
+          result:
+            properties:
+              robotId: {}
+              serialNumber: {}
+              currentProfileName: {}
+              hardwareInfo:
+                type: object
+              ipAddress: {}
+              batteryLevel: {}
+              occipitalDeviceInfo:
+                type: object
+              outputCapabilities:
+                items: {}
+                type: array
+              robotVersion: {}
+              sensoryServiceAppVersion: {}
+              windowsOSVersion: {}
+              sensorCapabilities:
+                items: {}
+                type: array
+            type: object
+          status: {}
         type: object
       title: device
       type: array
-      x-examples: {}
+      x-examples:
+        get-device-information-example:
+        - result:
+            robotId: "12345"
+            serialNumber: "12345"
+            batteryLevel: 0.5
+            hardwareInfo: {}
+            ipAddress: 0.0.0.0
+            occipitalDeviceInfo: {}
+            outputCapabilities:
+            - sure
+            robotVersion: 1.0.0.0
+            sensorCapabilities:
+            - uh hunh
+            sensoryServiceAppVersion: 1.0.0.0
+            windowsOSVersion: 1.0.0.0
+          status: Success
+    inline_object:
+      properties:
+        LinearVelocity: {}
+        AngularVelocity: {}
+      type: object
     inline_response_200:
       example:
         result: true
@@ -270,26 +321,81 @@ components:
           type: boolean
         status:
           type: string
-    inline_object:
+    _api_device_result:
+      example:
+        outputCapabilities:
+        - ""
+        - ""
+        serialNumber: ""
+        hardwareInfo: '{}'
+        ipAddress: ""
+        windowsOSVersion: ""
+        currentProfileName: ""
+        robotVersion: ""
+        robotId: ""
+        occipitalDeviceInfo: '{}'
+        sensoryServiceAppVersion: ""
+        sensorCapabilities:
+        - ""
+        - ""
+        batteryLevel: ""
       properties:
-        LinearVelocity:
-          type: number
-        AngularVelocity:
-          type: number
-      type: object
+        robotId: {}
+        serialNumber: {}
+        currentProfileName: {}
+        hardwareInfo:
+          type: object
+        ipAddress: {}
+        batteryLevel: {}
+        occipitalDeviceInfo:
+          type: object
+        outputCapabilities:
+          items: {}
+          type: array
+        robotVersion: {}
+        sensoryServiceAppVersion: {}
+        windowsOSVersion: {}
+        sensorCapabilities:
+          items: {}
+          type: array
     inline_response_200_1:
       example:
-        serialNumber: serialNumber
-        robotId: robotId
+        result:
+          outputCapabilities:
+          - ""
+          - ""
+          serialNumber: ""
+          hardwareInfo: '{}'
+          ipAddress: ""
+          windowsOSVersion: ""
+          currentProfileName: ""
+          robotVersion: ""
+          robotId: ""
+          occipitalDeviceInfo: '{}'
+          sensoryServiceAppVersion: ""
+          sensorCapabilities:
+          - ""
+          - ""
+          batteryLevel: ""
+        status: ""
       properties:
-        robotId:
-          type: string
-        serialNumber:
-          type: string
+        result:
+          $ref: '#/components/schemas/_api_device_result'
+        status: {}
     inline_object_1:
       properties:
-        RightTrackSpeed:
-          type: number
-        LeftTrackSpeed:
-          type: number
+        RightTrackSpeed: {}
+        LeftTrackSpeed: {}
+      type: object
+    inline_object_2:
+      properties:
+        Heading: {}
+        Distance: {}
+        TimeMS: {}
+      type: object
+    inline_object_3:
+      properties:
+        LinearVelocity: {}
+        AngularVelocity: {}
+        TimeMS: {}
       type: object

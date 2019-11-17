@@ -76,16 +76,26 @@ namespace Org.OpenAPITools.Test
         }
         
         /// <summary>
-        /// Test DriveGet
+        /// Test DriveHeading
         /// </summary>
         [Test]
-        public void DriveGetTest()
+        public void DriveHeadingTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //decimal angularVelocity = null;
-            //decimal linearVelocity = null;
-            //Object body = null;
-            //var response = instance.DriveGet(angularVelocity, linearVelocity, body);
+            //InlineObject2 inlineObject2 = null;
+            //var response = instance.DriveHeading(inlineObject2);
+            //Assert.IsInstanceOf(typeof(List<InlineResponse2001>), response, "response is List<InlineResponse2001>");
+        }
+        
+        /// <summary>
+        /// Test DriveTime
+        /// </summary>
+        [Test]
+        public void DriveTimeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //InlineObject3 inlineObject3 = null;
+            //var response = instance.DriveTime(inlineObject3);
             //Assert.IsInstanceOf(typeof(List<InlineResponse200>), response, "response is List<InlineResponse200>");
         }
         
@@ -98,20 +108,6 @@ namespace Org.OpenAPITools.Test
             // TODO uncomment below to test the method and replace null with proper value
             //InlineObject1 inlineObject1 = null;
             //var response = instance.DriveTrack(inlineObject1);
-            //Assert.IsInstanceOf(typeof(List<InlineResponse200>), response, "response is List<InlineResponse200>");
-        }
-        
-        /// <summary>
-        /// Test DriveTrackGet
-        /// </summary>
-        [Test]
-        public void DriveTrackGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string leftTrackSpeed = null;
-            //string rightTrackSpeed = null;
-            //Object body = null;
-            //var response = instance.DriveTrackGet(leftTrackSpeed, rightTrackSpeed, body);
             //Assert.IsInstanceOf(typeof(List<InlineResponse200>), response, "response is List<InlineResponse200>");
         }
         
@@ -134,17 +130,6 @@ namespace Org.OpenAPITools.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.Stop();
-            //Assert.IsInstanceOf(typeof(List<InlineResponse200>), response, "response is List<InlineResponse200>");
-        }
-        
-        /// <summary>
-        /// Test StopGet
-        /// </summary>
-        [Test]
-        public void StopGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.StopGet();
             //Assert.IsInstanceOf(typeof(List<InlineResponse200>), response, "response is List<InlineResponse200>");
         }
         

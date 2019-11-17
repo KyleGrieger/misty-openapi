@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**robotId** | **String** |  | [optional] 
-**serialNumber** | **String** |  | [optional] 
+**result** | [**ApiDeviceResult**](ApiDeviceResult.md) |  | [optional] 
+**status** | **Object** |  | [optional] 
 
 

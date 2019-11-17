@@ -15,6 +15,8 @@
 import ApiClient from "../ApiClient";
 import InlineObject from '../model/InlineObject';
 import InlineObject1 from '../model/InlineObject1';
+import InlineObject2 from '../model/InlineObject2';
+import InlineObject3 from '../model/InlineObject3';
 import InlineResponse200 from '../model/InlineResponse200';
 import InlineResponse2001 from '../model/InlineResponse2001';
 
@@ -46,7 +48,7 @@ export default class DefaultApi {
      */
 
     /**
-     * Drive POST
+     * Drive
      * Drive
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject} opts.inlineObject 
@@ -78,32 +80,68 @@ export default class DefaultApi {
     }
 
     /**
-     * Callback function to receive the result of the driveGet operation.
-     * @callback module:api/DefaultApi~driveGetCallback
+     * Callback function to receive the result of the driveHeading operation.
+     * @callback module:api/DefaultApi~driveHeadingCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/InlineResponse2001>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Drive Heading
+     * Drive Heading
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject2} opts.inlineObject2 
+     * @param {module:api/DefaultApi~driveHeadingCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/InlineResponse2001>}
+     */
+    driveHeading(opts, callback) {
+      opts = opts || {};
+      let postBody = opts['inlineObject2'];
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = [InlineResponse2001];
+      return this.apiClient.callApi(
+        '/api/drive/hdt', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the driveTime operation.
+     * @callback module:api/DefaultApi~driveTimeCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/InlineResponse200>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Drive GET
-     * Drive
+     * Drive Time
+     * Drive Time
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.angularVelocity 
-     * @param {Number} opts.linearVelocity 
-     * @param {Object} opts.body 
-     * @param {module:api/DefaultApi~driveGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/InlineObject3} opts.inlineObject3 
+     * @param {module:api/DefaultApi~driveTimeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/InlineResponse200>}
      */
-    driveGet(opts, callback) {
+    driveTime(opts, callback) {
       opts = opts || {};
-      let postBody = opts['body'];
+      let postBody = opts['inlineObject3'];
 
       let pathParams = {
       };
       let queryParams = {
-        'AngularVelocity': opts['angularVelocity'],
-        'LinearVelocity': opts['linearVelocity']
       };
       let headerParams = {
       };
@@ -115,7 +153,7 @@ export default class DefaultApi {
       let accepts = ['application/json'];
       let returnType = [InlineResponse200];
       return this.apiClient.callApi(
-        '/api/drive', 'GET',
+        '/api/drive/time', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -130,7 +168,7 @@ export default class DefaultApi {
      */
 
     /**
-     * Drive Track Post
+     * Drive Track
      * Drive Track
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject1} opts.inlineObject1 
@@ -162,50 +200,6 @@ export default class DefaultApi {
     }
 
     /**
-     * Callback function to receive the result of the driveTrackGet operation.
-     * @callback module:api/DefaultApi~driveTrackGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/InlineResponse200>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Drive Track GET
-     * Drive Track
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.leftTrackSpeed 
-     * @param {String} opts.rightTrackSpeed 
-     * @param {Object} opts.body 
-     * @param {module:api/DefaultApi~driveTrackGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/InlineResponse200>}
-     */
-    driveTrackGet(opts, callback) {
-      opts = opts || {};
-      let postBody = opts['body'];
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'LeftTrackSpeed': opts['leftTrackSpeed'],
-        'RightTrackSpeed': opts['rightTrackSpeed']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = [InlineResponse200];
-      return this.apiClient.callApi(
-        '/api/drive/track', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the getDeviceInformation operation.
      * @callback module:api/DefaultApi~getDeviceInformationCallback
      * @param {String} error Error message, if any.
@@ -214,7 +208,7 @@ export default class DefaultApi {
      */
 
     /**
-     * Device GET
+     * Get Device Information
      * Get Device Information
      * @param {module:api/DefaultApi~getDeviceInformationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/InlineResponse2001>}
@@ -251,7 +245,7 @@ export default class DefaultApi {
      */
 
     /**
-     * Drive Stop POST
+     * Stop
      * Stop
      * @param {module:api/DefaultApi~stopCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/InlineResponse200>}
@@ -274,43 +268,6 @@ export default class DefaultApi {
       let returnType = [InlineResponse200];
       return this.apiClient.callApi(
         '/api/drive/stop', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the stopGet operation.
-     * @callback module:api/DefaultApi~stopGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/InlineResponse200>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Drive Stop GET
-     * Stop
-     * @param {module:api/DefaultApi~stopGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/InlineResponse200>}
-     */
-    stopGet(callback) {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = [InlineResponse200];
-      return this.apiClient.callApi(
-        '/api/drive/stop', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

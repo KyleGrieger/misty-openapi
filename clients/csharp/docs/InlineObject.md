@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LinearVelocity** | **decimal** |  | [optional] 
-**AngularVelocity** | **decimal** |  | [optional] 
+**LinearVelocity** | **Object** |  | [optional] 
+**AngularVelocity** | **Object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

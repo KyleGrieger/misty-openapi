@@ -83,7 +83,7 @@ namespace Example
 
             try
             {
-                // Drive POST
+                // Drive
                 List<InlineResponse200> result = apiInstance.Drive(inlineObject);
                 Debug.WriteLine(result);
             }
@@ -105,19 +105,21 @@ All URIs are relative to *http://localhost:3000*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**Drive**](docs/DefaultApi.md#drive) | **POST** /api/drive | Drive POST
-*DefaultApi* | [**DriveGet**](docs/DefaultApi.md#driveget) | **GET** /api/drive | Drive GET
-*DefaultApi* | [**DriveTrack**](docs/DefaultApi.md#drivetrack) | **POST** /api/drive/track | Drive Track Post
-*DefaultApi* | [**DriveTrackGet**](docs/DefaultApi.md#drivetrackget) | **GET** /api/drive/track | Drive Track GET
-*DefaultApi* | [**GetDeviceInformation**](docs/DefaultApi.md#getdeviceinformation) | **GET** /api/device | Device GET
-*DefaultApi* | [**Stop**](docs/DefaultApi.md#stop) | **POST** /api/drive/stop | Drive Stop POST
-*DefaultApi* | [**StopGet**](docs/DefaultApi.md#stopget) | **GET** /api/drive/stop | Drive Stop GET
+*DefaultApi* | [**Drive**](docs/DefaultApi.md#drive) | **POST** /api/drive | Drive
+*DefaultApi* | [**DriveHeading**](docs/DefaultApi.md#driveheading) | **POST** /api/drive/hdt | Drive Heading
+*DefaultApi* | [**DriveTime**](docs/DefaultApi.md#drivetime) | **POST** /api/drive/time | Drive Time
+*DefaultApi* | [**DriveTrack**](docs/DefaultApi.md#drivetrack) | **POST** /api/drive/track | Drive Track
+*DefaultApi* | [**GetDeviceInformation**](docs/DefaultApi.md#getdeviceinformation) | **GET** /api/device | Get Device Information
+*DefaultApi* | [**Stop**](docs/DefaultApi.md#stop) | **POST** /api/drive/stop | Stop
 
 
 ## Documentation for Models
 
+ - [Model.ApiDeviceResult](docs/ApiDeviceResult.md)
  - [Model.InlineObject](docs/InlineObject.md)
  - [Model.InlineObject1](docs/InlineObject1.md)
+ - [Model.InlineObject2](docs/InlineObject2.md)
+ - [Model.InlineObject3](docs/InlineObject3.md)
  - [Model.InlineResponse200](docs/InlineResponse200.md)
  - [Model.InlineResponse2001](docs/InlineResponse2001.md)
 

@@ -33,8 +33,8 @@ class InlineObject1(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'right_track_speed': 'float',
-        'left_track_speed': 'float'
+        'right_track_speed': 'object',
+        'left_track_speed': 'object'
     }
 
     attribute_map = {
@@ -63,7 +63,7 @@ class InlineObject1(object):
 
 
         :return: The right_track_speed of this InlineObject1.  # noqa: E501
-        :rtype: float
+        :rtype: object
         """
         return self._right_track_speed
 
@@ -73,7 +73,7 @@ class InlineObject1(object):
 
 
         :param right_track_speed: The right_track_speed of this InlineObject1.  # noqa: E501
-        :type: float
+        :type: object
         """
 
         self._right_track_speed = right_track_speed
@@ -84,7 +84,7 @@ class InlineObject1(object):
 
 
         :return: The left_track_speed of this InlineObject1.  # noqa: E501
-        :rtype: float
+        :rtype: object
         """
         return self._left_track_speed
 
@@ -94,7 +94,7 @@ class InlineObject1(object):
 
 
         :param left_track_speed: The left_track_speed of this InlineObject1.  # noqa: E501
-        :type: float
+        :type: object
         """
 
         self._left_track_speed = left_track_speed

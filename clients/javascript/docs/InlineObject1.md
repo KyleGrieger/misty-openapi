@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rightTrackSpeed** | **Number** |  | [optional] 
-**leftTrackSpeed** | **Number** |  | [optional] 
+**rightTrackSpeed** | **Object** |  | [optional] 
+**leftTrackSpeed** | **Object** |  | [optional] 
 
 

@@ -31,49 +31,42 @@ class TestDefaultApi(unittest.TestCase):
     def test_drive(self):
         """Test case for drive
 
-        Drive POST  # noqa: E501
+        Drive  # noqa: E501
         """
         pass
 
-    def test_drive_get(self):
-        """Test case for drive_get
+    def test_drive_heading(self):
+        """Test case for drive_heading
 
-        Drive GET  # noqa: E501
+        Drive Heading  # noqa: E501
+        """
+        pass
+
+    def test_drive_time(self):
+        """Test case for drive_time
+
+        Drive Time  # noqa: E501
         """
         pass
 
     def test_drive_track(self):
         """Test case for drive_track
 
-        Drive Track Post  # noqa: E501
-        """
-        pass
-
-    def test_drive_track_get(self):
-        """Test case for drive_track_get
-
-        Drive Track GET  # noqa: E501
+        Drive Track  # noqa: E501
         """
         pass
 
     def test_get_device_information(self):
         """Test case for get_device_information
 
-        Device GET  # noqa: E501
+        Get Device Information  # noqa: E501
         """
         pass
 
     def test_stop(self):
         """Test case for stop
 
-        Drive Stop POST  # noqa: E501
-        """
-        pass
-
-    def test_stop_get(self):
-        """Test case for stop_get
-
-        Drive Stop GET  # noqa: E501
+        Stop  # noqa: E501
         """
         pass
 

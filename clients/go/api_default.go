@@ -31,7 +31,7 @@ type DriveOpts struct {
 }
 
 /*
-Drive Drive POST
+Drive Drive
 Drive
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *DriveOpts - Optional Parameters:
@@ -126,46 +126,36 @@ func (a *DefaultApiService) Drive(ctx _context.Context, localVarOptionals *Drive
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-// DriveGetOpts Optional parameters for the method 'DriveGet'
-type DriveGetOpts struct {
-    AngularVelocity optional.Float32
-    LinearVelocity optional.Float32
-    Body optional.Map[string]interface{}
+// DriveHeadingOpts Optional parameters for the method 'DriveHeading'
+type DriveHeadingOpts struct {
+    InlineObject2 optional.Interface
 }
 
 /*
-DriveGet Drive GET
-Drive
+DriveHeading Drive Heading
+Drive Heading
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *DriveGetOpts - Optional Parameters:
- * @param "AngularVelocity" (optional.Float32) - 
- * @param "LinearVelocity" (optional.Float32) - 
- * @param "Body" (optional.Map[string]interface{}) - 
-@return []InlineResponse200
+ * @param optional nil or *DriveHeadingOpts - Optional Parameters:
+ * @param "InlineObject2" (optional.Interface of InlineObject2) - 
+@return []InlineResponse2001
 */
-func (a *DefaultApiService) DriveGet(ctx _context.Context, localVarOptionals *DriveGetOpts) ([]InlineResponse200, *_nethttp.Response, error) {
+func (a *DefaultApiService) DriveHeading(ctx _context.Context, localVarOptionals *DriveHeadingOpts) ([]InlineResponse2001, *_nethttp.Response, error) {
 	var (
-		localVarHTTPMethod   = _nethttp.MethodGet
+		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  []InlineResponse200
+		localVarReturnValue  []InlineResponse2001
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/drive"
+	localVarPath := a.client.cfg.BasePath + "/api/drive/hdt"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := _neturl.Values{}
 	localVarFormParams := _neturl.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.AngularVelocity.IsSet() {
-		localVarQueryParams.Add("AngularVelocity", parameterToString(localVarOptionals.AngularVelocity.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LinearVelocity.IsSet() {
-		localVarQueryParams.Add("LinearVelocity", parameterToString(localVarOptionals.LinearVelocity.Value(), ""))
-	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json"}
 
@@ -184,8 +174,113 @@ func (a *DefaultApiService) DriveGet(ctx _context.Context, localVarOptionals *Dr
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
-		localVarPostBody = localVarOptionals.Body.Value()
+	if localVarOptionals != nil && localVarOptionals.InlineObject2.IsSet() {
+		localVarOptionalInlineObject2, localVarOptionalInlineObject2ok := localVarOptionals.InlineObject2.Value().(InlineObject2)
+		if !localVarOptionalInlineObject2ok {
+			return localVarReturnValue, nil, reportError("inlineObject2 should be InlineObject2")
+		}
+		localVarPostBody = &localVarOptionalInlineObject2
+	}
+
+	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(r)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := _ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 200 {
+			var v []InlineResponse2001
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+			newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+// DriveTimeOpts Optional parameters for the method 'DriveTime'
+type DriveTimeOpts struct {
+    InlineObject3 optional.Interface
+}
+
+/*
+DriveTime Drive Time
+Drive Time
+ * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param optional nil or *DriveTimeOpts - Optional Parameters:
+ * @param "InlineObject3" (optional.Interface of InlineObject3) - 
+@return []InlineResponse200
+*/
+func (a *DefaultApiService) DriveTime(ctx _context.Context, localVarOptionals *DriveTimeOpts) ([]InlineResponse200, *_nethttp.Response, error) {
+	var (
+		localVarHTTPMethod   = _nethttp.MethodPost
+		localVarPostBody     interface{}
+		localVarFormFileName string
+		localVarFileName     string
+		localVarFileBytes    []byte
+		localVarReturnValue  []InlineResponse200
+	)
+
+	// create path and map variables
+	localVarPath := a.client.cfg.BasePath + "/api/drive/time"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := _neturl.Values{}
+	localVarFormParams := _neturl.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	if localVarOptionals != nil && localVarOptionals.InlineObject3.IsSet() {
+		localVarOptionalInlineObject3, localVarOptionalInlineObject3ok := localVarOptionals.InlineObject3.Value().(InlineObject3)
+		if !localVarOptionalInlineObject3ok {
+			return localVarReturnValue, nil, reportError("inlineObject3 should be InlineObject3")
+		}
+		localVarPostBody = &localVarOptionalInlineObject3
 	}
 
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
@@ -239,7 +334,7 @@ type DriveTrackOpts struct {
 }
 
 /*
-DriveTrack Drive Track Post
+DriveTrack Drive Track
 Drive Track
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *DriveTrackOpts - Optional Parameters:
@@ -334,115 +429,8 @@ func (a *DefaultApiService) DriveTrack(ctx _context.Context, localVarOptionals *
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-// DriveTrackGetOpts Optional parameters for the method 'DriveTrackGet'
-type DriveTrackGetOpts struct {
-    LeftTrackSpeed optional.String
-    RightTrackSpeed optional.String
-    Body optional.Map[string]interface{}
-}
-
 /*
-DriveTrackGet Drive Track GET
-Drive Track
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *DriveTrackGetOpts - Optional Parameters:
- * @param "LeftTrackSpeed" (optional.String) - 
- * @param "RightTrackSpeed" (optional.String) - 
- * @param "Body" (optional.Map[string]interface{}) - 
-@return []InlineResponse200
-*/
-func (a *DefaultApiService) DriveTrackGet(ctx _context.Context, localVarOptionals *DriveTrackGetOpts) ([]InlineResponse200, *_nethttp.Response, error) {
-	var (
-		localVarHTTPMethod   = _nethttp.MethodGet
-		localVarPostBody     interface{}
-		localVarFormFileName string
-		localVarFileName     string
-		localVarFileBytes    []byte
-		localVarReturnValue  []InlineResponse200
-	)
-
-	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/drive/track"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := _neturl.Values{}
-	localVarFormParams := _neturl.Values{}
-
-	if localVarOptionals != nil && localVarOptionals.LeftTrackSpeed.IsSet() {
-		localVarQueryParams.Add("LeftTrackSpeed", parameterToString(localVarOptionals.LeftTrackSpeed.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.RightTrackSpeed.IsSet() {
-		localVarQueryParams.Add("RightTrackSpeed", parameterToString(localVarOptionals.RightTrackSpeed.Value(), ""))
-	}
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
-		localVarPostBody = localVarOptionals.Body.Value()
-	}
-
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := _ioutil.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 200 {
-			var v []InlineResponse200
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
-/*
-GetDeviceInformation Device GET
+GetDeviceInformation Get Device Information
 Get Device Information
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 @return []InlineResponse2001
@@ -527,7 +515,7 @@ func (a *DefaultApiService) GetDeviceInformation(ctx _context.Context) ([]Inline
 }
 
 /*
-Stop Drive Stop POST
+Stop Stop
 Stop
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 @return []InlineResponse200
@@ -535,91 +523,6 @@ Stop
 func (a *DefaultApiService) Stop(ctx _context.Context) ([]InlineResponse200, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
-		localVarPostBody     interface{}
-		localVarFormFileName string
-		localVarFileName     string
-		localVarFileBytes    []byte
-		localVarReturnValue  []InlineResponse200
-	)
-
-	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/drive/stop"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := _neturl.Values{}
-	localVarFormParams := _neturl.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := _ioutil.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 200 {
-			var v []InlineResponse200
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
-/*
-StopGet Drive Stop GET
-Stop
- * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return []InlineResponse200
-*/
-func (a *DefaultApiService) StopGet(ctx _context.Context) ([]InlineResponse200, *_nethttp.Response, error) {
-	var (
-		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string

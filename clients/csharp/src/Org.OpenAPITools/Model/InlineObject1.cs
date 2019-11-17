@@ -35,7 +35,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <param name="rightTrackSpeed">rightTrackSpeed.</param>
         /// <param name="leftTrackSpeed">leftTrackSpeed.</param>
-        public InlineObject1(decimal rightTrackSpeed = default(decimal), decimal leftTrackSpeed = default(decimal))
+        public InlineObject1(Object rightTrackSpeed = default(Object), Object leftTrackSpeed = default(Object))
         {
             this.RightTrackSpeed = rightTrackSpeed;
             this.LeftTrackSpeed = leftTrackSpeed;
@@ -45,13 +45,13 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets RightTrackSpeed
         /// </summary>
         [DataMember(Name="RightTrackSpeed", EmitDefaultValue=false)]
-        public decimal RightTrackSpeed { get; set; }
+        public Object RightTrackSpeed { get; set; }
 
         /// <summary>
         /// Gets or Sets LeftTrackSpeed
         /// </summary>
         [DataMember(Name="LeftTrackSpeed", EmitDefaultValue=false)]
-        public decimal LeftTrackSpeed { get; set; }
+        public Object LeftTrackSpeed { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

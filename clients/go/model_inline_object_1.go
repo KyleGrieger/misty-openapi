@@ -10,6 +10,6 @@
 package openapi
 // InlineObject1 struct for InlineObject1
 type InlineObject1 struct {
-	RightTrackSpeed float32 `json:"RightTrackSpeed,omitempty"`
-	LeftTrackSpeed float32 `json:"LeftTrackSpeed,omitempty"`
+	RightTrackSpeed map[string]interface{} `json:"RightTrackSpeed,omitempty"`
+	LeftTrackSpeed map[string]interface{} `json:"LeftTrackSpeed,omitempty"`
 }

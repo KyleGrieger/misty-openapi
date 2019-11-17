@@ -4,13 +4,12 @@ All URIs are relative to *http://localhost:3000*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Drive**](DefaultApi.md#drive) | **POST** /api/drive | Drive POST
-[**DriveGet**](DefaultApi.md#driveget) | **GET** /api/drive | Drive GET
-[**DriveTrack**](DefaultApi.md#drivetrack) | **POST** /api/drive/track | Drive Track Post
-[**DriveTrackGet**](DefaultApi.md#drivetrackget) | **GET** /api/drive/track | Drive Track GET
-[**GetDeviceInformation**](DefaultApi.md#getdeviceinformation) | **GET** /api/device | Device GET
-[**Stop**](DefaultApi.md#stop) | **POST** /api/drive/stop | Drive Stop POST
-[**StopGet**](DefaultApi.md#stopget) | **GET** /api/drive/stop | Drive Stop GET
+[**Drive**](DefaultApi.md#drive) | **POST** /api/drive | Drive
+[**DriveHeading**](DefaultApi.md#driveheading) | **POST** /api/drive/hdt | Drive Heading
+[**DriveTime**](DefaultApi.md#drivetime) | **POST** /api/drive/time | Drive Time
+[**DriveTrack**](DefaultApi.md#drivetrack) | **POST** /api/drive/track | Drive Track
+[**GetDeviceInformation**](DefaultApi.md#getdeviceinformation) | **GET** /api/device | Get Device Information
+[**Stop**](DefaultApi.md#stop) | **POST** /api/drive/stop | Stop
 
 
 
@@ -18,7 +17,7 @@ Method | HTTP request | Description
 
 > List&lt;InlineResponse200&gt; Drive (InlineObject inlineObject = null)
 
-Drive POST
+Drive
 
 Drive
 
@@ -43,7 +42,7 @@ namespace Example
 
             try
             {
-                // Drive POST
+                // Drive
                 List<InlineResponse200> result = apiInstance.Drive(inlineObject);
                 Debug.WriteLine(result);
             }
@@ -89,13 +88,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DriveGet
+## DriveHeading
 
-> List&lt;InlineResponse200&gt; DriveGet (decimal angularVelocity = null, decimal linearVelocity = null, Object body = null)
+> List&lt;InlineResponse2001&gt; DriveHeading (InlineObject2 inlineObject2 = null)
 
-Drive GET
+Drive Heading
 
-Drive
+Drive Heading
 
 ### Example
 
@@ -108,25 +107,23 @@ using Org.OpenAPITools.Model;
 
 namespace Example
 {
-    public class DriveGetExample
+    public class DriveHeadingExample
     {
         public static void Main()
         {
             Configuration.Default.BasePath = "http://localhost:3000";
             var apiInstance = new DefaultApi(Configuration.Default);
-            var angularVelocity = 8.14;  // decimal |  (optional) 
-            var linearVelocity = 8.14;  // decimal |  (optional) 
-            var body = ;  // Object |  (optional) 
+            var inlineObject2 = new InlineObject2(); // InlineObject2 |  (optional) 
 
             try
             {
-                // Drive GET
-                List<InlineResponse200> result = apiInstance.DriveGet(angularVelocity, linearVelocity, body);
+                // Drive Heading
+                List<InlineResponse2001> result = apiInstance.DriveHeading(inlineObject2);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling DefaultApi.DriveGet: " + e.Message );
+                Debug.Print("Exception when calling DefaultApi.DriveHeading: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -140,9 +137,82 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **angularVelocity** | **decimal**|  | [optional] 
- **linearVelocity** | **decimal**|  | [optional] 
- **body** | **Object**|  | [optional] 
+ **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | [optional] 
+
+### Return type
+
+[**List&lt;InlineResponse2001&gt;**](InlineResponse2001.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DriveTime
+
+> List&lt;InlineResponse200&gt; DriveTime (InlineObject3 inlineObject3 = null)
+
+Drive Time
+
+Drive Time
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
+
+namespace Example
+{
+    public class DriveTimeExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "http://localhost:3000";
+            var apiInstance = new DefaultApi(Configuration.Default);
+            var inlineObject3 = new InlineObject3(); // InlineObject3 |  (optional) 
+
+            try
+            {
+                // Drive Time
+                List<InlineResponse200> result = apiInstance.DriveTime(inlineObject3);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling DefaultApi.DriveTime: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inlineObject3** | [**InlineObject3**](InlineObject3.md)|  | [optional] 
 
 ### Return type
 
@@ -172,7 +242,7 @@ No authorization required
 
 > List&lt;InlineResponse200&gt; DriveTrack (InlineObject1 inlineObject1 = null)
 
-Drive Track Post
+Drive Track
 
 Drive Track
 
@@ -197,7 +267,7 @@ namespace Example
 
             try
             {
-                // Drive Track Post
+                // Drive Track
                 List<InlineResponse200> result = apiInstance.DriveTrack(inlineObject1);
                 Debug.WriteLine(result);
             }
@@ -243,90 +313,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DriveTrackGet
-
-> List&lt;InlineResponse200&gt; DriveTrackGet (string leftTrackSpeed = null, string rightTrackSpeed = null, Object body = null)
-
-Drive Track GET
-
-Drive Track
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class DriveTrackGetExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "http://localhost:3000";
-            var apiInstance = new DefaultApi(Configuration.Default);
-            var leftTrackSpeed = leftTrackSpeed_example;  // string |  (optional) 
-            var rightTrackSpeed = rightTrackSpeed_example;  // string |  (optional) 
-            var body = ;  // Object |  (optional) 
-
-            try
-            {
-                // Drive Track GET
-                List<InlineResponse200> result = apiInstance.DriveTrackGet(leftTrackSpeed, rightTrackSpeed, body);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling DefaultApi.DriveTrackGet: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **leftTrackSpeed** | **string**|  | [optional] 
- **rightTrackSpeed** | **string**|  | [optional] 
- **body** | **Object**|  | [optional] 
-
-### Return type
-
-[**List&lt;InlineResponse200&gt;**](InlineResponse200.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## GetDeviceInformation
 
 > List&lt;InlineResponse2001&gt; GetDeviceInformation ()
 
-Device GET
+Get Device Information
 
 Get Device Information
 
@@ -350,7 +341,7 @@ namespace Example
 
             try
             {
-                // Device GET
+                // Get Device Information
                 List<InlineResponse2001> result = apiInstance.GetDeviceInformation();
                 Debug.WriteLine(result);
             }
@@ -397,7 +388,7 @@ No authorization required
 
 > List&lt;InlineResponse200&gt; Stop ()
 
-Drive Stop POST
+Stop
 
 Stop
 
@@ -421,84 +412,13 @@ namespace Example
 
             try
             {
-                // Drive Stop POST
+                // Stop
                 List<InlineResponse200> result = apiInstance.Stop();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
                 Debug.Print("Exception when calling DefaultApi.Stop: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;InlineResponse200&gt;**](InlineResponse200.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## StopGet
-
-> List&lt;InlineResponse200&gt; StopGet ()
-
-Drive Stop GET
-
-Stop
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
-
-namespace Example
-{
-    public class StopGetExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "http://localhost:3000";
-            var apiInstance = new DefaultApi(Configuration.Default);
-
-            try
-            {
-                // Drive Stop GET
-                List<InlineResponse200> result = apiInstance.StopGet();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling DefaultApi.StopGet: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

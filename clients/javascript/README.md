@@ -122,19 +122,21 @@ All URIs are relative to *http://localhost:3000*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*MistyApi.DefaultApi* | [**drive**](docs/DefaultApi.md#drive) | **POST** /api/drive | Drive POST
-*MistyApi.DefaultApi* | [**driveGet**](docs/DefaultApi.md#driveGet) | **GET** /api/drive | Drive GET
-*MistyApi.DefaultApi* | [**driveTrack**](docs/DefaultApi.md#driveTrack) | **POST** /api/drive/track | Drive Track Post
-*MistyApi.DefaultApi* | [**driveTrackGet**](docs/DefaultApi.md#driveTrackGet) | **GET** /api/drive/track | Drive Track GET
-*MistyApi.DefaultApi* | [**getDeviceInformation**](docs/DefaultApi.md#getDeviceInformation) | **GET** /api/device | Device GET
-*MistyApi.DefaultApi* | [**stop**](docs/DefaultApi.md#stop) | **POST** /api/drive/stop | Drive Stop POST
-*MistyApi.DefaultApi* | [**stopGet**](docs/DefaultApi.md#stopGet) | **GET** /api/drive/stop | Drive Stop GET
+*MistyApi.DefaultApi* | [**drive**](docs/DefaultApi.md#drive) | **POST** /api/drive | Drive
+*MistyApi.DefaultApi* | [**driveHeading**](docs/DefaultApi.md#driveHeading) | **POST** /api/drive/hdt | Drive Heading
+*MistyApi.DefaultApi* | [**driveTime**](docs/DefaultApi.md#driveTime) | **POST** /api/drive/time | Drive Time
+*MistyApi.DefaultApi* | [**driveTrack**](docs/DefaultApi.md#driveTrack) | **POST** /api/drive/track | Drive Track
+*MistyApi.DefaultApi* | [**getDeviceInformation**](docs/DefaultApi.md#getDeviceInformation) | **GET** /api/device | Get Device Information
+*MistyApi.DefaultApi* | [**stop**](docs/DefaultApi.md#stop) | **POST** /api/drive/stop | Stop
 
 
 ## Documentation for Models
 
+ - [MistyApi.ApiDeviceResult](docs/ApiDeviceResult.md)
  - [MistyApi.InlineObject](docs/InlineObject.md)
  - [MistyApi.InlineObject1](docs/InlineObject1.md)
+ - [MistyApi.InlineObject2](docs/InlineObject2.md)
+ - [MistyApi.InlineObject3](docs/InlineObject3.md)
  - [MistyApi.InlineResponse200](docs/InlineResponse200.md)
  - [MistyApi.InlineResponse2001](docs/InlineResponse2001.md)
 

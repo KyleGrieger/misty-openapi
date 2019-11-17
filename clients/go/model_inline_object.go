@@ -10,6 +10,6 @@
 package openapi
 // InlineObject struct for InlineObject
 type InlineObject struct {
-	LinearVelocity float32 `json:"LinearVelocity,omitempty"`
-	AngularVelocity float32 `json:"AngularVelocity,omitempty"`
+	LinearVelocity map[string]interface{} `json:"LinearVelocity,omitempty"`
+	AngularVelocity map[string]interface{} `json:"AngularVelocity,omitempty"`
 }

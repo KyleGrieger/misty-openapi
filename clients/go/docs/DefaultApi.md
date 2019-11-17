@@ -4,13 +4,12 @@ All URIs are relative to *http://localhost:3000*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Drive**](DefaultApi.md#Drive) | **Post** /api/drive | Drive POST
-[**DriveGet**](DefaultApi.md#DriveGet) | **Get** /api/drive | Drive GET
-[**DriveTrack**](DefaultApi.md#DriveTrack) | **Post** /api/drive/track | Drive Track Post
-[**DriveTrackGet**](DefaultApi.md#DriveTrackGet) | **Get** /api/drive/track | Drive Track GET
-[**GetDeviceInformation**](DefaultApi.md#GetDeviceInformation) | **Get** /api/device | Device GET
-[**Stop**](DefaultApi.md#Stop) | **Post** /api/drive/stop | Drive Stop POST
-[**StopGet**](DefaultApi.md#StopGet) | **Get** /api/drive/stop | Drive Stop GET
+[**Drive**](DefaultApi.md#Drive) | **Post** /api/drive | Drive
+[**DriveHeading**](DefaultApi.md#DriveHeading) | **Post** /api/drive/hdt | Drive Heading
+[**DriveTime**](DefaultApi.md#DriveTime) | **Post** /api/drive/time | Drive Time
+[**DriveTrack**](DefaultApi.md#DriveTrack) | **Post** /api/drive/track | Drive Track
+[**GetDeviceInformation**](DefaultApi.md#GetDeviceInformation) | **Get** /api/device | Get Device Information
+[**Stop**](DefaultApi.md#Stop) | **Post** /api/drive/stop | Stop
 
 
 
@@ -18,7 +17,7 @@ Method | HTTP request | Description
 
 > []InlineResponse200 Drive(ctx, optional)
 
-Drive POST
+Drive
 
 Drive
 
@@ -57,13 +56,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DriveGet
+## DriveHeading
 
-> []InlineResponse200 DriveGet(ctx, optional)
+> []InlineResponse2001 DriveHeading(ctx, optional)
 
-Drive GET
+Drive Heading
 
-Drive
+Drive Heading
 
 ### Required Parameters
 
@@ -71,18 +70,59 @@ Drive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***DriveGetOpts** | optional parameters | nil if no parameters
+ **optional** | ***DriveHeadingOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a DriveGetOpts struct
+Optional parameters are passed through a pointer to a DriveHeadingOpts struct
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **angularVelocity** | **optional.Float32**|  | 
- **linearVelocity** | **optional.Float32**|  | 
- **body** | **optional.Map[string]interface{}**|  | 
+ **inlineObject2** | [**optional.Interface of InlineObject2**](InlineObject2.md)|  | 
+
+### Return type
+
+[**[]InlineResponse2001**](inline_response_200_1.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DriveTime
+
+> []InlineResponse200 DriveTime(ctx, optional)
+
+Drive Time
+
+Drive Time
+
+### Required Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***DriveTimeOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a DriveTimeOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inlineObject3** | [**optional.Interface of InlineObject3**](InlineObject3.md)|  | 
 
 ### Return type
 
@@ -106,7 +146,7 @@ No authorization required
 
 > []InlineResponse200 DriveTrack(ctx, optional)
 
-Drive Track Post
+Drive Track
 
 Drive Track
 
@@ -145,56 +185,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DriveTrackGet
-
-> []InlineResponse200 DriveTrackGet(ctx, optional)
-
-Drive Track GET
-
-Drive Track
-
-### Required Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***DriveTrackGetOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-
-Optional parameters are passed through a pointer to a DriveTrackGetOpts struct
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **leftTrackSpeed** | **optional.String**|  | 
- **rightTrackSpeed** | **optional.String**|  | 
- **body** | **optional.Map[string]interface{}**|  | 
-
-### Return type
-
-[**[]InlineResponse200**](inline_response_200.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## GetDeviceInformation
 
 > []InlineResponse2001 GetDeviceInformation(ctx, )
 
-Device GET
+Get Device Information
 
 Get Device Information
 
@@ -224,37 +219,7 @@ No authorization required
 
 > []InlineResponse200 Stop(ctx, )
 
-Drive Stop POST
-
 Stop
-
-### Required Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**[]InlineResponse200**](inline_response_200.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## StopGet
-
-> []InlineResponse200 StopGet(ctx, )
-
-Drive Stop GET
 
 Stop
 

@@ -33,8 +33,8 @@ class InlineObject(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'linear_velocity': 'float',
-        'angular_velocity': 'float'
+        'linear_velocity': 'object',
+        'angular_velocity': 'object'
     }
 
     attribute_map = {
@@ -63,7 +63,7 @@ class InlineObject(object):
 
 
         :return: The linear_velocity of this InlineObject.  # noqa: E501
-        :rtype: float
+        :rtype: object
         """
         return self._linear_velocity
 
@@ -73,7 +73,7 @@ class InlineObject(object):
 
 
         :param linear_velocity: The linear_velocity of this InlineObject.  # noqa: E501
-        :type: float
+        :type: object
         """
 
         self._linear_velocity = linear_velocity
@@ -84,7 +84,7 @@ class InlineObject(object):
 
 
         :return: The angular_velocity of this InlineObject.  # noqa: E501
-        :rtype: float
+        :rtype: object
         """
         return self._angular_velocity
 
@@ -94,7 +94,7 @@ class InlineObject(object):
 
 
         :param angular_velocity: The angular_velocity of this InlineObject.  # noqa: E501
-        :type: float
+        :type: object
         """
 
         self._angular_velocity = angular_velocity

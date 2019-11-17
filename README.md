@@ -17,7 +17,7 @@ Use Python 3.7
 
 ex.
 
-	python servers/mock/server.py
+	python servers/jetbot/server.py
 
 ## Client
 
@@ -28,7 +28,15 @@ Generate a client library:
 	java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generate \
 	  -i {path}/{to}/reference/misty-api.yaml \
 	  -g {client language generator} \
-	  -o {path}/{to}/{output}/{client}/{lib}
+	  -o {path}/{to}/{output}/{client}/{lib folder}
 
 
 The list of client language generators can be found [here](https://github.com/OpenAPITools/openapi-generator/blob/master/docs/generators.md).
+
+Feel free to fork this repo, change the Misty OpenAPI spec and add your own functionality.
+
+## TODO 
+- Add websocket endpoint /pubsub
+- Generate "cleaner" client libraries where objects are not generic InlineObject and DefaultApi is renamed
+- Implement support fo Jetbot
+- Create documentation for assembling and setting up other devices

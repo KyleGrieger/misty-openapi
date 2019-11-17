@@ -33,25 +33,25 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineResponse2001" /> class.
         /// </summary>
-        /// <param name="robotId">robotId.</param>
-        /// <param name="serialNumber">serialNumber.</param>
-        public InlineResponse2001(string robotId = default(string), string serialNumber = default(string))
+        /// <param name="result">result.</param>
+        /// <param name="status">status.</param>
+        public InlineResponse2001(ApiDeviceResult result = default(ApiDeviceResult), Object status = default(Object))
         {
-            this.RobotId = robotId;
-            this.SerialNumber = serialNumber;
+            this.Result = result;
+            this.Status = status;
         }
         
         /// <summary>
-        /// Gets or Sets RobotId
+        /// Gets or Sets Result
         /// </summary>
-        [DataMember(Name="robotId", EmitDefaultValue=false)]
-        public string RobotId { get; set; }
+        [DataMember(Name="result", EmitDefaultValue=false)]
+        public ApiDeviceResult Result { get; set; }
 
         /// <summary>
-        /// Gets or Sets SerialNumber
+        /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="serialNumber", EmitDefaultValue=false)]
-        public string SerialNumber { get; set; }
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public Object Status { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,8 +61,8 @@ namespace Org.OpenAPITools.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InlineResponse2001 {\n");
-            sb.Append("  RobotId: ").Append(RobotId).Append("\n");
-            sb.Append("  SerialNumber: ").Append(SerialNumber).Append("\n");
+            sb.Append("  Result: ").Append(Result).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,14 +98,14 @@ namespace Org.OpenAPITools.Model
 
             return 
                 (
-                    this.RobotId == input.RobotId ||
-                    (this.RobotId != null &&
-                    this.RobotId.Equals(input.RobotId))
+                    this.Result == input.Result ||
+                    (this.Result != null &&
+                    this.Result.Equals(input.Result))
                 ) && 
                 (
-                    this.SerialNumber == input.SerialNumber ||
-                    (this.SerialNumber != null &&
-                    this.SerialNumber.Equals(input.SerialNumber))
+                    this.Status == input.Status ||
+                    (this.Status != null &&
+                    this.Status.Equals(input.Status))
                 );
         }
 
@@ -118,10 +118,10 @@ namespace Org.OpenAPITools.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.RobotId != null)
-                    hashCode = hashCode * 59 + this.RobotId.GetHashCode();
-                if (this.SerialNumber != null)
-                    hashCode = hashCode * 59 + this.SerialNumber.GetHashCode();
+                if (this.Result != null)
+                    hashCode = hashCode * 59 + this.Result.GetHashCode();
+                if (this.Status != null)
+                    hashCode = hashCode * 59 + this.Status.GetHashCode();
                 return hashCode;
             }
         }

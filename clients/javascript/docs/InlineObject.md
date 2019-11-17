@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**linearVelocity** | **Number** |  | [optional] 
-**angularVelocity** | **Number** |  | [optional] 
+**linearVelocity** | **Object** |  | [optional] 
+**angularVelocity** | **Object** |  | [optional] 
 
 

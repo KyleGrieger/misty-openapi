@@ -35,7 +35,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <param name="linearVelocity">linearVelocity.</param>
         /// <param name="angularVelocity">angularVelocity.</param>
-        public InlineObject(decimal linearVelocity = default(decimal), decimal angularVelocity = default(decimal))
+        public InlineObject(Object linearVelocity = default(Object), Object angularVelocity = default(Object))
         {
             this.LinearVelocity = linearVelocity;
             this.AngularVelocity = angularVelocity;
@@ -45,13 +45,13 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets LinearVelocity
         /// </summary>
         [DataMember(Name="LinearVelocity", EmitDefaultValue=false)]
-        public decimal LinearVelocity { get; set; }
+        public Object LinearVelocity { get; set; }
 
         /// <summary>
         /// Gets or Sets AngularVelocity
         /// </summary>
         [DataMember(Name="AngularVelocity", EmitDefaultValue=false)]
-        public decimal AngularVelocity { get; set; }
+        public Object AngularVelocity { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

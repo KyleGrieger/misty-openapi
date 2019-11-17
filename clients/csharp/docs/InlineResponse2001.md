@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RobotId** | **string** |  | [optional] 
-**SerialNumber** | **string** |  | [optional] 
+**Result** | [**ApiDeviceResult**](ApiDeviceResult.md) |  | [optional] 
+**Status** | **Object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

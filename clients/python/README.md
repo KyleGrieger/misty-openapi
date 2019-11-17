@@ -59,7 +59,7 @@ api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration)
 inline_object = openapi_client.InlineObject() # InlineObject |  (optional)
 
 try:
-    # Drive POST
+    # Drive
     api_response = api_instance.drive(inline_object=inline_object)
     pprint(api_response)
 except ApiException as e:
@@ -73,19 +73,21 @@ All URIs are relative to *http://localhost:3000*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**drive**](docs/DefaultApi.md#drive) | **POST** /api/drive | Drive POST
-*DefaultApi* | [**drive_get**](docs/DefaultApi.md#drive_get) | **GET** /api/drive | Drive GET
-*DefaultApi* | [**drive_track**](docs/DefaultApi.md#drive_track) | **POST** /api/drive/track | Drive Track Post
-*DefaultApi* | [**drive_track_get**](docs/DefaultApi.md#drive_track_get) | **GET** /api/drive/track | Drive Track GET
-*DefaultApi* | [**get_device_information**](docs/DefaultApi.md#get_device_information) | **GET** /api/device | Device GET
-*DefaultApi* | [**stop**](docs/DefaultApi.md#stop) | **POST** /api/drive/stop | Drive Stop POST
-*DefaultApi* | [**stop_get**](docs/DefaultApi.md#stop_get) | **GET** /api/drive/stop | Drive Stop GET
+*DefaultApi* | [**drive**](docs/DefaultApi.md#drive) | **POST** /api/drive | Drive
+*DefaultApi* | [**drive_heading**](docs/DefaultApi.md#drive_heading) | **POST** /api/drive/hdt | Drive Heading
+*DefaultApi* | [**drive_time**](docs/DefaultApi.md#drive_time) | **POST** /api/drive/time | Drive Time
+*DefaultApi* | [**drive_track**](docs/DefaultApi.md#drive_track) | **POST** /api/drive/track | Drive Track
+*DefaultApi* | [**get_device_information**](docs/DefaultApi.md#get_device_information) | **GET** /api/device | Get Device Information
+*DefaultApi* | [**stop**](docs/DefaultApi.md#stop) | **POST** /api/drive/stop | Stop
 
 
 ## Documentation For Models
 
+ - [ApiDeviceResult](docs/ApiDeviceResult.md)
  - [InlineObject](docs/InlineObject.md)
  - [InlineObject1](docs/InlineObject1.md)
+ - [InlineObject2](docs/InlineObject2.md)
+ - [InlineObject3](docs/InlineObject3.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
 

@@ -13,8 +13,11 @@
 
 
 import ApiClient from './ApiClient';
+import ApiDeviceResult from './model/ApiDeviceResult';
 import InlineObject from './model/InlineObject';
 import InlineObject1 from './model/InlineObject1';
+import InlineObject2 from './model/InlineObject2';
+import InlineObject3 from './model/InlineObject3';
 import InlineResponse200 from './model/InlineResponse200';
 import InlineResponse2001 from './model/InlineResponse2001';
 import DefaultApi from './api/DefaultApi';
@@ -59,6 +62,12 @@ export {
     ApiClient,
 
     /**
+     * The ApiDeviceResult model constructor.
+     * @property {module:model/ApiDeviceResult}
+     */
+    ApiDeviceResult,
+
+    /**
      * The InlineObject model constructor.
      * @property {module:model/InlineObject}
      */
@@ -69,6 +78,18 @@ export {
      * @property {module:model/InlineObject1}
      */
     InlineObject1,
+
+    /**
+     * The InlineObject2 model constructor.
+     * @property {module:model/InlineObject2}
+     */
+    InlineObject2,
+
+    /**
+     * The InlineObject3 model constructor.
+     * @property {module:model/InlineObject3}
+     */
+    InlineObject3,
 
     /**
      * The InlineResponse200 model constructor.

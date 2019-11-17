@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**robot_id** | **str** |  | [optional] 
-**serial_number** | **str** |  | [optional] 
+**result** | [**ApiDeviceResult**](ApiDeviceResult.md) |  | [optional] 
+**status** | **object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

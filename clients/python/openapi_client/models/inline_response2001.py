@@ -33,71 +33,71 @@ class InlineResponse2001(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'robot_id': 'str',
-        'serial_number': 'str'
+        'result': 'ApiDeviceResult',
+        'status': 'object'
     }
 
     attribute_map = {
-        'robot_id': 'robotId',
-        'serial_number': 'serialNumber'
+        'result': 'result',
+        'status': 'status'
     }
 
-    def __init__(self, robot_id=None, serial_number=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, result=None, status=None, local_vars_configuration=None):  # noqa: E501
         """InlineResponse2001 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._robot_id = None
-        self._serial_number = None
+        self._result = None
+        self._status = None
         self.discriminator = None
 
-        if robot_id is not None:
-            self.robot_id = robot_id
-        if serial_number is not None:
-            self.serial_number = serial_number
+        if result is not None:
+            self.result = result
+        if status is not None:
+            self.status = status
 
     @property
-    def robot_id(self):
-        """Gets the robot_id of this InlineResponse2001.  # noqa: E501
+    def result(self):
+        """Gets the result of this InlineResponse2001.  # noqa: E501
 
 
-        :return: The robot_id of this InlineResponse2001.  # noqa: E501
-        :rtype: str
+        :return: The result of this InlineResponse2001.  # noqa: E501
+        :rtype: ApiDeviceResult
         """
-        return self._robot_id
+        return self._result
 
-    @robot_id.setter
-    def robot_id(self, robot_id):
-        """Sets the robot_id of this InlineResponse2001.
+    @result.setter
+    def result(self, result):
+        """Sets the result of this InlineResponse2001.
 
 
-        :param robot_id: The robot_id of this InlineResponse2001.  # noqa: E501
-        :type: str
+        :param result: The result of this InlineResponse2001.  # noqa: E501
+        :type: ApiDeviceResult
         """
 
-        self._robot_id = robot_id
+        self._result = result
 
     @property
-    def serial_number(self):
-        """Gets the serial_number of this InlineResponse2001.  # noqa: E501
+    def status(self):
+        """Gets the status of this InlineResponse2001.  # noqa: E501
 
 
-        :return: The serial_number of this InlineResponse2001.  # noqa: E501
-        :rtype: str
+        :return: The status of this InlineResponse2001.  # noqa: E501
+        :rtype: object
         """
-        return self._serial_number
+        return self._status
 
-    @serial_number.setter
-    def serial_number(self, serial_number):
-        """Sets the serial_number of this InlineResponse2001.
+    @status.setter
+    def status(self, status):
+        """Sets the status of this InlineResponse2001.
 
 
-        :param serial_number: The serial_number of this InlineResponse2001.  # noqa: E501
-        :type: str
+        :param status: The status of this InlineResponse2001.  # noqa: E501
+        :type: object
         """
 
-        self._serial_number = serial_number
+        self._status = status
 
     def to_dict(self):
         """Returns the model properties as a dict"""
