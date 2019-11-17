@@ -8,49 +8,9 @@ servers:
     description: misty
 paths:
   /api/drive:
-    get:
-      x-openapi-router-controller: api
-      summary: Drive GET
-      tags: []
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                title: response
-                type: array
-                x-examples:
-                  example-1:
-                    - result: true
-                      status: Success
-                description: response
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type: boolean
-                    status:
-                      type: string
-      requestBody:
-        description: ''
-        content:
-          application/json:
-            schema: {}
-      parameters:
-        - schema:
-            type: number
-          in: query
-          name: AngularVelocity
-        - schema:
-            type: number
-          in: query
-          name: LinearVelocity
-      description: Drive
-      operationId: drive_get
     post:
       x-openapi-router-controller: api
-      summary: Drive POST
+      summary: Drive
       responses:
         '200':
           description: OK
@@ -77,10 +37,8 @@ paths:
             schema:
               type: object
               properties:
-                LinearVelocity:
-                  type: number
-                AngularVelocity:
-                  type: number
+                LinearVelocity: {}
+                AngularVelocity: {}
             examples:
               example-1:
                 value:
@@ -90,35 +48,9 @@ paths:
       operationId: drive
     parameters: []
   /api/drive/stop:
-    get:
-      x-openapi-router-controller: api
-      summary: Drive Stop GET
-      tags: []
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                title: response
-                type: array
-                x-examples:
-                  example-1:
-                    - result: true
-                      status: Success
-                description: response
-                items:
-                  type: object
-                  properties:
-                    result:
-                      type: boolean
-                    status:
-                      type: string
-      description: Stop
-      operationId: stop_get
     post:
       x-openapi-router-controller: api
-      summary: Drive Stop POST
+      summary: Stop
       responses:
         '200':
           description: OK
@@ -144,7 +76,7 @@ paths:
   /api/device:
     get:
       x-openapi-router-controller: api
-      summary: Device GET
+      summary: Get Device Information
       tags: []
       responses:
         '200':
@@ -154,59 +86,55 @@ paths:
               schema:
                 title: device
                 type: array
-                x-examples: {}
-                items:
-                  type: object
-                  properties:
-                    robotId:
-                      type: string
-                    serialNumber:
-                      type: string
-      operationId: get_device_information
-      description: Get Device Information
-  /api/drive/track:
-    get:
-      x-openapi-router-controller: api
-      summary: Drive Track GET
-      tags: []
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                title: response
-                type: array
                 x-examples:
-                  example-1:
-                    - result: true
+                  get-device-information-example:
+                    - result:
+                        robotId: '12345'
+                        serialNumber: '12345'
+                        batteryLevel: 0.5
+                        hardwareInfo: {}
+                        ipAddress: 0.0.0.0
+                        occipitalDeviceInfo: {}
+                        outputCapabilities:
+                          - sure
+                        robotVersion: 1.0.0.0
+                        sensorCapabilities:
+                          - uh hunh
+                        sensoryServiceAppVersion: 1.0.0.0
+                        windowsOSVersion: 1.0.0.0
                       status: Success
-                description: response
+                description: ''
                 items:
                   type: object
                   properties:
                     result:
-                      type: boolean
-                    status:
-                      type: string
-      description: Drive Track
-      operationId: drive_track_get
-      parameters:
-        - schema:
-            type: string
-          in: query
-          name: LeftTrackSpeed
-        - schema:
-            type: string
-          in: query
-          name: RightTrackSpeed
-      requestBody:
-        content:
-          application/json:
-            schema: {}
+                      type: object
+                      properties:
+                        robotId: {}
+                        serialNumber: {}
+                        currentProfileName: {}
+                        hardwareInfo:
+                          type: object
+                        ipAddress: {}
+                        batteryLevel: {}
+                        occipitalDeviceInfo:
+                          type: object
+                        outputCapabilities:
+                          type: array
+                          items: {}
+                        robotVersion: {}
+                        sensoryServiceAppVersion: {}
+                        windowsOSVersion: {}
+                        sensorCapabilities:
+                          type: array
+                          items: {}
+                    status: {}
+      operationId: get_device_information
+      description: Get Device Information
+  /api/drive/track:
     post:
       x-openapi-router-controller: api
-      summary: Drive Track Post
+      summary: Drive Track
       responses:
         '200':
           description: OK
@@ -234,10 +162,8 @@ paths:
             schema:
               type: object
               properties:
-                RightTrackSpeed:
-                  type: number
-                LeftTrackSpeed:
-                  type: number
+                RightTrackSpeed: {}
+                LeftTrackSpeed: {}
             examples:
               example-1:
                 value:
@@ -245,6 +171,119 @@ paths:
                   RightTrackSpeed: 70
       operationId: drive_track
       description: Drive Track
+  /api/drive/hdt:
+    post:
+      x-openapi-router-controller: api
+      summary: Drive Heading
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                title: device
+                type: array
+                x-examples:
+                  get-device-information-example:
+                    - result:
+                        robotId: '12345'
+                        serialNumber: '12345'
+                        batteryLevel: 0.5
+                        hardwareInfo: {}
+                        ipAddress: 0.0.0.0
+                        occipitalDeviceInfo: {}
+                        outputCapabilities:
+                          - sure
+                        robotVersion: 1.0.0.0
+                        sensorCapabilities:
+                          - uh hunh
+                        sensoryServiceAppVersion: 1.0.0.0
+                        windowsOSVersion: 1.0.0.0
+                      status: Success
+                description: ''
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type: object
+                      properties:
+                        robotId: {}
+                        serialNumber: {}
+                        currentProfileName: {}
+                        hardwareInfo:
+                          type: object
+                        ipAddress: {}
+                        batteryLevel: {}
+                        occipitalDeviceInfo:
+                          type: object
+                        outputCapabilities:
+                          type: array
+                          items: {}
+                        robotVersion: {}
+                        sensoryServiceAppVersion: {}
+                        windowsOSVersion: {}
+                        sensorCapabilities:
+                          type: array
+                          items: {}
+                    status: {}
+      description: Drive Heading
+      operationId: drive_heading
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Heading: {}
+                Distance: {}
+                TimeMS: {}
+            examples:
+              example-1:
+                value:
+                  Heading: 90
+                  Distance: 1
+                  TimeMs: 4000
+  /api/drive/time:
+    post:
+      x-openapi-router-controller: api
+      summary: Drive Time
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                    - result: true
+                      status: Success
+                description: response
+                items:
+                  type: object
+                  properties:
+                    result:
+                      type: boolean
+                    status:
+                      type: string
+      description: Drive Time
+      operationId: drive_time
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                LinearVelocity: {}
+                AngularVelocity: {}
+                TimeMS: {}
+            examples:
+              example-1:
+                value:
+                  LinearVelocity: 1
+                  AngularVelocity: 4
+                  TimeMS: 500
 components:
   schemas:
     response:
@@ -265,11 +304,46 @@ components:
     device:
       title: device
       type: array
-      x-examples: {}
+      x-examples:
+        get-device-information-example:
+          - result:
+              robotId: '12345'
+              serialNumber: '12345'
+              batteryLevel: 0.5
+              hardwareInfo: {}
+              ipAddress: 0.0.0.0
+              occipitalDeviceInfo: {}
+              outputCapabilities:
+                - sure
+              robotVersion: 1.0.0.0
+              sensorCapabilities:
+                - uh hunh
+              sensoryServiceAppVersion: 1.0.0.0
+              windowsOSVersion: 1.0.0.0
+            status: Success
+      description: ''
       items:
         type: object
         properties:
-          robotId:
-            type: string
-          serialNumber:
-            type: string
+          result:
+            type: object
+            properties:
+              robotId: {}
+              serialNumber: {}
+              currentProfileName: {}
+              hardwareInfo:
+                type: object
+              ipAddress: {}
+              batteryLevel: {}
+              occipitalDeviceInfo:
+                type: object
+              outputCapabilities:
+                type: array
+                items: {}
+              robotVersion: {}
+              sensoryServiceAppVersion: {}
+              windowsOSVersion: {}
+              sensorCapabilities:
+                type: array
+                items: {}
+          status: {}
