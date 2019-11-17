@@ -11,7 +11,7 @@ Use Python 3.7
 
 	pip install -r servers/{your-device}/requirements.txt
 
-###Usage
+### Usage
 
 	python servers/{your-device}/server.py
 
