@@ -34,11 +34,11 @@ Generate a client library:
 	  -o {path}/{to}/{output}/{client}/{lib folder}
 
 
-The list of client language generators can be found [here](https://github.com/OpenAPITools/openapi-generator/blob/master/docs/generators.md).
+- The list of client language generators can be found [here](https://github.com/OpenAPITools/openapi-generator/blob/master/docs/generators.md).
 
-Feel free to fork this repo, change the Misty OpenAPI spec and add your own functionality.
+- Feel free to fork this repo, change the Misty OpenAPI spec and add your own functionality.
 
-[Stoplight](https://stoplight.io/) is an excellent tool for adding/editing openapi schemas
+- [Stoplight](https://stoplight.io/) is an excellent tool for adding/editing openapi schemas.
 
 ## TODO 
 - Add websocket endpoint /pubsub
