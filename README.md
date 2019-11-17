@@ -1,7 +1,6 @@
 # Misty OpenAPI
+
 The Misty Robot OpenAPI spec
-
-
 
 ## Server
 
@@ -19,6 +18,10 @@ ex.
 
 	python servers/jetbot/server.py
 
+The api should now be served at http://{host ip}:3000
+
+There is a user interface with documentation about the available paths that is served at http://{host ip}:3000/ui
+
 ## Client
 
 Set up [openapi-generator](https://github.com/OpenAPITools/openapi-generator#2---getting-started).
@@ -35,8 +38,11 @@ The list of client language generators can be found [here](https://github.com/Op
 
 Feel free to fork this repo, change the Misty OpenAPI spec and add your own functionality.
 
+[Stoplight](https://stoplight.io/) is an excellent tool for adding/editing openapi schemas
+
 ## TODO 
 - Add websocket endpoint /pubsub
+- Add support for the rest of the Misty API
 - Generate "cleaner" client libraries where objects are not generic InlineObject and DefaultApi is renamed
 - Implement support fo Jetbot
 - Create documentation for assembling and setting up other devices
