@@ -195,51 +195,20 @@ paths:
           content:
             application/json:
               schema:
+                title: response
+                type: array
+                x-examples:
+                  example-1:
+                    - result: true
+                      status: Success
+                description: response
                 items:
                   type: object
                   properties:
                     result:
-                      type: object
-                      properties:
-                        robotId: {}
-                        serialNumber: {}
-                        currentProfileName: {}
-                        hardwareInfo:
-                          type: object
-                        ipAddress: {}
-                        batteryLevel: {}
-                        occipitalDeviceInfo:
-                          type: object
-                        outputCapabilities:
-                          type: array
-                          items: {}
-                        robotVersion: {}
-                        sensoryServiceAppVersion: {}
-                        windowsOSVersion: {}
-                        sensorCapabilities:
-                          type: array
-                          items: {}
-                    status: {}
-                description: ''
-                x-examples:
-                  get-device-information-example:
-                    - result:
-                        robotId: '12345'
-                        serialNumber: '12345'
-                        batteryLevel: 0.5
-                        hardwareInfo: {}
-                        ipAddress: 0.0.0.0
-                        occipitalDeviceInfo: {}
-                        outputCapabilities:
-                          - sure
-                        robotVersion: 1.0.0.0
-                        sensorCapabilities:
-                          - uh hunh
-                        sensoryServiceAppVersion: 1.0.0.0
-                        windowsOSVersion: 1.0.0.0
-                      status: Success
-                type: array
-                title: device
+                      type: boolean
+                    status:
+                      type: string
       description: Drive Heading
       operationId: drive_heading
       requestBody:
