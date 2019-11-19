@@ -18,9 +18,13 @@ ex.
 
 	python servers/jetbot/server.py
 
-The api should now be served at http://{host ip}:3000
+- The api should now be served at http://{host ip}:3000
 
-There is a user interface with documentation about the available paths that is served at http://{host ip}:3000/ui
+- There is a user interface with documentation about the available paths that is served at http://{host ip}:3000/ui
+
+#### Notes
+
+The server uses [connextion](https://github.com/zalando/connexion) which uses Python Flask. Other webservers can also be used.  Additionally [connexion](https://github.com/zalando/connexion) supports setting up [authentication](https://github.com/zalando/connexion#oauth-2-authentication-and-authorization) and [SSL](https://github.com/zalando/connexion#https-support)!  `x-openapi-router-controller` defines the module where the implementation is for the path/route. The `operationId` defines the function name.  So `x-openapi-router-controller: api` and `operationId: drive` means that the implementation for the drive path/route is in the function `drive()` and file api.py.  Feel free to fork this repo, extend, modify or implement your own robot api using the Misty API!
 
 ## Client
 
