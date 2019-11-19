@@ -27,6 +27,8 @@ type DefaultApiService service
 
 // DriveOpts Optional parameters for the method 'Drive'
 type DriveOpts struct {
+    LinearVelocity optional.Interface
+    AngularVelocity optional.Interface
     InlineObject optional.Interface
 }
 
@@ -35,6 +37,8 @@ Drive Drive
 Drive
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *DriveOpts - Optional Parameters:
+ * @param "LinearVelocity" (optional.Interface of map[string]interface{}) - 
+ * @param "AngularVelocity" (optional.Interface of map[string]interface{}) - 
  * @param "InlineObject" (optional.Interface of InlineObject) - 
 @return []InlineResponse200
 */
@@ -55,6 +59,12 @@ func (a *DefaultApiService) Drive(ctx _context.Context, localVarOptionals *Drive
 	localVarQueryParams := _neturl.Values{}
 	localVarFormParams := _neturl.Values{}
 
+	if localVarOptionals != nil && localVarOptionals.LinearVelocity.IsSet() {
+		localVarQueryParams.Add("LinearVelocity", parameterToString(localVarOptionals.LinearVelocity.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.AngularVelocity.IsSet() {
+		localVarQueryParams.Add("AngularVelocity", parameterToString(localVarOptionals.AngularVelocity.Value(), ""))
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json"}
 
@@ -128,6 +138,9 @@ func (a *DefaultApiService) Drive(ctx _context.Context, localVarOptionals *Drive
 
 // DriveHeadingOpts Optional parameters for the method 'DriveHeading'
 type DriveHeadingOpts struct {
+    Heading optional.Interface
+    Distance optional.Interface
+    TimeMS optional.Interface
     InlineObject2 optional.Interface
 }
 
@@ -136,6 +149,9 @@ DriveHeading Drive Heading
 Drive Heading
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *DriveHeadingOpts - Optional Parameters:
+ * @param "Heading" (optional.Interface of map[string]interface{}) - 
+ * @param "Distance" (optional.Interface of map[string]interface{}) - 
+ * @param "TimeMS" (optional.Interface of map[string]interface{}) - 
  * @param "InlineObject2" (optional.Interface of InlineObject2) - 
 @return []InlineResponse2001
 */
@@ -156,6 +172,15 @@ func (a *DefaultApiService) DriveHeading(ctx _context.Context, localVarOptionals
 	localVarQueryParams := _neturl.Values{}
 	localVarFormParams := _neturl.Values{}
 
+	if localVarOptionals != nil && localVarOptionals.Heading.IsSet() {
+		localVarQueryParams.Add("Heading", parameterToString(localVarOptionals.Heading.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.Distance.IsSet() {
+		localVarQueryParams.Add("Distance", parameterToString(localVarOptionals.Distance.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.TimeMS.IsSet() {
+		localVarQueryParams.Add("TimeMS", parameterToString(localVarOptionals.TimeMS.Value(), ""))
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json"}
 
@@ -229,6 +254,9 @@ func (a *DefaultApiService) DriveHeading(ctx _context.Context, localVarOptionals
 
 // DriveTimeOpts Optional parameters for the method 'DriveTime'
 type DriveTimeOpts struct {
+    LinearVelocity optional.Interface
+    AngularVelocity optional.Interface
+    TimeMS optional.Interface
     InlineObject3 optional.Interface
 }
 
@@ -237,6 +265,9 @@ DriveTime Drive Time
 Drive Time
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *DriveTimeOpts - Optional Parameters:
+ * @param "LinearVelocity" (optional.Interface of map[string]interface{}) - 
+ * @param "AngularVelocity" (optional.Interface of map[string]interface{}) - 
+ * @param "TimeMS" (optional.Interface of map[string]interface{}) - 
  * @param "InlineObject3" (optional.Interface of InlineObject3) - 
 @return []InlineResponse200
 */
@@ -257,6 +288,15 @@ func (a *DefaultApiService) DriveTime(ctx _context.Context, localVarOptionals *D
 	localVarQueryParams := _neturl.Values{}
 	localVarFormParams := _neturl.Values{}
 
+	if localVarOptionals != nil && localVarOptionals.LinearVelocity.IsSet() {
+		localVarQueryParams.Add("LinearVelocity", parameterToString(localVarOptionals.LinearVelocity.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.AngularVelocity.IsSet() {
+		localVarQueryParams.Add("AngularVelocity", parameterToString(localVarOptionals.AngularVelocity.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.TimeMS.IsSet() {
+		localVarQueryParams.Add("TimeMS", parameterToString(localVarOptionals.TimeMS.Value(), ""))
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json"}
 
@@ -330,6 +370,8 @@ func (a *DefaultApiService) DriveTime(ctx _context.Context, localVarOptionals *D
 
 // DriveTrackOpts Optional parameters for the method 'DriveTrack'
 type DriveTrackOpts struct {
+    RightTrackSpeed optional.Interface
+    LeftTrackSpeed optional.Interface
     InlineObject1 optional.Interface
 }
 
@@ -338,6 +380,8 @@ DriveTrack Drive Track
 Drive Track
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *DriveTrackOpts - Optional Parameters:
+ * @param "RightTrackSpeed" (optional.Interface of map[string]interface{}) - 
+ * @param "LeftTrackSpeed" (optional.Interface of map[string]interface{}) - 
  * @param "InlineObject1" (optional.Interface of InlineObject1) - 
 @return []InlineResponse200
 */
@@ -358,6 +402,12 @@ func (a *DefaultApiService) DriveTrack(ctx _context.Context, localVarOptionals *
 	localVarQueryParams := _neturl.Values{}
 	localVarFormParams := _neturl.Values{}
 
+	if localVarOptionals != nil && localVarOptionals.RightTrackSpeed.IsSet() {
+		localVarQueryParams.Add("RightTrackSpeed", parameterToString(localVarOptionals.RightTrackSpeed.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.LeftTrackSpeed.IsSet() {
+		localVarQueryParams.Add("LeftTrackSpeed", parameterToString(localVarOptionals.LeftTrackSpeed.Value(), ""))
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json"}
 

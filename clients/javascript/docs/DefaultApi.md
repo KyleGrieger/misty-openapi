@@ -28,6 +28,8 @@ import MistyApi from 'misty_api';
 
 let apiInstance = new MistyApi.DefaultApi();
 let opts = {
+  'linearVelocity': null, // Object | 
+  'angularVelocity': null, // Object | 
   'inlineObject': new MistyApi.InlineObject() // InlineObject | 
 };
 apiInstance.drive(opts, (error, data, response) => {
@@ -44,6 +46,8 @@ apiInstance.drive(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **linearVelocity** | [**Object**](.md)|  | [optional] 
+ **angularVelocity** | [**Object**](.md)|  | [optional] 
  **inlineObject** | [**InlineObject**](InlineObject.md)|  | [optional] 
 
 ### Return type
@@ -75,6 +79,9 @@ import MistyApi from 'misty_api';
 
 let apiInstance = new MistyApi.DefaultApi();
 let opts = {
+  'heading': null, // Object | 
+  'distance': null, // Object | 
+  'timeMS': null, // Object | 
   'inlineObject2': new MistyApi.InlineObject2() // InlineObject2 | 
 };
 apiInstance.driveHeading(opts, (error, data, response) => {
@@ -91,6 +98,9 @@ apiInstance.driveHeading(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **heading** | [**Object**](.md)|  | [optional] 
+ **distance** | [**Object**](.md)|  | [optional] 
+ **timeMS** | [**Object**](.md)|  | [optional] 
  **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | [optional] 
 
 ### Return type
@@ -122,6 +132,9 @@ import MistyApi from 'misty_api';
 
 let apiInstance = new MistyApi.DefaultApi();
 let opts = {
+  'linearVelocity': null, // Object | 
+  'angularVelocity': null, // Object | 
+  'timeMS': null, // Object | 
   'inlineObject3': new MistyApi.InlineObject3() // InlineObject3 | 
 };
 apiInstance.driveTime(opts, (error, data, response) => {
@@ -138,6 +151,9 @@ apiInstance.driveTime(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **linearVelocity** | [**Object**](.md)|  | [optional] 
+ **angularVelocity** | [**Object**](.md)|  | [optional] 
+ **timeMS** | [**Object**](.md)|  | [optional] 
  **inlineObject3** | [**InlineObject3**](InlineObject3.md)|  | [optional] 
 
 ### Return type
@@ -169,6 +185,8 @@ import MistyApi from 'misty_api';
 
 let apiInstance = new MistyApi.DefaultApi();
 let opts = {
+  'rightTrackSpeed': null, // Object | 
+  'leftTrackSpeed': null, // Object | 
   'inlineObject1': new MistyApi.InlineObject1() // InlineObject1 | 
 };
 apiInstance.driveTrack(opts, (error, data, response) => {
@@ -185,6 +203,8 @@ apiInstance.driveTrack(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **rightTrackSpeed** | [**Object**](.md)|  | [optional] 
+ **leftTrackSpeed** | [**Object**](.md)|  | [optional] 
  **inlineObject1** | [**InlineObject1**](InlineObject1.md)|  | [optional] 
 
 ### Return type

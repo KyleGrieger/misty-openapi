@@ -36,6 +36,8 @@ Optional parameters are passed through a pointer to a DriveOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **linearVelocity** | [**optional.Interface of map[string]interface{}**](.md)|  | 
+ **angularVelocity** | [**optional.Interface of map[string]interface{}**](.md)|  | 
  **inlineObject** | [**optional.Interface of InlineObject**](InlineObject.md)|  | 
 
 ### Return type
@@ -79,6 +81,9 @@ Optional parameters are passed through a pointer to a DriveHeadingOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **heading** | [**optional.Interface of map[string]interface{}**](.md)|  | 
+ **distance** | [**optional.Interface of map[string]interface{}**](.md)|  | 
+ **timeMS** | [**optional.Interface of map[string]interface{}**](.md)|  | 
  **inlineObject2** | [**optional.Interface of InlineObject2**](InlineObject2.md)|  | 
 
 ### Return type
@@ -122,6 +127,9 @@ Optional parameters are passed through a pointer to a DriveTimeOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **linearVelocity** | [**optional.Interface of map[string]interface{}**](.md)|  | 
+ **angularVelocity** | [**optional.Interface of map[string]interface{}**](.md)|  | 
+ **timeMS** | [**optional.Interface of map[string]interface{}**](.md)|  | 
  **inlineObject3** | [**optional.Interface of InlineObject3**](InlineObject3.md)|  | 
 
 ### Return type
@@ -165,6 +173,8 @@ Optional parameters are passed through a pointer to a DriveTrackOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **rightTrackSpeed** | [**optional.Interface of map[string]interface{}**](.md)|  | 
+ **leftTrackSpeed** | [**optional.Interface of map[string]interface{}**](.md)|  | 
  **inlineObject1** | [**optional.Interface of InlineObject1**](InlineObject1.md)|  | 
 
 ### Return type

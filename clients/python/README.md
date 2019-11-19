@@ -56,11 +56,13 @@ from pprint import pprint
 configuration.host = "http://localhost:3000"
 # Create an instance of the API class
 api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+linear_velocity = None # object |  (optional)
+angular_velocity = None # object |  (optional)
 inline_object = openapi_client.InlineObject() # InlineObject |  (optional)
 
 try:
     # Drive
-    api_response = api_instance.drive(inline_object=inline_object)
+    api_response = api_instance.drive(linear_velocity=linear_velocity, angular_velocity=angular_velocity, inline_object=inline_object)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->drive: %s\n" % e)

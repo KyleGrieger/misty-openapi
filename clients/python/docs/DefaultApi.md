@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **drive**
-> list[InlineResponse200] drive(inline_object=inline_object)
+> list[InlineResponse200] drive(linear_velocity=linear_velocity, angular_velocity=angular_velocity, inline_object=inline_object)
 
 Drive
 
@@ -30,11 +30,13 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = openapi_client.DefaultApi()
+linear_velocity = None # object |  (optional)
+angular_velocity = None # object |  (optional)
 inline_object = openapi_client.InlineObject() # InlineObject |  (optional)
 
 try:
     # Drive
-    api_response = api_instance.drive(inline_object=inline_object)
+    api_response = api_instance.drive(linear_velocity=linear_velocity, angular_velocity=angular_velocity, inline_object=inline_object)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->drive: %s\n" % e)
@@ -44,6 +46,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **linear_velocity** | [**object**](.md)|  | [optional] 
+ **angular_velocity** | [**object**](.md)|  | [optional] 
  **inline_object** | [**InlineObject**](InlineObject.md)|  | [optional] 
 
 ### Return type
@@ -67,7 +71,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **drive_heading**
-> list[InlineResponse2001] drive_heading(inline_object2=inline_object2)
+> list[InlineResponse2001] drive_heading(heading=heading, distance=distance, time_ms=time_ms, inline_object2=inline_object2)
 
 Drive Heading
 
@@ -84,11 +88,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = openapi_client.DefaultApi()
+heading = None # object |  (optional)
+distance = None # object |  (optional)
+time_ms = None # object |  (optional)
 inline_object2 = openapi_client.InlineObject2() # InlineObject2 |  (optional)
 
 try:
     # Drive Heading
-    api_response = api_instance.drive_heading(inline_object2=inline_object2)
+    api_response = api_instance.drive_heading(heading=heading, distance=distance, time_ms=time_ms, inline_object2=inline_object2)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->drive_heading: %s\n" % e)
@@ -98,6 +105,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **heading** | [**object**](.md)|  | [optional] 
+ **distance** | [**object**](.md)|  | [optional] 
+ **time_ms** | [**object**](.md)|  | [optional] 
  **inline_object2** | [**InlineObject2**](InlineObject2.md)|  | [optional] 
 
 ### Return type
@@ -121,7 +131,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **drive_time**
-> list[InlineResponse200] drive_time(inline_object3=inline_object3)
+> list[InlineResponse200] drive_time(linear_velocity=linear_velocity, angular_velocity=angular_velocity, time_ms=time_ms, inline_object3=inline_object3)
 
 Drive Time
 
@@ -138,11 +148,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = openapi_client.DefaultApi()
+linear_velocity = None # object |  (optional)
+angular_velocity = None # object |  (optional)
+time_ms = None # object |  (optional)
 inline_object3 = openapi_client.InlineObject3() # InlineObject3 |  (optional)
 
 try:
     # Drive Time
-    api_response = api_instance.drive_time(inline_object3=inline_object3)
+    api_response = api_instance.drive_time(linear_velocity=linear_velocity, angular_velocity=angular_velocity, time_ms=time_ms, inline_object3=inline_object3)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->drive_time: %s\n" % e)
@@ -152,6 +165,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **linear_velocity** | [**object**](.md)|  | [optional] 
+ **angular_velocity** | [**object**](.md)|  | [optional] 
+ **time_ms** | [**object**](.md)|  | [optional] 
  **inline_object3** | [**InlineObject3**](InlineObject3.md)|  | [optional] 
 
 ### Return type
@@ -175,7 +191,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **drive_track**
-> list[InlineResponse200] drive_track(inline_object1=inline_object1)
+> list[InlineResponse200] drive_track(right_track_speed=right_track_speed, left_track_speed=left_track_speed, inline_object1=inline_object1)
 
 Drive Track
 
@@ -192,11 +208,13 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = openapi_client.DefaultApi()
+right_track_speed = None # object |  (optional)
+left_track_speed = None # object |  (optional)
 inline_object1 = openapi_client.InlineObject1() # InlineObject1 |  (optional)
 
 try:
     # Drive Track
-    api_response = api_instance.drive_track(inline_object1=inline_object1)
+    api_response = api_instance.drive_track(right_track_speed=right_track_speed, left_track_speed=left_track_speed, inline_object1=inline_object1)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->drive_track: %s\n" % e)
@@ -206,6 +224,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **right_track_speed** | [**object**](.md)|  | [optional] 
+ **left_track_speed** | [**object**](.md)|  | [optional] 
  **inline_object1** | [**InlineObject1**](InlineObject1.md)|  | [optional] 
 
 ### Return type

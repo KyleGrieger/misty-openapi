@@ -70,8 +70,10 @@ namespace Org.OpenAPITools.Test
         public void DriveTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //Object linearVelocity = null;
+            //Object angularVelocity = null;
             //InlineObject inlineObject = null;
-            //var response = instance.Drive(inlineObject);
+            //var response = instance.Drive(linearVelocity, angularVelocity, inlineObject);
             //Assert.IsInstanceOf(typeof(List<InlineResponse200>), response, "response is List<InlineResponse200>");
         }
         
@@ -82,8 +84,11 @@ namespace Org.OpenAPITools.Test
         public void DriveHeadingTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //Object heading = null;
+            //Object distance = null;
+            //Object timeMS = null;
             //InlineObject2 inlineObject2 = null;
-            //var response = instance.DriveHeading(inlineObject2);
+            //var response = instance.DriveHeading(heading, distance, timeMS, inlineObject2);
             //Assert.IsInstanceOf(typeof(List<InlineResponse2001>), response, "response is List<InlineResponse2001>");
         }
         
@@ -94,8 +99,11 @@ namespace Org.OpenAPITools.Test
         public void DriveTimeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //Object linearVelocity = null;
+            //Object angularVelocity = null;
+            //Object timeMS = null;
             //InlineObject3 inlineObject3 = null;
-            //var response = instance.DriveTime(inlineObject3);
+            //var response = instance.DriveTime(linearVelocity, angularVelocity, timeMS, inlineObject3);
             //Assert.IsInstanceOf(typeof(List<InlineResponse200>), response, "response is List<InlineResponse200>");
         }
         
@@ -106,8 +114,10 @@ namespace Org.OpenAPITools.Test
         public void DriveTrackTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //Object rightTrackSpeed = null;
+            //Object leftTrackSpeed = null;
             //InlineObject1 inlineObject1 = null;
-            //var response = instance.DriveTrack(inlineObject1);
+            //var response = instance.DriveTrack(rightTrackSpeed, leftTrackSpeed, inlineObject1);
             //Assert.IsInstanceOf(typeof(List<InlineResponse200>), response, "response is List<InlineResponse200>");
         }
         

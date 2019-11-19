@@ -103,6 +103,8 @@ var MistyApi = require('misty_api');
 
 var api = new MistyApi.DefaultApi()
 var opts = {
+  'linearVelocity': null, // {Object} 
+  'angularVelocity': null, // {Object} 
   'inlineObject': new MistyApi.InlineObject() // {InlineObject} 
 };
 var callback = function(error, data, response) {

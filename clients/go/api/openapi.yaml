@@ -11,6 +11,19 @@ paths:
     post:
       description: Drive
       operationId: drive
+      parameters:
+      - explode: true
+        in: query
+        name: LinearVelocity
+        required: false
+        schema: {}
+        style: form
+      - explode: true
+        in: query
+        name: AngularVelocity
+        required: false
+        schema: {}
+        style: form
       requestBody:
         $ref: '#/components/requestBodies/inline_object'
         content:
@@ -102,7 +115,19 @@ paths:
     post:
       description: Drive Track
       operationId: drive_track
-      parameters: []
+      parameters:
+      - explode: true
+        in: query
+        name: RightTrackSpeed
+        required: false
+        schema: {}
+        style: form
+      - explode: true
+        in: query
+        name: LeftTrackSpeed
+        required: false
+        schema: {}
+        style: form
       requestBody:
         $ref: '#/components/requestBodies/inline_object_1'
         content:
@@ -139,6 +164,25 @@ paths:
     post:
       description: Drive Heading
       operationId: drive_heading
+      parameters:
+      - explode: true
+        in: query
+        name: Heading
+        required: false
+        schema: {}
+        style: form
+      - explode: true
+        in: query
+        name: Distance
+        required: false
+        schema: {}
+        style: form
+      - explode: true
+        in: query
+        name: TimeMS
+        required: false
+        schema: {}
+        style: form
       requestBody:
         $ref: '#/components/requestBodies/inline_object_2'
         content:
@@ -189,6 +233,25 @@ paths:
     post:
       description: Drive Time
       operationId: drive_time
+      parameters:
+      - explode: true
+        in: query
+        name: LinearVelocity
+        required: false
+        schema: {}
+        style: form
+      - explode: true
+        in: query
+        name: AngularVelocity
+        required: false
+        schema: {}
+        style: form
+      - explode: true
+        in: query
+        name: TimeMS
+        required: false
+        schema: {}
+        style: form
       requestBody:
         $ref: '#/components/requestBodies/inline_object_3'
         content:

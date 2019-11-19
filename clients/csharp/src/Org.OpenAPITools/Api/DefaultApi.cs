@@ -31,9 +31,11 @@ namespace Org.OpenAPITools.Api
         /// Drive
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
         /// <param name="inlineObject"> (optional)</param>
         /// <returns>List&lt;InlineResponse200&gt;</returns>
-        List<InlineResponse200> Drive (InlineObject inlineObject = default(InlineObject));
+        List<InlineResponse200> Drive (Object linearVelocity = default(Object), Object angularVelocity = default(Object), InlineObject inlineObject = default(InlineObject));
 
         /// <summary>
         /// Drive
@@ -42,9 +44,11 @@ namespace Org.OpenAPITools.Api
         /// Drive
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
         /// <param name="inlineObject"> (optional)</param>
         /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
-        ApiResponse<List<InlineResponse200>> DriveWithHttpInfo (InlineObject inlineObject = default(InlineObject));
+        ApiResponse<List<InlineResponse200>> DriveWithHttpInfo (Object linearVelocity = default(Object), Object angularVelocity = default(Object), InlineObject inlineObject = default(InlineObject));
         /// <summary>
         /// Drive Heading
         /// </summary>
@@ -52,9 +56,12 @@ namespace Org.OpenAPITools.Api
         /// Drive Heading
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="heading"> (optional)</param>
+        /// <param name="distance"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject2"> (optional)</param>
         /// <returns>List&lt;InlineResponse2001&gt;</returns>
-        List<InlineResponse2001> DriveHeading (InlineObject2 inlineObject2 = default(InlineObject2));
+        List<InlineResponse2001> DriveHeading (Object heading = default(Object), Object distance = default(Object), Object timeMS = default(Object), InlineObject2 inlineObject2 = default(InlineObject2));
 
         /// <summary>
         /// Drive Heading
@@ -63,9 +70,12 @@ namespace Org.OpenAPITools.Api
         /// Drive Heading
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="heading"> (optional)</param>
+        /// <param name="distance"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject2"> (optional)</param>
         /// <returns>ApiResponse of List&lt;InlineResponse2001&gt;</returns>
-        ApiResponse<List<InlineResponse2001>> DriveHeadingWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2));
+        ApiResponse<List<InlineResponse2001>> DriveHeadingWithHttpInfo (Object heading = default(Object), Object distance = default(Object), Object timeMS = default(Object), InlineObject2 inlineObject2 = default(InlineObject2));
         /// <summary>
         /// Drive Time
         /// </summary>
@@ -73,9 +83,12 @@ namespace Org.OpenAPITools.Api
         /// Drive Time
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject3"> (optional)</param>
         /// <returns>List&lt;InlineResponse200&gt;</returns>
-        List<InlineResponse200> DriveTime (InlineObject3 inlineObject3 = default(InlineObject3));
+        List<InlineResponse200> DriveTime (Object linearVelocity = default(Object), Object angularVelocity = default(Object), Object timeMS = default(Object), InlineObject3 inlineObject3 = default(InlineObject3));
 
         /// <summary>
         /// Drive Time
@@ -84,9 +97,12 @@ namespace Org.OpenAPITools.Api
         /// Drive Time
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject3"> (optional)</param>
         /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
-        ApiResponse<List<InlineResponse200>> DriveTimeWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3));
+        ApiResponse<List<InlineResponse200>> DriveTimeWithHttpInfo (Object linearVelocity = default(Object), Object angularVelocity = default(Object), Object timeMS = default(Object), InlineObject3 inlineObject3 = default(InlineObject3));
         /// <summary>
         /// Drive Track
         /// </summary>
@@ -94,9 +110,11 @@ namespace Org.OpenAPITools.Api
         /// Drive Track
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rightTrackSpeed"> (optional)</param>
+        /// <param name="leftTrackSpeed"> (optional)</param>
         /// <param name="inlineObject1"> (optional)</param>
         /// <returns>List&lt;InlineResponse200&gt;</returns>
-        List<InlineResponse200> DriveTrack (InlineObject1 inlineObject1 = default(InlineObject1));
+        List<InlineResponse200> DriveTrack (Object rightTrackSpeed = default(Object), Object leftTrackSpeed = default(Object), InlineObject1 inlineObject1 = default(InlineObject1));
 
         /// <summary>
         /// Drive Track
@@ -105,9 +123,11 @@ namespace Org.OpenAPITools.Api
         /// Drive Track
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rightTrackSpeed"> (optional)</param>
+        /// <param name="leftTrackSpeed"> (optional)</param>
         /// <param name="inlineObject1"> (optional)</param>
         /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
-        ApiResponse<List<InlineResponse200>> DriveTrackWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1));
+        ApiResponse<List<InlineResponse200>> DriveTrackWithHttpInfo (Object rightTrackSpeed = default(Object), Object leftTrackSpeed = default(Object), InlineObject1 inlineObject1 = default(InlineObject1));
         /// <summary>
         /// Get Device Information
         /// </summary>
@@ -155,9 +175,11 @@ namespace Org.OpenAPITools.Api
         /// Drive
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
         /// <param name="inlineObject"> (optional)</param>
         /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
-        System.Threading.Tasks.Task<List<InlineResponse200>> DriveAsync (InlineObject inlineObject = default(InlineObject));
+        System.Threading.Tasks.Task<List<InlineResponse200>> DriveAsync (Object linearVelocity = default(Object), Object angularVelocity = default(Object), InlineObject inlineObject = default(InlineObject));
 
         /// <summary>
         /// Drive
@@ -166,9 +188,11 @@ namespace Org.OpenAPITools.Api
         /// Drive
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
         /// <param name="inlineObject"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveAsyncWithHttpInfo (InlineObject inlineObject = default(InlineObject));
+        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveAsyncWithHttpInfo (Object linearVelocity = default(Object), Object angularVelocity = default(Object), InlineObject inlineObject = default(InlineObject));
         /// <summary>
         /// Drive Heading
         /// </summary>
@@ -176,9 +200,12 @@ namespace Org.OpenAPITools.Api
         /// Drive Heading
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="heading"> (optional)</param>
+        /// <param name="distance"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject2"> (optional)</param>
         /// <returns>Task of List&lt;InlineResponse2001&gt;</returns>
-        System.Threading.Tasks.Task<List<InlineResponse2001>> DriveHeadingAsync (InlineObject2 inlineObject2 = default(InlineObject2));
+        System.Threading.Tasks.Task<List<InlineResponse2001>> DriveHeadingAsync (Object heading = default(Object), Object distance = default(Object), Object timeMS = default(Object), InlineObject2 inlineObject2 = default(InlineObject2));
 
         /// <summary>
         /// Drive Heading
@@ -187,9 +214,12 @@ namespace Org.OpenAPITools.Api
         /// Drive Heading
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="heading"> (optional)</param>
+        /// <param name="distance"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject2"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;InlineResponse2001&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse2001>>> DriveHeadingAsyncWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2));
+        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse2001>>> DriveHeadingAsyncWithHttpInfo (Object heading = default(Object), Object distance = default(Object), Object timeMS = default(Object), InlineObject2 inlineObject2 = default(InlineObject2));
         /// <summary>
         /// Drive Time
         /// </summary>
@@ -197,9 +227,12 @@ namespace Org.OpenAPITools.Api
         /// Drive Time
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject3"> (optional)</param>
         /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
-        System.Threading.Tasks.Task<List<InlineResponse200>> DriveTimeAsync (InlineObject3 inlineObject3 = default(InlineObject3));
+        System.Threading.Tasks.Task<List<InlineResponse200>> DriveTimeAsync (Object linearVelocity = default(Object), Object angularVelocity = default(Object), Object timeMS = default(Object), InlineObject3 inlineObject3 = default(InlineObject3));
 
         /// <summary>
         /// Drive Time
@@ -208,9 +241,12 @@ namespace Org.OpenAPITools.Api
         /// Drive Time
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject3"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveTimeAsyncWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3));
+        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveTimeAsyncWithHttpInfo (Object linearVelocity = default(Object), Object angularVelocity = default(Object), Object timeMS = default(Object), InlineObject3 inlineObject3 = default(InlineObject3));
         /// <summary>
         /// Drive Track
         /// </summary>
@@ -218,9 +254,11 @@ namespace Org.OpenAPITools.Api
         /// Drive Track
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rightTrackSpeed"> (optional)</param>
+        /// <param name="leftTrackSpeed"> (optional)</param>
         /// <param name="inlineObject1"> (optional)</param>
         /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
-        System.Threading.Tasks.Task<List<InlineResponse200>> DriveTrackAsync (InlineObject1 inlineObject1 = default(InlineObject1));
+        System.Threading.Tasks.Task<List<InlineResponse200>> DriveTrackAsync (Object rightTrackSpeed = default(Object), Object leftTrackSpeed = default(Object), InlineObject1 inlineObject1 = default(InlineObject1));
 
         /// <summary>
         /// Drive Track
@@ -229,9 +267,11 @@ namespace Org.OpenAPITools.Api
         /// Drive Track
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rightTrackSpeed"> (optional)</param>
+        /// <param name="leftTrackSpeed"> (optional)</param>
         /// <param name="inlineObject1"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveTrackAsyncWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1));
+        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveTrackAsyncWithHttpInfo (Object rightTrackSpeed = default(Object), Object leftTrackSpeed = default(Object), InlineObject1 inlineObject1 = default(InlineObject1));
         /// <summary>
         /// Get Device Information
         /// </summary>
@@ -385,11 +425,13 @@ namespace Org.OpenAPITools.Api
         /// Drive Drive
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
         /// <param name="inlineObject"> (optional)</param>
         /// <returns>List&lt;InlineResponse200&gt;</returns>
-        public List<InlineResponse200> Drive (InlineObject inlineObject = default(InlineObject))
+        public List<InlineResponse200> Drive (Object linearVelocity = default(Object), Object angularVelocity = default(Object), InlineObject inlineObject = default(InlineObject))
         {
-             ApiResponse<List<InlineResponse200>> localVarResponse = DriveWithHttpInfo(inlineObject);
+             ApiResponse<List<InlineResponse200>> localVarResponse = DriveWithHttpInfo(linearVelocity, angularVelocity, inlineObject);
              return localVarResponse.Data;
         }
 
@@ -397,9 +439,11 @@ namespace Org.OpenAPITools.Api
         /// Drive Drive
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
         /// <param name="inlineObject"> (optional)</param>
         /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
-        public ApiResponse<List<InlineResponse200>> DriveWithHttpInfo (InlineObject inlineObject = default(InlineObject))
+        public ApiResponse<List<InlineResponse200>> DriveWithHttpInfo (Object linearVelocity = default(Object), Object angularVelocity = default(Object), InlineObject inlineObject = default(InlineObject))
         {
 
             var localVarPath = "/api/drive";
@@ -424,6 +468,8 @@ namespace Org.OpenAPITools.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (linearVelocity != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LinearVelocity", linearVelocity)); // query parameter
+            if (angularVelocity != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AngularVelocity", angularVelocity)); // query parameter
             if (inlineObject != null && inlineObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject); // http body (model) parameter
@@ -456,11 +502,13 @@ namespace Org.OpenAPITools.Api
         /// Drive Drive
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
         /// <param name="inlineObject"> (optional)</param>
         /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
-        public async System.Threading.Tasks.Task<List<InlineResponse200>> DriveAsync (InlineObject inlineObject = default(InlineObject))
+        public async System.Threading.Tasks.Task<List<InlineResponse200>> DriveAsync (Object linearVelocity = default(Object), Object angularVelocity = default(Object), InlineObject inlineObject = default(InlineObject))
         {
-             ApiResponse<List<InlineResponse200>> localVarResponse = await DriveAsyncWithHttpInfo(inlineObject);
+             ApiResponse<List<InlineResponse200>> localVarResponse = await DriveAsyncWithHttpInfo(linearVelocity, angularVelocity, inlineObject);
              return localVarResponse.Data;
 
         }
@@ -469,9 +517,11 @@ namespace Org.OpenAPITools.Api
         /// Drive Drive
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
         /// <param name="inlineObject"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveAsyncWithHttpInfo (InlineObject inlineObject = default(InlineObject))
+        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveAsyncWithHttpInfo (Object linearVelocity = default(Object), Object angularVelocity = default(Object), InlineObject inlineObject = default(InlineObject))
         {
 
             var localVarPath = "/api/drive";
@@ -496,6 +546,8 @@ namespace Org.OpenAPITools.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (linearVelocity != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LinearVelocity", linearVelocity)); // query parameter
+            if (angularVelocity != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AngularVelocity", angularVelocity)); // query parameter
             if (inlineObject != null && inlineObject.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject); // http body (model) parameter
@@ -528,11 +580,14 @@ namespace Org.OpenAPITools.Api
         /// Drive Heading Drive Heading
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="heading"> (optional)</param>
+        /// <param name="distance"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject2"> (optional)</param>
         /// <returns>List&lt;InlineResponse2001&gt;</returns>
-        public List<InlineResponse2001> DriveHeading (InlineObject2 inlineObject2 = default(InlineObject2))
+        public List<InlineResponse2001> DriveHeading (Object heading = default(Object), Object distance = default(Object), Object timeMS = default(Object), InlineObject2 inlineObject2 = default(InlineObject2))
         {
-             ApiResponse<List<InlineResponse2001>> localVarResponse = DriveHeadingWithHttpInfo(inlineObject2);
+             ApiResponse<List<InlineResponse2001>> localVarResponse = DriveHeadingWithHttpInfo(heading, distance, timeMS, inlineObject2);
              return localVarResponse.Data;
         }
 
@@ -540,9 +595,12 @@ namespace Org.OpenAPITools.Api
         /// Drive Heading Drive Heading
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="heading"> (optional)</param>
+        /// <param name="distance"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject2"> (optional)</param>
         /// <returns>ApiResponse of List&lt;InlineResponse2001&gt;</returns>
-        public ApiResponse<List<InlineResponse2001>> DriveHeadingWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2))
+        public ApiResponse<List<InlineResponse2001>> DriveHeadingWithHttpInfo (Object heading = default(Object), Object distance = default(Object), Object timeMS = default(Object), InlineObject2 inlineObject2 = default(InlineObject2))
         {
 
             var localVarPath = "/api/drive/hdt";
@@ -567,6 +625,9 @@ namespace Org.OpenAPITools.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (heading != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Heading", heading)); // query parameter
+            if (distance != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Distance", distance)); // query parameter
+            if (timeMS != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "TimeMS", timeMS)); // query parameter
             if (inlineObject2 != null && inlineObject2.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject2); // http body (model) parameter
@@ -599,11 +660,14 @@ namespace Org.OpenAPITools.Api
         /// Drive Heading Drive Heading
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="heading"> (optional)</param>
+        /// <param name="distance"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject2"> (optional)</param>
         /// <returns>Task of List&lt;InlineResponse2001&gt;</returns>
-        public async System.Threading.Tasks.Task<List<InlineResponse2001>> DriveHeadingAsync (InlineObject2 inlineObject2 = default(InlineObject2))
+        public async System.Threading.Tasks.Task<List<InlineResponse2001>> DriveHeadingAsync (Object heading = default(Object), Object distance = default(Object), Object timeMS = default(Object), InlineObject2 inlineObject2 = default(InlineObject2))
         {
-             ApiResponse<List<InlineResponse2001>> localVarResponse = await DriveHeadingAsyncWithHttpInfo(inlineObject2);
+             ApiResponse<List<InlineResponse2001>> localVarResponse = await DriveHeadingAsyncWithHttpInfo(heading, distance, timeMS, inlineObject2);
              return localVarResponse.Data;
 
         }
@@ -612,9 +676,12 @@ namespace Org.OpenAPITools.Api
         /// Drive Heading Drive Heading
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="heading"> (optional)</param>
+        /// <param name="distance"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject2"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;InlineResponse2001&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse2001>>> DriveHeadingAsyncWithHttpInfo (InlineObject2 inlineObject2 = default(InlineObject2))
+        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse2001>>> DriveHeadingAsyncWithHttpInfo (Object heading = default(Object), Object distance = default(Object), Object timeMS = default(Object), InlineObject2 inlineObject2 = default(InlineObject2))
         {
 
             var localVarPath = "/api/drive/hdt";
@@ -639,6 +706,9 @@ namespace Org.OpenAPITools.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (heading != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Heading", heading)); // query parameter
+            if (distance != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Distance", distance)); // query parameter
+            if (timeMS != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "TimeMS", timeMS)); // query parameter
             if (inlineObject2 != null && inlineObject2.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject2); // http body (model) parameter
@@ -671,11 +741,14 @@ namespace Org.OpenAPITools.Api
         /// Drive Time Drive Time
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject3"> (optional)</param>
         /// <returns>List&lt;InlineResponse200&gt;</returns>
-        public List<InlineResponse200> DriveTime (InlineObject3 inlineObject3 = default(InlineObject3))
+        public List<InlineResponse200> DriveTime (Object linearVelocity = default(Object), Object angularVelocity = default(Object), Object timeMS = default(Object), InlineObject3 inlineObject3 = default(InlineObject3))
         {
-             ApiResponse<List<InlineResponse200>> localVarResponse = DriveTimeWithHttpInfo(inlineObject3);
+             ApiResponse<List<InlineResponse200>> localVarResponse = DriveTimeWithHttpInfo(linearVelocity, angularVelocity, timeMS, inlineObject3);
              return localVarResponse.Data;
         }
 
@@ -683,9 +756,12 @@ namespace Org.OpenAPITools.Api
         /// Drive Time Drive Time
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject3"> (optional)</param>
         /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
-        public ApiResponse<List<InlineResponse200>> DriveTimeWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3))
+        public ApiResponse<List<InlineResponse200>> DriveTimeWithHttpInfo (Object linearVelocity = default(Object), Object angularVelocity = default(Object), Object timeMS = default(Object), InlineObject3 inlineObject3 = default(InlineObject3))
         {
 
             var localVarPath = "/api/drive/time";
@@ -710,6 +786,9 @@ namespace Org.OpenAPITools.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (linearVelocity != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LinearVelocity", linearVelocity)); // query parameter
+            if (angularVelocity != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AngularVelocity", angularVelocity)); // query parameter
+            if (timeMS != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "TimeMS", timeMS)); // query parameter
             if (inlineObject3 != null && inlineObject3.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject3); // http body (model) parameter
@@ -742,11 +821,14 @@ namespace Org.OpenAPITools.Api
         /// Drive Time Drive Time
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject3"> (optional)</param>
         /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
-        public async System.Threading.Tasks.Task<List<InlineResponse200>> DriveTimeAsync (InlineObject3 inlineObject3 = default(InlineObject3))
+        public async System.Threading.Tasks.Task<List<InlineResponse200>> DriveTimeAsync (Object linearVelocity = default(Object), Object angularVelocity = default(Object), Object timeMS = default(Object), InlineObject3 inlineObject3 = default(InlineObject3))
         {
-             ApiResponse<List<InlineResponse200>> localVarResponse = await DriveTimeAsyncWithHttpInfo(inlineObject3);
+             ApiResponse<List<InlineResponse200>> localVarResponse = await DriveTimeAsyncWithHttpInfo(linearVelocity, angularVelocity, timeMS, inlineObject3);
              return localVarResponse.Data;
 
         }
@@ -755,9 +837,12 @@ namespace Org.OpenAPITools.Api
         /// Drive Time Drive Time
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="linearVelocity"> (optional)</param>
+        /// <param name="angularVelocity"> (optional)</param>
+        /// <param name="timeMS"> (optional)</param>
         /// <param name="inlineObject3"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveTimeAsyncWithHttpInfo (InlineObject3 inlineObject3 = default(InlineObject3))
+        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveTimeAsyncWithHttpInfo (Object linearVelocity = default(Object), Object angularVelocity = default(Object), Object timeMS = default(Object), InlineObject3 inlineObject3 = default(InlineObject3))
         {
 
             var localVarPath = "/api/drive/time";
@@ -782,6 +867,9 @@ namespace Org.OpenAPITools.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (linearVelocity != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LinearVelocity", linearVelocity)); // query parameter
+            if (angularVelocity != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AngularVelocity", angularVelocity)); // query parameter
+            if (timeMS != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "TimeMS", timeMS)); // query parameter
             if (inlineObject3 != null && inlineObject3.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject3); // http body (model) parameter
@@ -814,11 +902,13 @@ namespace Org.OpenAPITools.Api
         /// Drive Track Drive Track
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rightTrackSpeed"> (optional)</param>
+        /// <param name="leftTrackSpeed"> (optional)</param>
         /// <param name="inlineObject1"> (optional)</param>
         /// <returns>List&lt;InlineResponse200&gt;</returns>
-        public List<InlineResponse200> DriveTrack (InlineObject1 inlineObject1 = default(InlineObject1))
+        public List<InlineResponse200> DriveTrack (Object rightTrackSpeed = default(Object), Object leftTrackSpeed = default(Object), InlineObject1 inlineObject1 = default(InlineObject1))
         {
-             ApiResponse<List<InlineResponse200>> localVarResponse = DriveTrackWithHttpInfo(inlineObject1);
+             ApiResponse<List<InlineResponse200>> localVarResponse = DriveTrackWithHttpInfo(rightTrackSpeed, leftTrackSpeed, inlineObject1);
              return localVarResponse.Data;
         }
 
@@ -826,9 +916,11 @@ namespace Org.OpenAPITools.Api
         /// Drive Track Drive Track
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rightTrackSpeed"> (optional)</param>
+        /// <param name="leftTrackSpeed"> (optional)</param>
         /// <param name="inlineObject1"> (optional)</param>
         /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
-        public ApiResponse<List<InlineResponse200>> DriveTrackWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1))
+        public ApiResponse<List<InlineResponse200>> DriveTrackWithHttpInfo (Object rightTrackSpeed = default(Object), Object leftTrackSpeed = default(Object), InlineObject1 inlineObject1 = default(InlineObject1))
         {
 
             var localVarPath = "/api/drive/track";
@@ -853,6 +945,8 @@ namespace Org.OpenAPITools.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (rightTrackSpeed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "RightTrackSpeed", rightTrackSpeed)); // query parameter
+            if (leftTrackSpeed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LeftTrackSpeed", leftTrackSpeed)); // query parameter
             if (inlineObject1 != null && inlineObject1.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject1); // http body (model) parameter
@@ -885,11 +979,13 @@ namespace Org.OpenAPITools.Api
         /// Drive Track Drive Track
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rightTrackSpeed"> (optional)</param>
+        /// <param name="leftTrackSpeed"> (optional)</param>
         /// <param name="inlineObject1"> (optional)</param>
         /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
-        public async System.Threading.Tasks.Task<List<InlineResponse200>> DriveTrackAsync (InlineObject1 inlineObject1 = default(InlineObject1))
+        public async System.Threading.Tasks.Task<List<InlineResponse200>> DriveTrackAsync (Object rightTrackSpeed = default(Object), Object leftTrackSpeed = default(Object), InlineObject1 inlineObject1 = default(InlineObject1))
         {
-             ApiResponse<List<InlineResponse200>> localVarResponse = await DriveTrackAsyncWithHttpInfo(inlineObject1);
+             ApiResponse<List<InlineResponse200>> localVarResponse = await DriveTrackAsyncWithHttpInfo(rightTrackSpeed, leftTrackSpeed, inlineObject1);
              return localVarResponse.Data;
 
         }
@@ -898,9 +994,11 @@ namespace Org.OpenAPITools.Api
         /// Drive Track Drive Track
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="rightTrackSpeed"> (optional)</param>
+        /// <param name="leftTrackSpeed"> (optional)</param>
         /// <param name="inlineObject1"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveTrackAsyncWithHttpInfo (InlineObject1 inlineObject1 = default(InlineObject1))
+        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> DriveTrackAsyncWithHttpInfo (Object rightTrackSpeed = default(Object), Object leftTrackSpeed = default(Object), InlineObject1 inlineObject1 = default(InlineObject1))
         {
 
             var localVarPath = "/api/drive/track";
@@ -925,6 +1023,8 @@ namespace Org.OpenAPITools.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (rightTrackSpeed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "RightTrackSpeed", rightTrackSpeed)); // query parameter
+            if (leftTrackSpeed != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LeftTrackSpeed", leftTrackSpeed)); // query parameter
             if (inlineObject1 != null && inlineObject1.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(inlineObject1); // http body (model) parameter

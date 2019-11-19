@@ -51,6 +51,8 @@ export default class DefaultApi {
      * Drive
      * Drive
      * @param {Object} opts Optional parameters
+     * @param {Object} opts.linearVelocity 
+     * @param {Object} opts.angularVelocity 
      * @param {module:model/InlineObject} opts.inlineObject 
      * @param {module:api/DefaultApi~driveCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/InlineResponse200>}
@@ -62,6 +64,8 @@ export default class DefaultApi {
       let pathParams = {
       };
       let queryParams = {
+        'LinearVelocity': opts['linearVelocity'],
+        'AngularVelocity': opts['angularVelocity']
       };
       let headerParams = {
       };
@@ -91,6 +95,9 @@ export default class DefaultApi {
      * Drive Heading
      * Drive Heading
      * @param {Object} opts Optional parameters
+     * @param {Object} opts.heading 
+     * @param {Object} opts.distance 
+     * @param {Object} opts.timeMS 
      * @param {module:model/InlineObject2} opts.inlineObject2 
      * @param {module:api/DefaultApi~driveHeadingCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/InlineResponse2001>}
@@ -102,6 +109,9 @@ export default class DefaultApi {
       let pathParams = {
       };
       let queryParams = {
+        'Heading': opts['heading'],
+        'Distance': opts['distance'],
+        'TimeMS': opts['timeMS']
       };
       let headerParams = {
       };
@@ -131,6 +141,9 @@ export default class DefaultApi {
      * Drive Time
      * Drive Time
      * @param {Object} opts Optional parameters
+     * @param {Object} opts.linearVelocity 
+     * @param {Object} opts.angularVelocity 
+     * @param {Object} opts.timeMS 
      * @param {module:model/InlineObject3} opts.inlineObject3 
      * @param {module:api/DefaultApi~driveTimeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/InlineResponse200>}
@@ -142,6 +155,9 @@ export default class DefaultApi {
       let pathParams = {
       };
       let queryParams = {
+        'LinearVelocity': opts['linearVelocity'],
+        'AngularVelocity': opts['angularVelocity'],
+        'TimeMS': opts['timeMS']
       };
       let headerParams = {
       };
@@ -171,6 +187,8 @@ export default class DefaultApi {
      * Drive Track
      * Drive Track
      * @param {Object} opts Optional parameters
+     * @param {Object} opts.rightTrackSpeed 
+     * @param {Object} opts.leftTrackSpeed 
      * @param {module:model/InlineObject1} opts.inlineObject1 
      * @param {module:api/DefaultApi~driveTrackCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/InlineResponse200>}
@@ -182,6 +200,8 @@ export default class DefaultApi {
       let pathParams = {
       };
       let queryParams = {
+        'RightTrackSpeed': opts['rightTrackSpeed'],
+        'LeftTrackSpeed': opts['leftTrackSpeed']
       };
       let headerParams = {
       };

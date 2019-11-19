@@ -46,6 +46,8 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
+        :param object linear_velocity:
+        :param object angular_velocity:
         :param InlineObject inline_object:
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -71,6 +73,8 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
+        :param object linear_velocity:
+        :param object angular_velocity:
         :param InlineObject inline_object:
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -88,7 +92,7 @@ class DefaultApi(object):
 
         local_var_params = locals()
 
-        all_params = ['inline_object']  # noqa: E501
+        all_params = ['linear_velocity', 'angular_velocity', 'inline_object']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -108,6 +112,10 @@ class DefaultApi(object):
         path_params = {}
 
         query_params = []
+        if 'linear_velocity' in local_var_params and local_var_params['linear_velocity'] is not None:  # noqa: E501
+            query_params.append(('LinearVelocity', local_var_params['linear_velocity']))  # noqa: E501
+        if 'angular_velocity' in local_var_params and local_var_params['angular_velocity'] is not None:  # noqa: E501
+            query_params.append(('AngularVelocity', local_var_params['angular_velocity']))  # noqa: E501
 
         header_params = {}
 
@@ -154,6 +162,9 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
+        :param object heading:
+        :param object distance:
+        :param object time_ms:
         :param InlineObject2 inline_object2:
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -179,6 +190,9 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
+        :param object heading:
+        :param object distance:
+        :param object time_ms:
         :param InlineObject2 inline_object2:
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -196,7 +210,7 @@ class DefaultApi(object):
 
         local_var_params = locals()
 
-        all_params = ['inline_object2']  # noqa: E501
+        all_params = ['heading', 'distance', 'time_ms', 'inline_object2']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -216,6 +230,12 @@ class DefaultApi(object):
         path_params = {}
 
         query_params = []
+        if 'heading' in local_var_params and local_var_params['heading'] is not None:  # noqa: E501
+            query_params.append(('Heading', local_var_params['heading']))  # noqa: E501
+        if 'distance' in local_var_params and local_var_params['distance'] is not None:  # noqa: E501
+            query_params.append(('Distance', local_var_params['distance']))  # noqa: E501
+        if 'time_ms' in local_var_params and local_var_params['time_ms'] is not None:  # noqa: E501
+            query_params.append(('TimeMS', local_var_params['time_ms']))  # noqa: E501
 
         header_params = {}
 
@@ -262,6 +282,9 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
+        :param object linear_velocity:
+        :param object angular_velocity:
+        :param object time_ms:
         :param InlineObject3 inline_object3:
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -287,6 +310,9 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
+        :param object linear_velocity:
+        :param object angular_velocity:
+        :param object time_ms:
         :param InlineObject3 inline_object3:
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -304,7 +330,7 @@ class DefaultApi(object):
 
         local_var_params = locals()
 
-        all_params = ['inline_object3']  # noqa: E501
+        all_params = ['linear_velocity', 'angular_velocity', 'time_ms', 'inline_object3']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -324,6 +350,12 @@ class DefaultApi(object):
         path_params = {}
 
         query_params = []
+        if 'linear_velocity' in local_var_params and local_var_params['linear_velocity'] is not None:  # noqa: E501
+            query_params.append(('LinearVelocity', local_var_params['linear_velocity']))  # noqa: E501
+        if 'angular_velocity' in local_var_params and local_var_params['angular_velocity'] is not None:  # noqa: E501
+            query_params.append(('AngularVelocity', local_var_params['angular_velocity']))  # noqa: E501
+        if 'time_ms' in local_var_params and local_var_params['time_ms'] is not None:  # noqa: E501
+            query_params.append(('TimeMS', local_var_params['time_ms']))  # noqa: E501
 
         header_params = {}
 
@@ -370,6 +402,8 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
+        :param object right_track_speed:
+        :param object left_track_speed:
         :param InlineObject1 inline_object1:
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -395,6 +429,8 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
+        :param object right_track_speed:
+        :param object left_track_speed:
         :param InlineObject1 inline_object1:
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -412,7 +448,7 @@ class DefaultApi(object):
 
         local_var_params = locals()
 
-        all_params = ['inline_object1']  # noqa: E501
+        all_params = ['right_track_speed', 'left_track_speed', 'inline_object1']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -432,6 +468,10 @@ class DefaultApi(object):
         path_params = {}
 
         query_params = []
+        if 'right_track_speed' in local_var_params and local_var_params['right_track_speed'] is not None:  # noqa: E501
+            query_params.append(('RightTrackSpeed', local_var_params['right_track_speed']))  # noqa: E501
+        if 'left_track_speed' in local_var_params and local_var_params['left_track_speed'] is not None:  # noqa: E501
+            query_params.append(('LeftTrackSpeed', local_var_params['left_track_speed']))  # noqa: E501
 
         header_params = {}
 

@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## Drive
 
-> List&lt;InlineResponse200&gt; Drive (InlineObject inlineObject = null)
+> List&lt;InlineResponse200&gt; Drive (Object linearVelocity = null, Object angularVelocity = null, InlineObject inlineObject = null)
 
 Drive
 
@@ -38,12 +38,14 @@ namespace Example
         {
             Configuration.Default.BasePath = "http://localhost:3000";
             var apiInstance = new DefaultApi(Configuration.Default);
+            var linearVelocity = new Object(); // Object |  (optional) 
+            var angularVelocity = new Object(); // Object |  (optional) 
             var inlineObject = new InlineObject(); // InlineObject |  (optional) 
 
             try
             {
                 // Drive
-                List<InlineResponse200> result = apiInstance.Drive(inlineObject);
+                List<InlineResponse200> result = apiInstance.Drive(linearVelocity, angularVelocity, inlineObject);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -62,6 +64,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **linearVelocity** | [**Object**](Object.md)|  | [optional] 
+ **angularVelocity** | [**Object**](Object.md)|  | [optional] 
  **inlineObject** | [**InlineObject**](InlineObject.md)|  | [optional] 
 
 ### Return type
@@ -90,7 +94,7 @@ No authorization required
 
 ## DriveHeading
 
-> List&lt;InlineResponse2001&gt; DriveHeading (InlineObject2 inlineObject2 = null)
+> List&lt;InlineResponse2001&gt; DriveHeading (Object heading = null, Object distance = null, Object timeMS = null, InlineObject2 inlineObject2 = null)
 
 Drive Heading
 
@@ -113,12 +117,15 @@ namespace Example
         {
             Configuration.Default.BasePath = "http://localhost:3000";
             var apiInstance = new DefaultApi(Configuration.Default);
+            var heading = new Object(); // Object |  (optional) 
+            var distance = new Object(); // Object |  (optional) 
+            var timeMS = new Object(); // Object |  (optional) 
             var inlineObject2 = new InlineObject2(); // InlineObject2 |  (optional) 
 
             try
             {
                 // Drive Heading
-                List<InlineResponse2001> result = apiInstance.DriveHeading(inlineObject2);
+                List<InlineResponse2001> result = apiInstance.DriveHeading(heading, distance, timeMS, inlineObject2);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -137,6 +144,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **heading** | [**Object**](Object.md)|  | [optional] 
+ **distance** | [**Object**](Object.md)|  | [optional] 
+ **timeMS** | [**Object**](Object.md)|  | [optional] 
  **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | [optional] 
 
 ### Return type
@@ -165,7 +175,7 @@ No authorization required
 
 ## DriveTime
 
-> List&lt;InlineResponse200&gt; DriveTime (InlineObject3 inlineObject3 = null)
+> List&lt;InlineResponse200&gt; DriveTime (Object linearVelocity = null, Object angularVelocity = null, Object timeMS = null, InlineObject3 inlineObject3 = null)
 
 Drive Time
 
@@ -188,12 +198,15 @@ namespace Example
         {
             Configuration.Default.BasePath = "http://localhost:3000";
             var apiInstance = new DefaultApi(Configuration.Default);
+            var linearVelocity = new Object(); // Object |  (optional) 
+            var angularVelocity = new Object(); // Object |  (optional) 
+            var timeMS = new Object(); // Object |  (optional) 
             var inlineObject3 = new InlineObject3(); // InlineObject3 |  (optional) 
 
             try
             {
                 // Drive Time
-                List<InlineResponse200> result = apiInstance.DriveTime(inlineObject3);
+                List<InlineResponse200> result = apiInstance.DriveTime(linearVelocity, angularVelocity, timeMS, inlineObject3);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -212,6 +225,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **linearVelocity** | [**Object**](Object.md)|  | [optional] 
+ **angularVelocity** | [**Object**](Object.md)|  | [optional] 
+ **timeMS** | [**Object**](Object.md)|  | [optional] 
  **inlineObject3** | [**InlineObject3**](InlineObject3.md)|  | [optional] 
 
 ### Return type
@@ -240,7 +256,7 @@ No authorization required
 
 ## DriveTrack
 
-> List&lt;InlineResponse200&gt; DriveTrack (InlineObject1 inlineObject1 = null)
+> List&lt;InlineResponse200&gt; DriveTrack (Object rightTrackSpeed = null, Object leftTrackSpeed = null, InlineObject1 inlineObject1 = null)
 
 Drive Track
 
@@ -263,12 +279,14 @@ namespace Example
         {
             Configuration.Default.BasePath = "http://localhost:3000";
             var apiInstance = new DefaultApi(Configuration.Default);
+            var rightTrackSpeed = new Object(); // Object |  (optional) 
+            var leftTrackSpeed = new Object(); // Object |  (optional) 
             var inlineObject1 = new InlineObject1(); // InlineObject1 |  (optional) 
 
             try
             {
                 // Drive Track
-                List<InlineResponse200> result = apiInstance.DriveTrack(inlineObject1);
+                List<InlineResponse200> result = apiInstance.DriveTrack(rightTrackSpeed, leftTrackSpeed, inlineObject1);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -287,6 +305,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **rightTrackSpeed** | [**Object**](Object.md)|  | [optional] 
+ **leftTrackSpeed** | [**Object**](Object.md)|  | [optional] 
  **inlineObject1** | [**InlineObject1**](InlineObject1.md)|  | [optional] 
 
 ### Return type

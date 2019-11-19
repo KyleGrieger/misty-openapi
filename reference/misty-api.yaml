@@ -47,6 +47,13 @@ paths:
         description: Drive
       description: Drive
       operationId: drive
+      parameters:
+        - schema: {}
+          in: query
+          name: LinearVelocity
+        - schema: {}
+          in: query
+          name: AngularVelocity
     parameters: []
   /api/drive/stop:
     post:
@@ -156,7 +163,13 @@ paths:
                       status: Success
                 type: array
                 title: response
-      parameters: []
+      parameters:
+        - schema: {}
+          in: query
+          name: RightTrackSpeed
+        - schema: {}
+          in: query
+          name: LeftTrackSpeed
       requestBody:
         content:
           application/json:
@@ -246,6 +259,16 @@ paths:
                   TimeMs: 4000
         description: Drive Heading
       x-openapi-router-controller: api
+      parameters:
+        - schema: {}
+          in: query
+          name: Heading
+        - schema: {}
+          in: query
+          name: Distance
+        - schema: {}
+          in: query
+          name: TimeMS
   /api/drive/time:
     post:
       summary: Drive Time
@@ -288,6 +311,16 @@ paths:
                   TimeMS: 500
         description: Drive Time
       x-openapi-router-controller: api
+      parameters:
+        - schema: {}
+          in: query
+          name: LinearVelocity
+        - schema: {}
+          in: query
+          name: AngularVelocity
+        - schema: {}
+          in: query
+          name: TimeMS
 components:
   schemas:
     response:

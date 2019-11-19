@@ -79,12 +79,14 @@ namespace Example
 
             Configuration.Default.BasePath = "http://localhost:3000";
             var apiInstance = new DefaultApi(Configuration.Default);
+            var linearVelocity = new Object(); // Object |  (optional) 
+            var angularVelocity = new Object(); // Object |  (optional) 
             var inlineObject = new InlineObject(); // InlineObject |  (optional) 
 
             try
             {
                 // Drive
-                List<InlineResponse200> result = apiInstance.Drive(inlineObject);
+                List<InlineResponse200> result = apiInstance.Drive(linearVelocity, angularVelocity, inlineObject);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
