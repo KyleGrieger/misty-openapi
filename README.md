@@ -22,7 +22,7 @@ Generate a client library:
 
 ## Server
 
-Use Python 3.7
+Use Python 3
 
 ### Installation
 
