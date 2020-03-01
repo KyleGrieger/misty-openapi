@@ -1,6 +1,7 @@
-# Misty OpenAPI
+# Misty OpenAPI 
 The Misty Robot OpenAPI spec
 
+Jetbot bindings are still a WIP
 
 Use Python 3.7
 
